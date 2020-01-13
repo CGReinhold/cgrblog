@@ -9,9 +9,9 @@ Você provavelmente já deve ter se deparado com o [JSFuck](http://www.jsfuck.co
 
 ## Básico
 
-A ideia básica por trás disso é utilizar o mecanismo de coersão implícita da linguagem que permite criarmos cada um dos caracteres que desejamos. O Javascript trabalha com valores "falso" que podem ser o booleano `false`, uma string vazia ou o número 0, e valores "verdadeiros" que podem ser o booleano `true`, valores diferentes de zero, strings, arrays ou objetos.
+A ideia básica por trás disso é utilizar o mecanismo de coersão implícita da linguagem que permite criarmos cada um dos caracteres que desejamos. O Javascript trabalha com valores "falsos" que podem ser o booleano `false`, uma string vazia ou o número 0, e valores "verdadeiros" que podem ser o booleano `true`, valores diferentes de zero, strings, arrays ou objetos.
 
-Para a criação da nossa string usaremos os caracteres de soma (`+`), negação (`!`), criação de arrays (`[]`) e agrupamentos (`()`) da linguagem.
+Para a criação da nossa string utilizaremos os caracteres de soma (`+`), negação (`!`), criação de arrays (`[]`) e agrupamentos (`()`) da linguagem.
 
 Com o seguinte código conseguimos criar um array em Javascript:
 
@@ -21,19 +21,19 @@ Estes dois caracteres, porém, não servem só para isso. Colchetes também são
 
 `[][[]]`
 
-O código acima está criando um array e tentando acessar a posição "verdadeira", ou 1, do mesmo, resultando assim em `undefined`. Mas para que isso nos serve? Se somarmos `undefined` com um array vazio, o Javascript irá converter para nós isso na string `"undefined"`, desta forma:
+O código acima está criando um array e tentando acessar a posição "verdadeira", ou 1, do mesmo, resultando assim em `undefined`. Mas para que isso nos serve? Se somarmos `undefined` com um array vazio, o Javascript irá converter para nós na string `"undefined"`, desta forma:
 
 `[][[]]+[]` é o equivalente a `undefined+""`
 
 ## Criando números
 
-No Javascript, assim como várias outras linguagens, strings são tratadas como arrays, logo conseguimos acessar caracteres dela utilizando nossos colchetes. O que precisamos agora são de números, para conseguir acessar as posições desejadas da string.
-Como vimos anteriormente, um array vazio é o equivalente a um valor "verdadeiro". Se negarmos o array com o caractere `!` teremos um valor `false`, e negando duas vezes temos o `true`. Ao colocar o caractere `+` na frente de um valor booleano, ele é convertido para um inteiro. Desta forma, o booleano True pode ser convertido para 1 adicionando o caractere `+` na frente.
+No Javascript, assim como em várias outras linguagens, strings são tratadas como arrays, logo, conseguimos acessar caracteres dela utilizando nossos colchetes. O que precisamos agora são de números, para conseguir acessar as posições desejadas da string.
+Como visto anteriormente, um array vazio é o equivalente a um valor "verdadeiro". Se negarmos o array com o caractere `!` teremos um valor `false`, e negando duas vezes temos o `true`. Ao colocar o caractere `+` na frente de um valor booleano, ele é convertido para um inteiro. Desta forma, o booleano True pode ser convertido para 1 adicionando o caractere `+` na frente.
 
 `+![]` é equivalente a `+false` que é equivalente a `0`
 `+!![]` é equivalente a `+true` que é equivalente a `1`
 
-Para conseguir os outros números, basta realizar a soma com 1:
+Para obter os demais números, basta adicionar o valor 1 a quantidade de vezes desejada:
 
 ```js
 1 === +!![]
@@ -44,7 +44,7 @@ Para conseguir os outros números, basta realizar a soma com 1:
 
 ## Acessando caracteres de uma string
 
-Agora conseguimos acessar dentro da nossa string `"undefined"` os caracteres que quisermos. O caractere "i", por exemplo, fica no índice 5, logo conseguimos buscá-lo com o seguinte código:
+Agora que conseguimos criar números, podemos acessar as posições desejadas na string `"undefined"` bara buscar os caracteres que quisermos. O caractere "i", por exemplo, fica no índice 5, logo conseguimos buscá-lo com o seguinte código:
 
 `"undefined"[5]` é equivalente a `([][[]]+[])[+!![]+!![]+!![]+!![]+!![]]` que é equivalente a `"i"`
 
