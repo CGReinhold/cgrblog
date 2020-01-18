@@ -16,7 +16,7 @@ Para quem busca uma plataforma para criação de sites estáticos sem muitas com
 
 ## Audio
 
-Já faz bastante tempo que o HTML5 já não é mais uma novidade, mas como muitos de seus recursos não são tão comuns de serem usados muita gente acaba nem utilizando. Até hoje eu ainda não havia utilizado as APIs de áudio, e não sabia que era tão fácil.
+Já faz tempo que o HTML5 já não é mais uma novidade, mas como muitos de seus recursos não são tão comuns de serem usados muita gente acaba nem utilizando. Até hoje eu ainda não havia utilizado as APIs de áudio, e não sabia que era tão fácil.
 
 Para tocar um áudio não é nem necessário utilizar a tag `<audio>` no HTML da página, basta utilizar o contrutor `new Audio(url)` através do Javascript.
 
