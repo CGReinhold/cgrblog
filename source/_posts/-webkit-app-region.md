@@ -33,7 +33,6 @@ Um exemplo utilizando esta propriedade em uma div pode ser vista no seguinte có
 ```
 
 Node que a div inteira irá permitir que o usuário arraste a janela, com exceção da div interna que é clicável.
-Note that the hole div will allow the user to drag the window, with exception of the inner div, which is clickable.
 
 ## Usando com electron
 
