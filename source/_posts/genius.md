@@ -9,13 +9,14 @@ A algum tempo atrás vi [esse](https://matthewrayfield.com/articles/animating-ur
 
 Vendo isso, imaginei se não é possível utilizar esse conceito para fazer um jogo. Como minha criatividade não foi muito longe daí, decidi tentar implementar o jogo _Genius_ (aquele com quatro cores que acendem e você deve pressionar os botões na sequência correta), já que possui uma jogabilidade simples e fácil de se adaptar a uma caixa de texto.
 
-Clicando no botão abaixo a URL será utilizada como "display" para o jogo. As cores irão aparecer em uma sequência, e quando a URL indicar a sua vez, basta digitar aqui mesmo a inicial das cores (em inglês) na mesma sequência.
+Clicando no botão abaixo a URL será utilizada como "display" para o jogo. As cores irão aparecer em uma sequência, e quando a URL indicar a sua vez, basta digitar aqui mesmo a inicial das cores (em inglês) na mesma sequência. (Alguns navegadores podem não conseguir carregar todos os emojis corretamente)
 
 🔵 ➔ **B**
 🟡 ➔ **Y**
 🟢 ➔ **G**
 🔴 ➔ **R**
 
+(Em alguns apps para _smartphones_ pode não funcionar corretamente)
 {% raw %}
 <button onclick="start('location')">Iniciar o jogo na URL</button>
 {% endraw %}
@@ -28,6 +29,7 @@ Como alternativa, ajustei o código para permitir o mesmo tipo de jogo através 
 
 O botão abaixo irá permitir você jogar, mas agora no título da aba do navegador.
 
+(Em alguns apps para _smartphones_ pode não funcionar corretamente)
 {% raw %}
 <button onclick="start('title')">Iniciar o jogo na aba do navegador</button>
 {% endraw %}
@@ -38,6 +40,7 @@ Recentemente caí [neste artigo aqui](http://www.p01.org/defender_of_the_favicon
 
 Com essa biblioteca, decidi criar uma versão do genius também no _favicon_ dessa página. Para jogar, clique no botão abaixo.
 
+(Em alguns apps para _smartphones_ pode não funcionar corretamente)
 {% raw %}
 <script src="http://lab.ejci.net/favico.js/favico.min.js"></script>
 <button onclick="start('favicon')">Iniciar o jogo no ícone da aba do navegador</button>
