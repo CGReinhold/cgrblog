@@ -18,9 +18,9 @@ Gradiente horizontal
 <div style="width: 200px; height: 50px; background-image: linear-gradient(to right, black, red);"></div>
 {% endraw %}
 
-Também é possível adicionar mais de duas cores dentro de um `linear-gradient` podendo adicionar ilimitados valores (`background-image: linear-gradient(to right, black, red, orange, yellow, white);`).
-
 ## Cores
+
+Também é possível adicionar mais de duas cores dentro de um `linear-gradient` podendo adicionar ilimitados valores (`background-image: linear-gradient(to right, black, red, orange, yellow, white);`).
 
 {% raw %}
 <div style="width: 200px; height: 50px; background-image: linear-gradient(to right, black, red, orange, yellow, white);"></div>
