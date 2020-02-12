@@ -3,9 +3,9 @@ title: Jogando com CSS
 date: "2020-02-11T20:12:07.169Z"
 ---
 
-Um dos primeiros programas que fiz ao aprender a programar foi um simples jogo para Android. No meu primeiro ano aprendendo a programar tive o desafio de aprender como desenvolver jogos para Android para realizar uma apresentação para as outras pessoas aprendendo. A ideia foi criar um jogo onde baratas ficavam correndo pela tela e o usuário precisava clicar nelas para ganhar pontos.
+Um dos primeiros programas que fiz ao aprender a programar foi um simples jogo para Android. No meu primeiro ano estudando programação tive o desafio de aprender como desenvolver jogos para Android para realizar uma oficina para os alunos das turmas iniciais. A ideia era criar um jogo onde baratas ficavam correndo pela tela e o usuário precisava clicar nelas para ganhar pontos.
 
-As linguagenns de programação evoluíram muito desde então, e hoje um jogo como esse é possível ser feito utilizando apenas CSS e HTML. E é isso que faremos neste artigo. Alguns dos recursos que vamos usar são das versões mais recentes do CSS e podem não funcionar em versões mais antigas de alguns navegadores.
+As linguagens de programação evoluíram muito desde então, e hoje um jogo como esse é possível ser feito utilizando apenas CSS e HTML. E é isso que faremos neste artigo. Alguns dos recursos que vamos usar são disponíveis apenas nas versões mais recentes do CSS e podem não funcionar em versões mais antigas de alguns navegadores.
 
 ## Começando
 
@@ -15,7 +15,7 @@ A base do nosso jogo será utilizando _checkboxes_. Para isso iniciamos com um s
 <iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/1/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 {% endraw %}
 
-Na sequência, adicionamos adicionamos alguns estilos nos inputs para transformá-los nos nossos itens do jogo. Para isso, ocultamos a caixa existente, e nos labels de cada um adicionamos _emojis_ da seguinte forma:
+Na sequência, adicionamos alguns estilos nos inputs para transformá-los nos nossos itens do jogo. Para isso, ocultamos a caixa de seleção existente, e nos labels de cada um adicionamos _emojis_ da seguinte forma:
 
 ```css
 label[for="1"]:before {
@@ -55,15 +55,15 @@ input {
 
 ## Contador
 
-Precisamos também de um contador para a pontuação do jogo, e por sorte o CSS possui essa funcionalidade também utilizando a propriedade _counter_. Para isso vamos incrementar o contador __frutas__ para cada input e o contador __frutas-selecionadas__ para as frutas clicadas.
+Precisamos também de um contador para a pontuação do jogo, e por sorte o CSS possui essa funcionalidade também, utilizando a propriedade _counter_. Para isso vamos incrementar o contador __frutas__ para cada input e o contador __frutas-selecionadas__ para as frutas clicadas.
 
 ```css
 input {
-  counter-increment: gifts;
+  counter-increment: frutas;
 }
     
 input:checked {
-  counter-increment: gifts gifts-wrapped;
+  counter-increment: frutas frutas-selecionadas;
 }
 ```
 
@@ -86,17 +86,17 @@ footer {
 }
 
 footer:before {
-  content: counter(gifts-wrapped) '/' counter(gifts) ' ';
+  content: counter(frutas-selecionadas) '/' counter(frutas) ' ';
 }
 ```
 
 {% raw %}
-<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/10/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/28/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 {% endraw %}
 
 ## Animando
 
-Agora que já temos a base de nosso jogo pronta podemos adicionar a animação aos ítens para dar um pouco de dificuldade. Para isso vamos utilizar as propriedades de animação do CSS. O estilo abaixo por exemplo fará com que todos os _emojis_ fiquem subindo e descendo infinitamente (`infinite`, `linear` e `alternate`) demorando 5 segundos (`5s`) para chegar ao fim da página (`100vh`) e 5 segundos mais para subir:
+Agora que já temos a base de nosso jogo pronta, podemos adicionar a animação aos itens para dar um pouco de dificuldade. Para isso vamos utilizar as propriedades de animação do CSS. O estilo abaixo por exemplo fará com que todos os _emojis_ fiquem subindo e descendo infinitamente (`infinite`, `linear` e `alternate`) demorando 5 segundos (`5s`) para chegar ao fim da página (`100vh`) e 5 segundos mais para subir:
 
 ```css
 label {
@@ -115,7 +115,7 @@ label {
 ```
 
 {% raw %}
-<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/12/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/29/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 {% endraw %}
 
 Podemos fazer com que o estilo fique um pouco mais aleatório utilizando mais _keyframes_ no movimento dos itens como por exemplo abaixo:
@@ -144,7 +144,7 @@ Podemos fazer com que o estilo fique um pouco mais aleatório utilizando mais _k
 ```
 
 {% raw %}
-<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/14/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/30/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 {% endraw %}
 
 E brincando mais com o seletor `nth-of-type` conseguimos deixar cada item com um movimento diferente.
@@ -177,7 +177,7 @@ input:checked + label {
 ```
 
 {% raw %}
-<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/17/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/31/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 {% endraw %}
 
 ## Finalizando
@@ -216,15 +216,15 @@ input:checked
 E assim temos o jogo finalizado.
 
 {% raw %}
-<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/25/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/cgreinhold/doqk7rzm/32/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 {% endraw %}
 
 ## Conclusão
 
-O CSS já avançou tanto que hoje conseguimos fazer coisas bastante avançadas conforme vimos no jogo acima. Um ótimo lugar para pesquisar e conhecer mais sobre CSS com projetos de verdade é o [Codepen](https://codepen.io/picks/pens/), onde muitos desenvolvedores liberam trechos de códigos para ideias simples, mas que podem deixar suas páginas mais bonitas e divertidas.
+O CSS já evoluiu tanto que hoje conseguimos fazer coisas bastante avançadas conforme vimos no jogo acima. Um ótimo lugar para pesquisar e conhecer mais sobre CSS com projetos de verdade é o [Codepen](https://codepen.io/picks/pens/), onde muitos desenvolvedores liberam trechos de códigos para ideias simples, mas que podem deixar suas páginas mais bonitas e divertidas.
 
 Outra ferramenta muito legal é o [Flexbox Froggy](https://flexboxfroggy.com/) que ensina o funcionamento do _flex_ no CSS através de um jogo com 24 níveis de dificuldade.
 
 ## Referência
 
-Esse artigo foi feito com base no tutorial da Mira Thoen Feiring, disponibilizado em 21.12.2019 [aqui](https://css.christmas/2019/21)
+Esse artigo foi feito com base no tutorial da Mira Thoen Feiring, disponibilizado em 21.12.2019 [aqui](https://css.christmas/2019/21).
