@@ -42,3 +42,14 @@ Você pode ver ela sendo executada também em um loop no código abaixo.
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 {% endraw %}
+
+Ou uma versão alternativa
+
+{% raw %}
+<p class="codepen" data-height="506" data-theme-id="default" data-default-tab="result" data-user="cgreinhold" data-slug-hash="wvBVKPX" style="height: 506px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="p5.js">
+  <span>See the Pen <a href="https://codepen.io/cgreinhold/pen/wvBVKPX">
+  p5.js</a> by cleyson (<a href="https://codepen.io/cgreinhold">@cgreinhold</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% endraw %}
