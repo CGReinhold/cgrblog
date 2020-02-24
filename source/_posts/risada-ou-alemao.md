@@ -1,6 +1,6 @@
 ---
 title: Palavra alemã ou risada de internet?
-date: "2020-02-17T20:12:07.169Z"
+date: "2020-02-24T20:12:07.169Z"
 ---
 
 A risada é algo universal, mas não existe uma forma simples de reproduzi-la através de texto. No Brasil o mais comum é utilizar o hahaha ou kkkk, mas também tem quem gosta de só bater no teclado de qualquer jeito e usar um aushuash, kospakoa ou até isudhwuhiw.
