@@ -1,6 +1,6 @@
 ---
 title: Blogs e outras recomendações
-date: "2020-02-25T22:00:00.169Z"
+date: "2020-03-02T22:00:00.169Z"
 ---
 
 No último artigo escrevi sobre arte generativa e recomendei alguns sites onde você pode aprender e conhecer mais sobre arte generativa. Neste artigo irei recomendar alguns outros blogs de programadores com projetos legais relacionados a programação criativa e outras áreas.
@@ -40,8 +40,8 @@ No último artigo escrevi sobre arte generativa e recomendei alguns sites onde v
   left: 225px;
 }
 </style>
-<p>Caso prefira, você pode vestir um chapéu no seu mouse para continuar lendo o artigo</p>
-<div class="hanger">
+<p id="text1">Caso prefira, você pode vestir um chapéu no seu mouse para continuar lendo o artigo</p>
+<div id="hanger" class="hanger">
   <svg viewBox="0 0 900.000000 675.000000"><g transform="translate(0.000000,675.000000) scale(0.100000,-0.100000)"
 fill="#b37700" stroke="none"><path d="M4859 6580 c-20 -4 -81 -32 -137 -63 -108 -60 -122 -65 -122 -43 0
 19 -82 30 -154 21 l-56 -7 0 -137 c0 -76 -3 -141 -7 -144 -3 -4 -40 12 -82 34
@@ -171,7 +171,7 @@ fill="#b37700" stroke="none"><path d="M4859 6580 c-20 -4 -81 -32 -137 -63 -108 -
 	c0,0,88.002,61.36,256-0.005l5.218-45.068L96.349,294.512L96.349,294.512z"/><path style="fill:#FFCA28;" d="M512,339.585c-19.894-46.009-126.936-81.148-256-81.148c-129.059,0-236.097,35.137-255.998,81.143
 	c0,0,87.999-61.365,255.998,0S512,339.585,512,339.585z"/></svg>
 </div>
-<p>Observação: A ideia acima é só uma cópia mal feita <a href="https://twitter.com/nealagarwal/status/1176529001017434112">deste tweet</a>. </p>
+<p id="text2">Observação: A ideia acima é só uma cópia mal feita <a href="https://twitter.com/nealagarwal/status/1176529001017434112">deste tweet</a>. </p>
 <script>
 let hatSelected = undefined;
 let hatReturned = undefined;
@@ -258,6 +258,25 @@ const stopHat = (hat) => {
   const hatEl = document.getElementsByClassName(hat.class)[0];
   hatEl.style.top = `${hat.y}px`;
   hatEl.style.left = `${hat.x}px`;
+}
+
+function isTouchDevice() {
+	const supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+	return supportsTouch;
+}
+
+if (isTouchDevice()) {
+	const hanger = document.getElementById('hanger');
+	const text1 = document.getElementById('text1');
+	const text2 = document.getElementById('text2');
+	const hats = document.getElementsByClassName('hat');
+
+	hanger.style.display = 'none';
+	text1.style.display = 'none';
+	text2.style.display = 'none';
+	for (let hat of hats) {
+		hat.style.display = 'none';
+	}
 }
 </script>
 {% endraw %}
