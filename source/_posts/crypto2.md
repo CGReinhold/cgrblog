@@ -62,7 +62,7 @@ Abaixo você consegue verificar de uma forma interativa como a criptografia func
   margin-bottom: 20px;
 }
 .row span {
-  min-width: 20px;
+  min-width: 12px;
   text-align: center;
 }
 </style>
