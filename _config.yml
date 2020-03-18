@@ -99,3 +99,11 @@ theme: cactus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+feed:
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - feed.xml
