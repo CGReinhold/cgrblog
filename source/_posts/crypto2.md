@@ -3,13 +3,13 @@ title: Criptografia - parte 2
 date: "2020-03-18T22:00:00.169Z"
 ---
 
-No último artigo escrevi um pouco sobre a história da criptografia, e algumas das formas mais antigas de criptografar textos utilizadas. Uma das mais famosas é a cifra de César, que substitui cada caractere do alfabeto por um caractere diferente.
+No último artigo escrevi um pouco sobre a história da criptografia, e algumas das formas mais antigas utilizadas para criptografar textos. Uma das mais famosas é a cifra de César, que substitui cada caractere do alfabeto por um caractere diferente.
 
 A cifra de César é considerada simples de quebrar, já que por ser monoalfabética, ou seja, cada caractere é substituído por outro, conseguimos encontrar qual o valor criptografado de cada letra analisando a frequência de caracteres da mensagem. Isso é possível pois o caracter mais utilizado na mensagem criptografada provavelmente deve ser um dos caracteres mais utilizados no idioma da mensagem original.
 
 ## Disco de Alberti
 
-Sabendo da fraqueza deste método de criptografia, várias outros sistemas foram criados. Uma das ferramentas inventadas para auxiliar a codificação de mensagens é o disco de Alberti, criado por Leon Alberti. O disco consiste em duas partes, uma com caracteres externos, que fica parada, e outra com caracteres internos, que pode ser rotacionada. Esse disco é utilizado para criação de cifras polialfabéticas, ou seja, um caractere da mensagem original pode ser substituído por vários outros.
+Sabendo da fraqueza deste método de criptografia, vários outros sistemas foram criados. Uma das ferramentas inventadas para auxiliar a codificação de mensagens é o disco de Alberti, criado por Leon Alberti. O disco consiste em duas partes, uma com caracteres externos, que fica parada, e outra com caracteres internos, que pode ser rotacionada. Esse disco é utilizado para criação de cifras polialfabéticas, ou seja, um caractere da mensagem original pode ser substituído por vários outros.
 
 O disco de Alberti pode ser visto na imagem abaixo.
 
