@@ -58,12 +58,26 @@ function getRandom(multiply, sum, time) {
   return (sum || 0) + (multiply || 255) * sin(millis() / (time||5));
 }
 
+function isTouchDevice() {
+	const supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+	return supportsTouch;
+}
+
 let iterations = 0;
 
 document.addEventListener('keypress', () => {
   iterations++;
   redraw();
 });
+
+document.addEventListener('click', () => {
+  iterations++;
+  redraw();
+});
+
+if (isTouchDevice()) {
+  document.getElementById('digite').innerText = 'Aperte aqui...';
+}
 </script>
 <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
 {% endraw %}
