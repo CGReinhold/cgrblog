@@ -6,7 +6,8 @@ date: "2020-03-02T22:00:00.169Z"
 No último artigo escrevi sobre arte generativa e recomendei alguns sites onde você pode aprender e conhecer mais sobre arte generativa. Neste artigo irei recomendar alguns outros blogs de programadores com projetos legais relacionados a programação criativa e outras áreas.
 
 {% raw %}
-<style>
+<!-- Descobrir porque não está funcionando -->
+<!--<style>
 .hanger {
   height: 450px;
   width: 600px;
@@ -278,7 +279,7 @@ if (isTouchDevice()) {
 		hat.style.display = 'none';
 	}
 }
-</script>
+</script>-->
 {% endraw %}
 
 ## Tyler Hobbs
