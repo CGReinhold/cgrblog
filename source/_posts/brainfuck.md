@@ -1,6 +1,6 @@
 ---
 title: brainfuck
-date: "2020-05-13T22:00:00.169Z"
+date: "2020-05-11T22:00:00.169Z"
 ---
 
 Algum tempo atrás escrevi um artigo sobre [como escrever código Javascript com apenas seis caracteres](https://cgreinhold.dev/2020/01/11/js-seis-caracteres/). A ideia por trás disso era abusar da conversão implícita do Javascript para criação de componentes da linguagem, assim executando o código.
