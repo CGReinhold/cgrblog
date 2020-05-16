@@ -60,6 +60,9 @@ article
       padding: .5em 10px
       background: inherit
       color: $color-quote
+      @media (prefers-color-scheme: dark) {
+        color: #ccffb6
+      }
       quotes: "\201C" "\201D" "\2018" "\2019"
       font-weight: bold
 
@@ -69,6 +72,9 @@ article
       &:before
         margin-right: .25em
         color: $color-quote
+        @media (prefers-color-scheme: dark) {
+          color: #ccffb6
+        }
         content: "\201C"
         vertical-align: -.4em
         font-size: 2em
@@ -77,15 +83,26 @@ article
       footer
         margin: line-height 0
         color: $color-meta
+        @media (prefers-color-scheme: dark) {
+          color: #666
+        }
         font-size: 11px
 
         a
           background-image: linear-gradient(transparent, transparent 5px, $color-meta 5px, $color-meta)
           color: $color-meta
+          @media (prefers-color-scheme: dark) {
+            background-image: linear-gradient(transparent, transparent 5px, #666 5px, #666)
+            color: #666
+          }
 
         a:hover
           background-image: linear-gradient(transparent, transparent 4px, lighten($color-meta, 20%) 4px, lighten($color-meta, 20%))
           color: lighten($color-meta, 20%)
+          @media (prefers-color-scheme: dark) {
+            background-image: linear-gradient(transparent, transparent 4px, lighten(#666, 20%) 4px, lighten(#666, 20%))
+            color: lighten(#666, 20%)
+          }
 
         cite
           &:before
@@ -110,6 +127,9 @@ article
       display: block
       margin-top: .5em
       color: $color-meta
+      @media (prefers-color-scheme: dark) {
+        color: #666
+      }
       text-align: center
       font-size: .9em
 
@@ -123,10 +143,16 @@ article
     &:before
       content: "#"
     underline(10px, $color-link)
+    @media (prefers-color-scheme: dark) {
+      underline(10px, rgba(212, 128, 170, 1))
+    }
 
 .article-category
   .category-link
     underline(10px, $color-link)
+    @media (prefers-color-scheme: dark) {
+      underline(10px, rgba(212, 128, 170, 1))
+    }
 
 @media (min-width: 480px)
   .article-tag,

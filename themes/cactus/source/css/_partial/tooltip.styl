@@ -21,6 +21,10 @@
   white-space: pre
   content: attr(aria-label)
   background: $color-text
+  @media (prefers-color-scheme: dark) {
+    color: #1d1f21
+    background: #c9cacc
+  }
   border-radius: 3px
   opacity: 0
   
@@ -32,6 +36,9 @@
   width: 0
   height: 0
   color: $color-text
+  @media (prefers-color-scheme: dark) {
+    color: #c9cacc
+  }
   pointer-events: none
   content: ''
   border: 6px solid transparent
@@ -70,6 +77,9 @@
     bottom: -7px
     margin-right: -6px
     border-bottom-color: $color-text
+    @media (prefers-color-scheme: dark) {
+      border-bottom-color: #c9cacc
+    }
 .tooltipped-sw::after
   margin-right: -16px
   

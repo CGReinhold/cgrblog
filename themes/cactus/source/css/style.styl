@@ -1,5 +1,5 @@
 @import "_variables"
-@import "_colors/" + $colors
+@import "_colors/white"
 @import "_util"
 @import "_mixins"
 @import "_extend"
@@ -15,6 +15,9 @@ html
   padding: 0
   height: 100%
   border-top: 2px solid $color-text
+  @media (prefers-color-scheme: dark) {
+    border-top: 2px solid #c9cacc
+  }
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
 
@@ -23,6 +26,10 @@ body
   height: 100%
   background-color: $color-background
   color: $color-text
+  @media (prefers-color-scheme: dark) {
+    background-color: #1d1f21
+    color: #c9cacc
+  }
   font-display: swap // @stylint ignore
   font-weight: 400
   font-size: $font-size
@@ -53,15 +60,25 @@ body
     text-decoration: none
 
     underline(5px, $color-text)
+    @media (prefers-color-scheme: dark) {
+      color: #c9cacc
+      underline(5px, #c9cacc)
+    }
 
     &:hover
       background-image: linear-gradient(transparent, transparent 4px, $color-link 4px, $color-link)
+      @media (prefers-color-scheme: dark) {
+        background-image: linear-gradient(transparent, transparent 4px, rgba(212, 128, 170, 1) 4px, rgba(212, 128, 170, 1))
+      }
 
   a.icon
     background: none
 
     &:hover
       color: $color-link
+      @media (prefers-color-scheme: dark) {
+        color: rgba(212, 128, 170, 1)
+      }
 
   h1 a, .h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
     background: none
@@ -70,6 +87,9 @@ body
 
   h1 a:hover, .h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
     underline(6px, $color-link)
+    @media (prefers-color-scheme: dark) {
+      underline(6px, rgba(212, 128, 170, 1))
+    }
 
   h6
     a
@@ -80,6 +100,9 @@ body
   h6
     a:hover
       underline(6px, $color-link)
+      @media (prefers-color-scheme: dark) {
+        underline(6px, rgba(212, 128, 170, 1))
+      }
 
 @media (min-width: 540px)
   .image-wrap
@@ -131,6 +154,9 @@ pre
   padding: 10px 15px
   padding-bottom: 0
   border: 1px dotted $color-border
+  @media (prefers-color-scheme: dark) {
+    border: 1px dotted #666
+  }
   border-radius: 4px
   font-size: 13px
   font-family: $font-family-mono
@@ -145,6 +171,9 @@ pre
 code
   padding: 0 5px
   border: 1px dotted $color-border
+  @media (prefers-color-scheme: dark) {
+    border: 1px dotted #666
+  }
   border-radius: 2px
   -webkit-border-radius: 2px
 
@@ -154,26 +183,40 @@ code
   padding: 10px 15px
   border-radius: 4px
   background: $color-background-code
+  @media (prefers-color-scheme: dark) {
+    background: #1d1f21
+  }
   font-family: $font-family-mono
-  // color: $color-accent-3
   -webkit-border-radius: 4px
 
   figcaption
     margin: -5px 0 5px
     color: $color-meta-code
+    @media (prefers-color-scheme: dark) {
+      color: #666
+    }
     font-size: .9em
     zoom: 1
 
     a
       float: right
       color: $color-meta-code
+      @media (prefers-color-scheme: dark) {
+        color: #666
+      }
       font-style: italic
       font-size: .8em
 
       underline(10px, $color-link)
+      @media (prefers-color-scheme: dark) {
+        underline(10px, rgba(212, 128, 170, 1))
+      }
 
     a:hover
       color: lighten($color-meta-code, 20%)
+      @media (prefers-color-scheme: dark) {
+        color: lighten(#666, 20%)
+      }
 
     &:before, content: ""
       display: table
@@ -193,6 +236,9 @@ code
     transition: opacity 0.2s ease-in
     &:hover
       color: $color-accent-1
+      @media (prefers-color-scheme: dark) {
+        color: #2bbc8a
+      }
 
   pre
     margin: 0
