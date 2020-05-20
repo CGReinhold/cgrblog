@@ -15,7 +15,9 @@ function onReady() {
       menu.style.visibility = "visible";
       menuIcon.forEach(i => i.className = "active");
     } else {
-      menu.style.visibility = "hidden";
+      if (menu) {
+        menu.style.visibility = "hidden";
+      }
     }
 
     /**
