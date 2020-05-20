@@ -7,7 +7,7 @@ Flexbox é o modelo de layout que eu mais tenho utilizado ao criar telas em CSS 
 
 Segundo a [documentação da Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), o _Grid é uma malha formada pela interseção de um conjunto de linhas horizontais e um conjunto de linhas verticais – um dos conjuntos define colunas e outro linhas. Dentro de um  grid, respeitando-se a configuração criada pelas suas linhas, pode-se inserir elementos da marcação._
 
-Com a popularização do grid layout, diversas ferramentas foram criadas para auxiliar a utilização deste modelo de layout. Uma delas é o [Grid garden](http://cssgridgarden.com/), um jogo simples que busca ensinar cada funcionalidade do grid layout. Outras ferramentas legais são o [Layoutit](https://grid.layoutit.com/) e o [CSS Grid Generator](https://cssgrid-generator.netlify.com/) que permitem criar grids de forma dinâmica e exportar o CSS gerado, facilitando o desenvolvimento.
+Com a popularização do grid layout, diversas ferramentas foram criadas para auxiliar a utilização deste modelo de layout. Uma delas é o [Grid garden](https://cssgridgarden.com/), um jogo simples que busca ensinar cada funcionalidade do grid layout. Outras ferramentas legais são o [Layoutit](https://grid.layoutit.com/) e o [CSS Grid Generator](https://cssgrid-generator.netlify.com/) que permitem criar grids de forma dinâmica e exportar o CSS gerado, facilitando o desenvolvimento.
 
 ## Brincando com CSS
 

@@ -42,7 +42,7 @@ Com essa biblioteca, decidi criar uma versão do genius também no _favicon_ des
 
 (Em alguns apps para _smartphones_ pode não funcionar corretamente)
 {% raw %}
-<script src="http://lab.ejci.net/favico.js/favico.min.js"></script>
+<script src="https://cgreinhold.dev/js/favico.min.js"></script>
 <button onclick="start('favicon')">Iniciar o jogo no ícone da aba do navegador</button>
 {% endraw %}
 
