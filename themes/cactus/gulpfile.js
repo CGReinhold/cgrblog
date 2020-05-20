@@ -14,14 +14,6 @@ gulp.task('lib:clean',function(){
   return del([ './source/lib/*' ]);
 })
 
-gulp.task('lib:fontAwesome',function(){
-  return gulp.src([
-    'node_modules/@fortawesome/fontawesome-free/webfonts/*',
-    'node_modules/@fortawesome/fontawesome-free/css/all.min.css'
-  ], {base: 'node_modules/@fortawesome/fontawesome-free'})
-    .pipe(gulp.dest('./source/lib/font-awesome'))
-})
-
 gulp.task('lib:mesloFont', function () {
   return download('https://github.com/andreberg/Meslo-Font/blob/master/dist/v1.2/Meslo%20LG%20v1.2.zip?raw=true')
     .pipe(decompress({
@@ -39,22 +31,9 @@ gulp.task('lib:vazirFont',function(){
     .pipe(gulp.dest('./source/lib/vazir-font'))
 })
 
-gulp.task('lib:justifiedGallery',function(){
-  return gulp.src([
-    'node_modules/justifiedGallery/dist/css/*.min.css',
-    'node_modules/justifiedGallery/dist/js/*.min.js'
-  ], {base: 'node_modules/justifiedGallery/dist'})
-    .pipe(gulp.dest('./source/lib/justified-gallery'))
-})
-
 gulp.task('lib:jQuery',function(){
   return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
     .pipe(gulp.dest('./source/lib/jquery'))
-})
-
-gulp.task('lib:clipboard',function(){
-  return gulp.src(['node_modules/clipboard/dist/clipboard.min.js'])
-    .pipe(gulp.dest('./source/lib/clipboard'))
 })
 
 gulp.task('lint:js', function() {
