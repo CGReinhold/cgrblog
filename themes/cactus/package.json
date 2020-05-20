@@ -38,7 +38,6 @@
     "stylus-supremacy": "^2.12.2"
   },
   "dependencies": {
-    "jquery": "^3.3.1",
     "vazir-font": "*"
   }
 }

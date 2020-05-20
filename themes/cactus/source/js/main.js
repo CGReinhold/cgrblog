@@ -1,100 +1,86 @@
-$(document).ready(function() {
-
-  /**
-   * Shows the responsive navigation menu on mobile.
-   */
-  $("#header > #nav > ul > .icon").click(function() {
-    $("#header > #nav > ul").toggleClass("responsive");
-  });
-
-
+function onReady() {
   /**
    * Controls the different versions of  the menu in blog post articles 
    * for Desktop, tablet and mobile.
    */
-  if ($(".post").length) {
-    var menu = $("#menu");
-    var nav = $("#menu > #nav");
-    var menuIcon = $("#menu-icon, #menu-icon-tablet");
+  if (document.getElementsByClassName("post").length) {
+    var menu = document.getElementById("menu");
+    var nav = document.getElementById("nav");
+    var menuIcon = document.querySelectorAll("#menu-icon, #menu-icon-tablet");
 
     /**
      * Display the menu on hi-res laptops and desktops.
      */
-    if ($(document).width() >= 1440) {
-      menu.css("visibility", "visible");
-      menuIcon.addClass("active");
+    if (document.body.clientWidth >= 1440) {
+      menu.style.visibility = "visible";
+      menuIcon.forEach(i => i.className = "active");
+    } else {
+      menu.style.visibility = "hidden";
     }
 
     /**
      * Display the menu if the menu icon is clicked.
      */
-    menuIcon.click(function() {
-      if (menu.css("visibility") === "hidden") {
-        menu.css("visibility", "visible");
-        menuIcon.addClass("active");
+    menuIcon.forEach(i => i.addEventListener("click", function() {
+      if (menu.style.visibility === "visible") {
+        menu.style.visibility = "hidden";
+        menuIcon.forEach(i => i.className = "");
       } else {
-        menu.css("visibility", "hidden");
-        menuIcon.removeClass("active");
+        menu.style.visibility = "visible";
+        menuIcon.forEach(i => i.className = "active");
       }
       return false;
-    });
+    }));
 
     /**
      * Add a scroll listener to the menu to hide/show the navigation links.
      */
-    if (menu.length) {
-      $(window).on("scroll", function() {
-        var topDistance = menu.offset().top;
+    if (menu) {
+      window.addEventListener("scroll", function() {
+        const getOffset = element => {
+            if (!element.getClientRects().length)
+            {
+              return { top: 0, left: 0 };
+            }
+
+            let rect = element.getBoundingClientRect();
+            let win = element.ownerDocument.defaultView;
+            return (
+            {
+              top: rect.top + win.pageYOffset,
+              left: rect.left + win.pageXOffset
+            });   
+        }
+        var topDistance = getOffset(menu).top;
 
         // hide only the navigation links on desktop
-        if (!nav.is(":visible") && topDistance < 50) {
-          nav.show();
-        } else if (nav.is(":visible") && topDistance > 100) {
-          nav.hide();
+        if (nav.style.display === "none" && topDistance < 50) {
+          nav.style.display = "";
+        } else if (nav.style.display !== "none" && topDistance > 100) {
+          nav.style.display = "none";
         }
 
         // on tablet, hide the navigation icon as well and show a "scroll to top
         // icon" instead
-        if ( ! $( "#menu-icon" ).is(":visible") && topDistance < 50 ) {
-          $("#menu-icon-tablet").show();
-          $("#top-icon-tablet").hide();
-        } else if (! $( "#menu-icon" ).is(":visible") && topDistance > 100) {
-          $("#menu-icon-tablet").hide();
-          $("#top-icon-tablet").show();
-        }
-      });
-    }
-
-    /**
-     * Show mobile navigation menu after scrolling upwards,
-     * hide it again after scrolling downwards.
-     */
-    if ($( "#footer-post").length) {
-      var lastScrollTop = 0;
-      $(window).on("scroll", function() {
-        var topDistance = $(window).scrollTop();
-
-        if (topDistance > lastScrollTop){
-          // downscroll -> show menu
-          $("#footer-post").hide();
-        } else {
-          // upscroll -> hide menu
-          $("#footer-post").show();
-        }
-        lastScrollTop = topDistance;
-
-        // close all submenu"s on scroll
-        $("#nav-footer").hide();
-        $("#toc-footer").hide();
-
-        // show a "navigation" icon when close to the top of the page, 
-        // otherwise show a "scroll to the top" icon
-        if (topDistance < 50) {
-          $("#actions-footer > #top").hide();
-        } else if (topDistance > 100) {
-          $("#actions-footer > #top").show();
+        const menuIconVisible = document.getElementById("menu-icon").offsetParent;
+        if (!menuIconVisible) {
+          if (topDistance < 50 ) {
+            document.getElementById("menu-icon-tablet").style.display = "";
+          } else {
+            document.getElementById("menu-icon-tablet").style.display = "none";
+          }
         }
       });
     }
   }
-});
+};
+
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+ready(onReady);
