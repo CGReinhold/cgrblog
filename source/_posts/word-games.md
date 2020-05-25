@@ -155,6 +155,7 @@ Um simples jogo em que o objetivo é pontuar encontrando palavras
     let maxLevelScore = 25;
 
     function addEvents() {
+        console.log("caiu aqui");
     const lettersContainer = document.getElementById('letters-container');
     lettersContainer.addEventListener('mousedown', e => {
         const selectedElement = e.target;
@@ -217,26 +218,28 @@ Um simples jogo em que o objetivo é pontuar encontrando palavras
     }
 
     function removeSelecteds() {
-    isPressed = false;
-    const selecteds = document.querySelectorAll('[pressed=true]');
-    const word = selectedLetters.map(l => l.letter).join('');
-    for (let i = 0; i < selecteds.length; i++) {
+      isPressed = false;
+      const selecteds = document.querySelectorAll('[pressed=true]');
+      const word = selectedLetters.map(l => l.letter).join('');
+      for (let i = 0; i < selecteds.length; i++) {
         selecteds[i].removeAttribute('pressed');
         if (isValidWord(word)) {
-        totalScore += word.length * 2;
-        levelScore += word.length * 2;
-        updateScoreText();
-        selecteds[i].innerText = randomLetter();
-        if (levelScore >= maxLevelScore) {
+          selecteds[i].innerText = randomLetter();
+        }
+      }
+      if (isValidWord(word)) {
+          totalScore += word.length * 2;
+          levelScore += word.length * 2;
+          updateScoreText();
+          if (levelScore >= maxLevelScore) {
             startLevel();
+          }
         }
-        }
-    }
-    selectedLetters = [];
+      selectedLetters = [];
     }
 
     function isValidWord(word) {
-    return words.includes(word);
+        return words.includes(word);
     }
 
     function randomLetter() {

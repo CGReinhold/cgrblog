@@ -215,26 +215,28 @@ date: "2020-05-25T22:00:00.169Z"
     }
 
     function removeSelecteds() {
-    isPressed = false;
-    const selecteds = document.querySelectorAll('[pressed=true]');
-    const word = selectedLetters.map(l => l.letter).join('');
-    for (let i = 0; i < selecteds.length; i++) {
+      isPressed = false;
+      const selecteds = document.querySelectorAll('[pressed=true]');
+      const word = selectedLetters.map(l => l.letter).join('');
+      for (let i = 0; i < selecteds.length; i++) {
         selecteds[i].removeAttribute('pressed');
         if (isValidWord(word)) {
-        totalScore += word.length * 2;
-        levelScore += word.length * 2;
-        updateScoreText();
-        selecteds[i].innerText = randomLetter();
-        if (levelScore >= maxLevelScore) {
+          selecteds[i].innerText = randomLetter();
+        }
+      }
+      if (isValidWord(word)) {
+          totalScore += word.length * 2;
+          levelScore += word.length * 2;
+          updateScoreText();
+          if (levelScore >= maxLevelScore) {
             startLevel();
+          }
         }
-        }
-    }
-    selectedLetters = [];
+      selectedLetters = [];
     }
 
     function isValidWord(word) {
-    return words.includes(word);
+        return words.includes(word);
     }
 
     function randomLetter() {
