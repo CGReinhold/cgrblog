@@ -155,7 +155,6 @@ Um simples jogo em que o objetivo é pontuar encontrando palavras
     let maxLevelScore = 25;
 
     function addEvents() {
-        console.log("caiu aqui");
     const lettersContainer = document.getElementById('letters-container');
     lettersContainer.addEventListener('mousedown', e => {
         const selectedElement = e.target;
