@@ -155,35 +155,49 @@ Um simples jogo em que o objetivo é pontuar encontrando palavras
     let maxLevelScore = 25;
 
     function addEvents() {
-    const lettersContainer = document.getElementById('letters-container');
-    lettersContainer.addEventListener('mousedown', e => {
+      const lettersContainer = document.getElementById('letters-container');
+      lettersContainer.addEventListener('mousedown', e => {
         const selectedElement = e.target;
         pushLetter(selectedElement);
         isPressed = true;
-    });
-    lettersContainer.addEventListener('mouseup', e => removeSelecteds());
-    lettersContainer.addEventListener('mouseleave', e => removeSelecteds());
-    const lettersDom = document.getElementsByClassName('letter');
-    for (let i = 0; i < lettersDom.length; i++) {
-        lettersDom[i].addEventListener('mouseenter', e => {
-        if (isPressed) {
-            const selectedElement = e.target;
-            const selectedIndex = selectedElement.id.replace('letter', '');
-            if (isSecondToLast(selectedIndex)) {
+      });
+      lettersContainer.addEventListener('touchstart', e => {
+        const selectedElement = e.target;
+        pushLetter(selectedElement);
+        isPressed = true;
+      });
+      lettersContainer.addEventListener('mouseup', e => removeSelecteds());
+      lettersContainer.addEventListener('touchend', e => removeSelecteds());
+      lettersContainer.addEventListener('mouseleave', e => removeSelecteds());
+      lettersContainer.addEventListener('touchmove', e => {
+        const element = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY);
+        onEnterItem({ target: element });
+      });
+      const lettersDom = document.getElementsByClassName('letter');
+      for (let i = 0; i < lettersDom.length; i++) {
+        lettersDom[i].addEventListener('mouseenter', e => onEnterItem(e));
+      }
+    }
+
+    function onEnterItem(e) {
+      if (isPressed) {
+        const selectedElement = e.target;
+        if (selectedElement.className === 'letter') {
+          const selectedIndex = selectedElement.id.replace('letter', '');
+          if (isSecondToLast(selectedIndex)) {
             const lastSelected = selectedLetters[selectedLetters.length - 1];
             selectedLetters.pop();
             document.getElementById('letter' + lastSelected.index).setAttribute('pressed', 'false');
-            } else {
+          } else {
             pushLetter(selectedElement);
-            }
+          }
         }
-        });
-    }
+      }
     }
 
     function isSecondToLast(index) {
-    return selectedLetters.length > 1 
-        && selectedLetters[selectedLetters.length - 2].index === index;
+        return selectedLetters.length > 1 
+            && selectedLetters[selectedLetters.length - 2].index === index;
     }
 
     function pushLetter(element) {
