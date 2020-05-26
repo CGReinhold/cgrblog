@@ -7,6 +7,9 @@ Um simples jogo em que o objetivo é pontuar encontrando palavras
 
 {% raw %}
 <style>
+    html, body {
+        overflow: hidden;
+    }
     .game {
         width: 400px;
         height: 400px;

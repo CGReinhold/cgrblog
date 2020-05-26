@@ -5,6 +5,9 @@ date: "2020-05-25T22:00:00.169Z"
 
 {% raw %}
 <style>
+    html, body {
+        overflow: hidden;
+    }
     .game {
         width: 400px;
         height: 400px;
