@@ -15,6 +15,14 @@ Escrevi um pouco mais sobre esse projeto [neste artigo aqui](https://cgreinhold.
 
 ![CGRCode](/images/cgrcode/cgrcode.gif)
 
+## Palavras
+
+O [Palavras](https://cgreinhold.dev/2020/05/25/word-games/) é um simples jogo WEB desenvolvido neste blog.
+
+A ideia básica do jogo é encontrar palavras dentro de uma tabela e fazer o máximo de pontos.
+
+![Palavras](/images/palavras.PNG)
+
 ## Bolão da Copa
 
 Este foi um aplicativo ([link para o repositório](https://github.com/CGReinhold/BolaoDaCopa/)) desenvolvido em __React Native__ em conjunto com o [Anderson Rissardi](https://github.com/andersonr) para apostas dos jogos da copa do mundo de 2018.
