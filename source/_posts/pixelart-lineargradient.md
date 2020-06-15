@@ -5,7 +5,7 @@ date: "2020-02-04T20:12:07.169Z"
 
 A algum tempo atrás li [esse artigo](https://css-tricks.com/fun-times-css-pixel-art/) do Geoff Graham explicando como fazer pixel art utilizando apenas CSS através da propriedade `box-shadow`. A ideia é muito legal e já possui até geradores permitem você fazer o desenho em um grid e gerar o código CSS pronto com a imagem.
 
-Recentemente estive trabalhando com `linear-gradients` no CSS e descobri que com isso também conseguimos criar desenhos pixel a pixel. A ideia por trás disso é adicionar diversos `linear-gradients` no mesmo `background-image` criando assim os pixels necessários para a imagem.
+Recentemente estive trabalhando com `linear-gradient` no CSS e descobri que com isso também conseguimos criar desenhos pixel a pixel. A ideia por trás disso é adicionar diversos `linear-gradient` no mesmo `background-image` criando assim os pixels necessários para a imagem.
 
 ## Começando
 

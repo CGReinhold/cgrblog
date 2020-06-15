@@ -260,7 +260,7 @@ Um simples jogo em que o objetivo é pontuar encontrando palavras
 
     function randomLetter() {
         const alphabet = portugueseAlphabet;
-        const randomIndex = Math.round(Math.random() * alphabet.length);
+        const randomIndex = Math.round(Math.random() * (alphabet.length - 1));
         return alphabet[randomIndex];
         }
 

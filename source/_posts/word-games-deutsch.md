@@ -258,7 +258,7 @@ date: "2020-05-25T22:00:00.169Z"
 
     function randomLetter() {
         const alphabet = deutschAlphabet;
-        const randomIndex = Math.round(Math.random() * alphabet.length);
+        const randomIndex = Math.round(Math.random() * (alphabet.length - 1));
         return alphabet[randomIndex];
         }
 
