@@ -8,7 +8,7 @@ date: "2020-06-16T22:00:00.169Z"
   <div class="mainContent">
     <div class="mainArticle">
       <div>
-        <a style="background-image: none;margin-left: 20px;" href="https://cgreinhold.dev/2020/01/11/js-seis-caracteres/"><h3>Desenvolvedor programa em Javascript com apenas seis caracteres</h3></a>
+        <a style="background-image: none;" href="https://cgreinhold.dev/2020/01/11/js-seis-caracteres/"><h3>Desenvolvedor programa em Javascript com apenas seis caracteres</h3></a>
         <p style="column-count: 2;column-gap: 25px;">
           Utilizando apenas seis caracteres é possível realizar quase qualquer programa Javascript. A ideia surgida como uma brincadeira se provou como algo complexo mas que tem seu uso. Neste artigo é apresentado um passo a passo de como começar a programar em Javascript utilizando apenas seis caracteres.
         </p>
