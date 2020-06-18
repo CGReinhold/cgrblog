@@ -5,7 +5,7 @@ date: "2020-05-19T22:00:00.169Z"
 
 É muito comum vermos pela internet a informação de que Node.js é _single threaded_, mas isso é mesmo verdade?
 
-Por mais que o _event loop_, estrutura do Node.js que aguarda os eventos e mensagens para execução, seja executado apenas em uma thread, não podemos afirmar que o node seja _single threaded_. Algumas das bibliotecas que usadas pelo node acabam utilizando mais threads do computador, já que são executadas fora do _event loop_. Veremos um pouco sobre isso neste artigo.
+Por mais que o _event loop_, estrutura do Node.js que aguarda os eventos e mensagens para execução, seja executado apenas em uma thread, não podemos afirmar que o node seja _single threaded_. Algumas das bibliotecas que são usadas pelo node acabam utilizando mais threads do computador, já que são executadas fora do _event loop_. Veremos um pouco sobre isso neste artigo.
 
 ## Exemplificando
 
@@ -87,7 +87,7 @@ Thread 4: 1134
 Thread 5: 1656
 ```
 
-Como podemos ver, o tempo total é um pouco maior para executar as cinco threads, mas conseguimos notar um padrão de 500 milisegundos para cada duas execuções.
+Como podemos ver, o tempo total é um pouco maior para executar as cinco threads, mas conseguimos notar um padrão de 500 milissegundos para cada duas execuções.
 
 Neste caso também conseguimos notar que as threads 1 e 2 são executadas antes das outras, já que são as primeiras a serem chamadas no código, em seguida a 3 e a 4 são executadas e por último a 5, confirmando nossa execução de duas threads por vez.
 
@@ -105,6 +105,6 @@ Como podemos notar, habilitando apenas uma thread do node a execução fica sequ
 
 ## Conclusão
 
-Como pudemos verificar, por mais que o _event loop_ do node seja executado em apenas um thread, não podemos arfirmar que o node seja completamente _single threaded_ já que diversas funções são executadas em multiplas threads e você consegue inclusive ajustar a quantidade de threads que deseja utilizar.
+Como pudemos verificar, por mais que o _event loop_ do node seja executado em apenas um thread, não podemos afirmar que o node seja completamente _single threaded_ já que diversas funções são executadas em múltiplas threads e você consegue inclusive ajustar a quantidade de threads que deseja utilizar.
 
 Saber disso pode ser algo muito importante em aplicações mais avançadas desenvolvidas em Node.js pois pode trazer uma grande melhoria de performance. Porém ainda é bastante importante tomar cuidado, pois com mais threads também temos mais complexidade e problemas que podemos encontrar em execuções concorrentes.
