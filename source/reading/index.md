@@ -5,6 +5,7 @@ date: 2020-06-24 08:32:21
 
 ## 2020
 
+- 06/07 - Gödel, Escher, Bach: An eternal golden braid, Douglas R. Hofstadter
 - 27/06 - O Alquimista, Paulo Coelho
 - 23/06 - Macunaíma, Mário de Andrade
 - 16/06 - The Great Gatsby, F. Scott Fitzgerald
