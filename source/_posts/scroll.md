@@ -1,6 +1,6 @@
 ---
 title: Scroll...
-date: "2020-07-14T22:00:00.169Z"
+date: "2020-07-07T22:00:00.169Z"
 ---
 
 
@@ -62,7 +62,7 @@ date: "2020-07-14T22:00:00.169Z"
   background-image: url("/images/faces.jpg");
 
   /* Set a specific height */
-  min-height: 1000px; 
+  min-height: 500px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
