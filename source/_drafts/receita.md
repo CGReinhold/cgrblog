@@ -1,6 +1,6 @@
 ---
 title: Receita de guacamole
-date: "2020-07-14T22:00:00.169Z"
+date: "2020-07-21T22:00:00.169Z"
 ---
 
 ## Ingredientes
