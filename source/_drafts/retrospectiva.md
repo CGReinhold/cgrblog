@@ -7,7 +7,7 @@ Retrospectiva do ano, sobre o que aconteceu comigo
 
 - Novo emprego
 - Posts blog
-- Livros feitos
+- Livros lidos
 - Atividades externas feitas pela primeira vez
 - COVID
 - Tecnologias aprendidas

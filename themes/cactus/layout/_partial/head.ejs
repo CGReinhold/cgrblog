@@ -3,7 +3,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Um blog criado para testar minhas ideias e compartilhar minhas práticas. Autor: Cleyson Reinhold">
     <%- open_graph({
         image:          thumbnail(page),
         fb_app_id:      theme.open_graph.fb_app_id,
@@ -39,10 +40,6 @@
     <title><%= page_title() %></title>
     <!-- styles -->
     <%- css('css/style') %>
-    <!-- persian styles -->
-    <% if (theme.direction) { %>
-      <%- css('css/rtl') %>
-    <% } %>
     <!-- rss -->
     <% if (theme.rss === '' && config.feed && config.feed.path) { %>
       <% theme.rss = config.feed.path %>
