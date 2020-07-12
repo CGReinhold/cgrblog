@@ -40,7 +40,7 @@ Você pode se achar que está criando uma risada inédita se gosta de fazer isso
     border-radius: 20;
     box-shadow: 0 3px 6px rgba(0,0,0,.275);
     cursor: pointer;
-    font-family: "Menlo", "Meslo LG", monospace;
+    font-family: "Consolas", monospace;
     font-size: 15px;
     outline: none;
   }

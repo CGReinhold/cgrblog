@@ -14,23 +14,6 @@ gulp.task('lib:clean',function(){
   return del([ './source/lib/*' ]);
 })
 
-gulp.task('lib:mesloFont', function () {
-  return download('https://github.com/andreberg/Meslo-Font/blob/master/dist/v1.2/Meslo%20LG%20v1.2.zip?raw=true')
-    .pipe(decompress({
-      filter: file => path.extname(file.path) == '.ttf',
-      strip: 1
-    }))
-    .pipe(gulp.dest('./source/lib/meslo-LG'));
-});
-
-
-gulp.task('lib:vazirFont',function(){
-  return gulp.src([
-    'node_modules/vazir-font/dist/*',
-  ], {base: 'node_modules/vazir-font/dist'})
-    .pipe(gulp.dest('./source/lib/vazir-font'))
-})
-
 gulp.task('lint:js', function() {
   return gulp.src([
     './source/js/**/*.js',
@@ -87,8 +70,7 @@ gulp.task('validate:languages', function(cb) {
   }
 });
 
-gulp.task('lib', gulp.series(
-  'lib:clean', 'lib:mesloFont', 'lib:vazirFont'));
+gulp.task('lib', gulp.series('lib:clean'));
 gulp.task('lint', gulp.parallel('lint:js', 'lint:stylus'));
 gulp.task('validate', gulp.parallel('validate:config', 'validate:languages'));
 gulp.task('default', gulp.parallel('lint', 'validate'));
