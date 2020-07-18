@@ -17,7 +17,7 @@ O HTML base que vamos utilizar é o seguinte:
   <div class="base"></div>
   <div class="pernas">
     <div class="perna"></div>
-    <div class="perna"></div>
+    <div class="perna short"></div>
   </div>
 </div>
 ```
@@ -134,7 +134,7 @@ Para concluir o layout do LED, adicionamos as perninhas do LED (que em um mundo 
   <div class="base"></div>
   <div class="pernas">
     <div class="perna"></div>
-    <div class="perna"></div>
+    <div class="perna short"></div>
   </div>
 </div>
 {% endraw %}
@@ -186,7 +186,7 @@ Abaixo coloquei o estilo para LEDs vermelhos, verdes e azuis, que podem ser test
   <div id="base" class="base red"></div>
   <div class="pernas">
     <div class="perna"></div>
-    <div class="perna"></div>
+    <div class="perna short"></div>
   </div>
 </div>
 <style>
@@ -235,6 +235,9 @@ Abaixo coloquei o estilo para LEDs vermelhos, verdes e azuis, que podem ser test
     width: 0.2em;
     background-color: gray;
     margin: 0 2em;
+  }
+  .short {
+    height: 10em;
   }
   .cores {
     margin-bottom: 100px;
