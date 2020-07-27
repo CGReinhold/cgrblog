@@ -6,6 +6,7 @@ date: "2020-07-28T22:00:00.169Z"
 {% raw %}
 <meta property="og:title" content="CGReinhold" />
 <meta property="og:description" content="Relembre como é jogar com o brick game">
+<meta property="og:image" content="/images/brick/brickgame.png"/>
 <meta name="description" content="Agora você pode finalmente relembrar como é jogar o melhor jogo de corrida já feito!">
 <div id="brick-game" class="brick-game">
     <div class="upper-part">
