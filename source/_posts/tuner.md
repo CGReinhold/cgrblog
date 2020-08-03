@@ -23,6 +23,8 @@ let loaded = false;
 let freqHistory = [];
 let textColor = "black";
 let bodyColor = "white";
+let width = 800;
+let height = 800;
 let notes = [
   { note: 'A', freq: 440 },
   { note: 'E', freq: 329.6276 },
@@ -30,13 +32,18 @@ let notes = [
   { note: 'G', freq: 391.9954 }
 ];
 function setup() {
-  const canvas = createCanvas(800, 800);
+  const computed = window.getComputedStyle(document.querySelector("body"));
+  if (computed.getPropertyValue('width').replace('px', '') < width)
+    width = computed.getPropertyValue('width').replace('px', '');
+  if (computed.getPropertyValue('height').replace('px', '') < height)
+    height = computed.getPropertyValue('height').replace('px', '') - 100;
+  const canvas = createCanvas(width, height);
   canvas.parent('tuner');
   audioContext = getAudioContext();
   mic = new p5.AudioIn();
   mic.start(listening);
-  textColor = window.getComputedStyle(document.querySelector("body")).getPropertyValue('color');
-  bodyColor = window.getComputedStyle(document.querySelector("body")).getPropertyValue('background-color');
+  textColor = computed.getPropertyValue('color');
+  bodyColor = computed.getPropertyValue('background-color');
 }
 function listening() {
   pitch = ml5.pitchDetection(
@@ -77,7 +84,7 @@ function draw() {
     let diff = recordDiff;
     stroke(textColor);
     strokeWeight(4);
-    line(400, 100, 400, 400);
+    line(width / 2, 100, width / 2, height / 2);
     noStroke();
     let col = color(255, 0, 0);
     if (abs(diff) < threshold) {
@@ -93,7 +100,7 @@ function draw() {
         const history = freqHistory[i];
         const levels = history.color.levels;
         fill(levels[0], levels[1], levels[2], alpha);
-        circle(400 + history.diff, 250, history.radius);
+        circle(width / 2 + history.diff, height / 3.5, history.radius);
     }
   } else {
     textAlign(CENTER, CENTER);
