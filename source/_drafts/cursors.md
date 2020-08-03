@@ -1,6 +1,6 @@
 ---
 title: Cursors
-date: "2020-08-18T22:00:00.169Z"
+date: "2020-08-25T22:00:00.169Z"
 ---
 
 Existem vários modelos de cursores diferentes em que é possível utilizar através do atributo `cursors` do CSS. Esse atributo permite, inclusive, adicionar imagens no lugar do cursor.

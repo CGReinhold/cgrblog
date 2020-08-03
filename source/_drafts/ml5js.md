@@ -1,21 +1,23 @@
 ---
 title: ml5.js
-date: "2020-08-04T22:00:00.169Z"
+date: "2020-08-11T22:00:00.169Z"
 ---
 
 Machine Learning tem sido uma área bastante explorada na computação nos últimos anos, mas você sabia que hoje já é possível utilizar bibliotecas de machine learning no seu navegador?
 
 ## ml5.js
 
-O [__ml5.js__](https://ml5js.org/) é uma biblioteca que busca facilitar o uso do machine learning no navegador com modelos já cadastrados e diversas funcionalidades diferentes.
+O [__ml5.js__](https://ml5js.org/) é uma biblioteca que busca facilitar o uso do machine learning no navegador com modelos já criados e diversas funcionalidades diferentes.
 
-[Neste post](https://cgreinhold.dev/2020/07/14/nose/) fiz o uso do `Posenet`, funcionalidade do __ml5.js__, para detectar a posição de alguns pontos do rosto através da camera e exibir um círculo em cima do nariz.
+[Neste post](https://cgreinhold.dev/2020/07/14/nose/) fiz o uso do `posenet`, funcionalidade do __ml5.js__, para detectar a posição de alguns pontos do rosto através da camera e exibir um círculo em cima do nariz.
 
-O interessante é que, como essa biblioteca funciona diretamente no navegador, conseguimos uní-la com outras diferentes bibliotecas, como por exemplo o [__p5.js__](https://p5js.org/), que é utilizada para criação de desenhos em `canvas` ou até mesmo processamento de imagens.
+[Neste outro post post](https://cgreinhold.dev/2020/08/04/tuner/) fiz o uso do `pitch-detection`, funcionalidade do __ml5.js__ que detecta a frequência de um som, para criar um afinador para ukuleles.
+
+O interessante é que, como essa biblioteca funciona diretamente no navegador, conseguimos uni-la com outras diferentes bibliotecas, como por exemplo o [__p5.js__](https://p5js.org/), que é utilizada para criação de desenhos em `canvas` ou até mesmo processamento de imagens.
 
 ## soundClassifier()
 
-Uma das funcionalidades do __ml5.js__ que podemos utilizar é a de [classificação de som](https://ml5js.org/reference/api-soundClassifier/), onde o machine learning é utilizado para detectar comandos de voz.
+Outra das funcionalidades do __ml5.js__ que podemos utilizar é a de [classificação de som](https://ml5js.org/reference/api-soundClassifier/), onde o machine learning é utilizado para detectar comandos de voz.
 
 Esta funcionalidade utiliza um modelo padrão que consegue detectar alguns poucos comandos (todo em inglês), como: `zero`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `right`, `left`, `up`, `down`, `yes`, `no`, `go` e `stop`. A biblioteca permite que você adicione um novo modelo, podendo criar um que esteja de acordo com as suas necessidades.
 

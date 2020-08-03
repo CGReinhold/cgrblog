@@ -195,18 +195,27 @@ Abaixo coloquei o estilo para LEDs vermelhos, verdes e azuis, que podem ser test
 <style>
   .red-light {
     box-shadow: 0px 0px 75px 10px rgb(255,0,0);
+    animation-name: red-luminosity;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
   }
   .red {
     background-image: linear-gradient(to top right, rgba(255, 50, 50, 0.5) 20%, rgba(255, 50, 50, 0.3) 60%, rgba(255, 50, 50, 0.2)) !important;
   }
   .green-light {
     box-shadow: 0px 0px 75px 10px rgb(0,255,0);
+    animation-name: green-luminosity;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
   }
   .green {
     background-image: linear-gradient(to top right, rgba(50, 255, 50, 0.5) 20%, rgba(50, 255, 50, 0.3) 60%, rgba(50, 255, 50, 0.2)) !important;
   }
   .blue-light {
     box-shadow: 0px 0px 75px 10px rgb(0,0,255);
+    animation-name: blue-luminosity;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
   }
   .blue {
     background-image: linear-gradient(to top right, rgba(50, 50, 255, 0.5) 20%, rgba(50, 50, 255, 0.3) 60%, rgba(50, 50, 255, 0.2)) !important;
@@ -247,6 +256,45 @@ Abaixo coloquei o estilo para LEDs vermelhos, verdes e azuis, que podem ser test
     display: flex;
     justify-content: space-between;
     align-self: stretch;
+  }
+  @keyframes red-luminosity {
+    0% { box-shadow: 0px 0px 75px 10px rgb(255,0,0); }
+    10% { box-shadow: 0px 0px 100px 10px rgb(255,0,0); }
+    20% { box-shadow: 0px 0px 50px 10px rgb(255,0,0); }
+    30% { box-shadow: 0px 0px 120px 10px rgb(255,0,0); }
+    40% { box-shadow: 0px 0px 105px 10px rgb(255,0,0); }
+    50% { box-shadow: 0px 0px 90px 10px rgb(255,0,0); }
+    60% { box-shadow: 0px 0px 80px 10px rgb(255,0,0); }
+    70% { box-shadow: 0px 0px 70px 10px rgb(255,0,0); }
+    80% { box-shadow: 0px 0px 90px 10px rgb(255,0,0); }
+    90% { box-shadow: 0px 0px 98px 10px rgb(255,0,0); }
+    100% { box-shadow: 0px 0px 85px 10px rgb(255,0,0); }
+  }
+  @keyframes green-luminosity {
+    0% { box-shadow: 0px 0px 75px 10px rgb(0,255,0); }
+    10% { box-shadow: 0px 0px 100px 10px rgb(0,255,0); }
+    20% { box-shadow: 0px 0px 50px 10px rgb(0,255,0); }
+    30% { box-shadow: 0px 0px 120px 10px rgb(0,255,0); }
+    40% { box-shadow: 0px 0px 105px 10px rgb(0,255,0); }
+    50% { box-shadow: 0px 0px 90px 10px rgb(0,255,0); }
+    60% { box-shadow: 0px 0px 80px 10px rgb(0,255,0); }
+    70% { box-shadow: 0px 0px 70px 10px rgb(0,255,0); }
+    80% { box-shadow: 0px 0px 90px 10px rgb(0,255,0); }
+    90% { box-shadow: 0px 0px 98px 10px rgb(0,255,0); }
+    100% { box-shadow: 0px 0px 85px 10px rgb(0,255,0); }
+  }
+  @keyframes blue-luminosity {
+    0% { box-shadow: 0px 0px 75px 10px rgb(0,0,255); }
+    10% { box-shadow: 0px 0px 100px 10px rgb(0,0,255); }
+    20% { box-shadow: 0px 0px 50px 10px rgb(0,0,255); }
+    30% { box-shadow: 0px 0px 120px 10px rgb(0,0,255); }
+    40% { box-shadow: 0px 0px 105px 10px rgb(0,0,255); }
+    50% { box-shadow: 0px 0px 90px 10px rgb(0,0,255); }
+    60% { box-shadow: 0px 0px 80px 10px rgb(0,0,255); }
+    70% { box-shadow: 0px 0px 70px 10px rgb(0,0,255); }
+    80% { box-shadow: 0px 0px 90px 10px rgb(0,0,255); }
+    90% { box-shadow: 0px 0px 98px 10px rgb(0,0,255); }
+    100% { box-shadow: 0px 0px 85px 10px rgb(0,0,255); }
   }
 </style>
 <script>
