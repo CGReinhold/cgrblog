@@ -9,7 +9,7 @@ Machine Learning tem sido uma área bastante explorada na computação nos últi
 
 O [__ml5.js__](https://ml5js.org/) é uma biblioteca que busca facilitar o uso do machine learning no navegador com modelos já criados e diversas funcionalidades diferentes.
 
-[Neste post](https://cgreinhold.dev/2020/07/14/nose/) fiz o uso do `posenet`, funcionalidade do __ml5.js__, para detectar a posição de alguns pontos do rosto através da camera e exibir um círculo em cima do nariz.
+[Neste post](https://cgreinhold.dev/2020/07/14/nose/) fiz o uso do `posenet`, funcionalidade do __ml5.js__, para detectar a posição de alguns pontos do rosto através da câmera e exibir um círculo em cima do nariz. Este foi só um teste para conhecer a ferramenta, mas a biblioteca permite também encontrar pontos dos braços e pernas por exemplo.
 
 [Neste outro post post](https://cgreinhold.dev/2020/08/04/tuner/) fiz o uso do `pitch-detection`, funcionalidade do __ml5.js__ que detecta a frequência de um som, para criar um afinador para ukuleles.
 
@@ -19,7 +19,7 @@ O interessante é que, como essa biblioteca funciona diretamente no navegador, c
 
 Outra das funcionalidades do __ml5.js__ que podemos utilizar é a de [classificação de som](https://ml5js.org/reference/api-soundClassifier/), onde o machine learning é utilizado para detectar comandos de voz.
 
-Esta funcionalidade utiliza um modelo padrão que consegue detectar alguns poucos comandos (todo em inglês), como: `zero`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `right`, `left`, `up`, `down`, `yes`, `no`, `go` e `stop`. A biblioteca permite que você adicione um novo modelo, podendo criar um que esteja de acordo com as suas necessidades.
+Esta funcionalidade utiliza um modelo padrão que consegue detectar alguns poucos comandos (todos em inglês), como: `zero`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `right`, `left`, `up`, `down`, `yes`, `no`, `go` e `stop`. A biblioteca permite ainda que você adicione novos modelos, podendo treinar e adicionar um que esteja de acordo com as suas necessidades.
 
 Habilitando o microfone você pode ver esta biblioteca em funcionamento. Quando carregado, será apresentado na tela a última palavra que foi detectada, assim como o percentual de confiança da biblioteca.
 
@@ -54,7 +54,11 @@ function setup() {
   soundClassifier.classify(gotResults);
 }
 function gotResults(error, results) {
-  resultP.html(`${results[0].label}: ${(results[0].confidence * 100).toFixed(2)}%`);
+  if (error) {
+    resultP.html("Não foi possível carregar o soundClassifier()");
+  } else {
+    resultP.html(`${results[0].label}: ${(results[0].confidence * 100).toFixed(2)}%`);
+  }
 }
 </script>
 {% endraw %}
