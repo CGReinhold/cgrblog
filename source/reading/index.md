@@ -5,6 +5,7 @@ date: 2020-06-24 08:32:21
 
 ## 2020
 
+- 10/08 - O Cortiço, Aluísio de Azevedo
 - 27/07 - Curto-circuito, Laura Carvalho
 - 13/07 - A Hora da Estrela, Clarice Lispector
 - 07/07 - Fahrenheit 451, Ray Bradbury
