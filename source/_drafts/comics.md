@@ -1,17 +1,9 @@
 ---
 title: Quadrinhos
-date: "2020-08-25T22:00:00.169Z"
+date: "2020-09-01T22:00:00.169Z"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend scelerisque mi, eu laoreet lectus aliquam at. Maecenas dolor magna, pellentesque eu urna et, tempor rutrum est. Donec eget varius lorem. Aliquam pretium, ligula nec molestie vestibulum, nulla dolor faucibus est, scelerisque convallis mauris enim et tortor. Etiam vitae ultrices risus. Aenean vel diam non enim ultrices ultrices. Fusce quis odio vitae risus faucibus tempor. Maecenas non egestas lacus, vel aliquam eros. Integer ultricies tempus cursus. Proin vestibulum, urna quis iaculis molestie, ex est laoreet dolor, et suscipit odio justo et metus. Nulla tincidunt urna vel tellus pharetra ultricies. Nulla tristique metus sollicitudin tortor iaculis eleifend. Aenean auctor justo ac nibh condimentum, laoreet tempus tortor consequat. Integer a nunc felis. Sed eget tristique mauris.
-
-Vivamus et eleifend mauris, sed vestibulum dolor. Duis suscipit, augue ac auctor iaculis, risus quam pretium neque, nec vestibulum sem turpis quis libero. Cras sit amet felis odio. Vestibulum pretium mattis eros, in iaculis mi viverra sit amet. Praesent sapien enim, mollis sit amet ante eu, facilisis tincidunt sem. Ut commodo magna diam, eu consectetur felis ullamcorper a. Aenean in tempor dolor. Pellentesque sodales commodo sem, sit amet vulputate nisl vehicula sed. Vestibulum ac lacinia eros. Suspendisse at ante maximus, maximus ex in, euismod nulla. Integer molestie et sem condimentum varius. Donec pretium dapibus feugiat. Maecenas placerat, libero vel scelerisque vulputate, neque orci ornare velit, ac malesuada turpis diam in massa. In ac dictum quam. Vestibulum ut leo a orci blandit dignissim in vitae eros. Praesent mattis euismod erat nec pretium.
-
-Donec aliquam tincidunt suscipit. Proin mi eros, auctor sit amet dolor ut, dapibus iaculis neque. Nulla mollis lectus in odio pulvinar mollis. Phasellus eget justo sollicitudin, rutrum nunc ac, vehicula nulla. Ut rutrum, magna et lobortis imperdiet, dolor nisi gravida libero, ut volutpat orci orci sit amet dui. Nunc faucibus lacus nec varius mollis. Sed et faucibus purus. Sed hendrerit felis quis bibendum sollicitudin. Morbi accumsan fermentum elit, et pulvinar lorem gravida nec.
-
-Ut ac sapien laoreet, laoreet sapien nec, laoreet risus. Aenean tempor at nisl vitae faucibus. Ut tellus elit, ullamcorper nec leo sit amet, aliquam porta felis. Aliquam a elementum purus, nec malesuada tortor. Cras maximus arcu tortor, et tincidunt justo laoreet at. Pellentesque dictum in enim sed fringilla. Ut vestibulum tincidunt dolor, vel tincidunt felis. Maecenas fermentum tortor ut eros semper, quis consectetur dui fringilla.
-
-Mauris sit amet metus orci. Nunc semper enim sit amet massa pellentesque, sit amet faucibus orci laoreet. Pellentesque tincidunt aliquet leo eu iaculis. Integer id pulvinar nunc. Quisque nec nunc bibendum, bibendum orci vitae, imperdiet purus. Cras at eros non ex tincidunt mollis vel sit amet sapien. Aliquam in orci quam. Phasellus sit amet condimentum diam, in mollis metus. Donec rhoncus gravida mauris id porttitor. 
+Esta página é apenas um teste de estilo para uma página. Você pode ver como esse estilo afeta alguém abaixo.
 
 {%raw%}
 <style>
@@ -44,6 +36,7 @@ header {
 }
 article .content {
   padding: 0 15px;
+  text-align: center;
 }
 .py4 {
   padding-bottom: 8rem;
@@ -74,4 +67,32 @@ article .content {
   }
 }
 </style>
+<div id="camera"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+<script>
+let capture;
+function setup() { 
+  const canvas = createCanvas(550, 400);
+  canvas.parent('camera');
+  capture = createCapture(VIDEO);
+  capture.size(550, 400);
+  capture.hide();
+}
+function draw() { 
+  background(0);
+  capture.loadPixels();
+  let stepSize = 4;
+  for (let x = 0; x < capture.width; x += stepSize) {
+    for (let y = 0; y < capture.height; y += stepSize) {
+      let index = ((y*capture.width) + x) * 4;
+      let redVal = capture.pixels[index];
+      let greenVal = capture.pixels[index + 1];
+      let blueVal = capture.pixels[index + 2];
+      fill(redVal, blueVal, greenVal); //yes, inverted
+      circle(x, y, stepSize);
+    }
+  }
+}
+</script>
 {%endraw%}

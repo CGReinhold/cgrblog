@@ -1,17 +1,39 @@
 ---
 title: Algoritmos que eu não sabia que queria conhecer
-date: "2020-09-08T22:00:00.169Z"
+date: "2020-09-15T22:00:00.169Z"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend scelerisque mi, eu laoreet lectus aliquam at. Maecenas dolor magna, pellentesque eu urna et, tempor rutrum est. Donec eget varius lorem. Aliquam pretium, ligula nec molestie vestibulum, nulla dolor faucibus est, scelerisque convallis mauris enim et tortor. Etiam vitae ultrices risus. Aenean vel diam non enim ultrices ultrices. Fusce quis odio vitae risus faucibus tempor. Maecenas non egestas lacus, vel aliquam eros. Integer ultricies tempus cursus. Proin vestibulum, urna quis iaculis molestie, ex est laoreet dolor, et suscipit odio justo et metus. Nulla tincidunt urna vel tellus pharetra ultricies. Nulla tristique metus sollicitudin tortor iaculis eleifend. Aenean auctor justo ac nibh condimentum, laoreet tempus tortor consequat. Integer a nunc felis. Sed eget tristique mauris.
+Desde que comecei a assistir os vídeos do [Coding Train](https://thecodingtrain.com/) tenho conhecido diversos algoritmos que nunca havia ouvido anteriormente, mas que achei bastante legais. Em seus vídeos, Daniel Shiffman aplica a maioria destes algoritmos a um canvas, gerando imagens um tnato quanto interessantes.
 
-Vivamus et eleifend mauris, sed vestibulum dolor. Duis suscipit, augue ac auctor iaculis, risus quam pretium neque, nec vestibulum sem turpis quis libero. Cras sit amet felis odio. Vestibulum pretium mattis eros, in iaculis mi viverra sit amet. Praesent sapien enim, mollis sit amet ante eu, facilisis tincidunt sem. Ut commodo magna diam, eu consectetur felis ullamcorper a. Aenean in tempor dolor. Pellentesque sodales commodo sem, sit amet vulputate nisl vehicula sed. Vestibulum ac lacinia eros. Suspendisse at ante maximus, maximus ex in, euismod nulla. Integer molestie et sem condimentum varius. Donec pretium dapibus feugiat. Maecenas placerat, libero vel scelerisque vulputate, neque orci ornare velit, ac malesuada turpis diam in massa. In ac dictum quam. Vestibulum ut leo a orci blandit dignissim in vitae eros. Praesent mattis euismod erat nec pretium.
+Selecionei alguns dos algoritmos de seus vídeos para descrever rapidamente aqui.
 
-Donec aliquam tincidunt suscipit. Proin mi eros, auctor sit amet dolor ut, dapibus iaculis neque. Nulla mollis lectus in odio pulvinar mollis. Phasellus eget justo sollicitudin, rutrum nunc ac, vehicula nulla. Ut rutrum, magna et lobortis imperdiet, dolor nisi gravida libero, ut volutpat orci orci sit amet dui. Nunc faucibus lacus nec varius mollis. Sed et faucibus purus. Sed hendrerit felis quis bibendum sollicitudin. Morbi accumsan fermentum elit, et pulvinar lorem gravida nec.
+## Perlin Noise
 
-Ut ac sapien laoreet, laoreet sapien nec, laoreet risus. Aenean tempor at nisl vitae faucibus. Ut tellus elit, ullamcorper nec leo sit amet, aliquam porta felis. Aliquam a elementum purus, nec malesuada tortor. Cras maximus arcu tortor, et tincidunt justo laoreet at. Pellentesque dictum in enim sed fringilla. Ut vestibulum tincidunt dolor, vel tincidunt felis. Maecenas fermentum tortor ut eros semper, quis consectetur dui fringilla.
+Perlin Noise é um algoritmo utilizado para geração de ruídos. Ele se diferencia da geração de ruídos aleatórios pois busca fazer isso de forma mais suave, podendo ser utilizado para gerações de elementos visuais mais realista.
 
-Mauris sit amet metus orci. Nunc semper enim sit amet massa pellentesque, sit amet faucibus orci laoreet. Pellentesque tincidunt aliquet leo eu iaculis. Integer id pulvinar nunc. Quisque nec nunc bibendum, bibendum orci vitae, imperdiet purus. Cras at eros non ex tincidunt mollis vel sit amet sapien. Aliquam in orci quam. Phasellus sit amet condimentum diam, in mollis metus. Donec rhoncus gravida mauris id porttitor. 
+Alguns dos vídeos que apresentam exemplos desse algoritmo são o [Flow Field](https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html) e o [Polar Loops](https://thecodingtrain.com/CodingChallenges/136.1-polar-perlin-noise-loops.html)
+
+No background deste artigo utilizo um exemplo do Perlin Noise com a implementação do **Flow Field**
+
+## Marching Squares
+
+Um outro algoritmo divertido para aplicação em geraçãode campos procedurais é o [Marching Squares](https://thecodingtrain.com/challenges/coding-in-the-cabana/005-marching-squares.html). Este algoritmo é utilizado para criação de contornos em campos 2D, que podem ser bastante utilizados em criação de terrenos em jogos.
+
+No vídeo do Daniel Shiffman, ele faz uma implementação do Marching Squares utilizando em conjunto com o perlin noise gerando imagens que você pode ver no gif abaixo.
+
+![Marching Squares](/images/fluid/marchingSquares.gif)
+
+## Ray Casting
+
+Este já é um algoritmo um pouco mais conhecido e bastante utilizado na indústria de jogos. O objetivo dele é conseguir encontrar os pontos de colisão de raios saídos de um objeto. Este algoritmo é a base da exibição de iluminações em jogos 3D. No gif abaixo você pode ver um exemplo deste algoritmo em execução.
+
+![Ray Casting](/images/fluid/rayCasting.gif)
+
+Este algoritmo é melhor explicado [neste tutorial](https://thecodingtrain.com/CodingChallenges/145-2d-ray-casting.html) do Daniel Shiffman.
+
+## Conclusão
+
+A diversão dos algoritmos apresentados é que todos podem ser utilizados para geração de imagens, ou até mesmo no desenvolvimento de jogos. Algumas recomendações legais caso você deseje continuar a estudar outros algoritmos são os tutoriais de [simulação de fluidos](https://thecodingtrain.com/CodingChallenges/132-fluid-simulation.html) e [simulação de fogo](https://thecodingtrain.com/CodingChallenges/103-fire-effect.html).
 
 
 {% raw %}

@@ -3,9 +3,11 @@ title: Aprendendo Javascript com Raul Seixas
 date: "2020-08-25T22:00:00.169Z"
 ---
 
-O Javascript é uma das linguagens de programação mais utilizadas nos dias de hoje, movido pelo fato de ser fácil de aprender e estar presente em todos os navegadores modernos. Além disso, o Javascript tem tido nos últimos anos um grande papel também no desenvolvimento desktop e mobile, com bibliotecas como `Node.js`, `React Native` e `Electron`.
+O Javascript é uma das linguagens de programação mais utilizadas nos dias de hoje, movido principalmente pelo fato de ser fácil de aprender e estar presente em todos os navegadores modernos. Além disso, o Javascript tem tido nos últimos anos um grande papel também no desenvolvimento desktop e mobile, com bibliotecas como `Node.js`, `React Native` e `Electron`.
 
-Apesar de ser fácil de aprender e dar muita liberadade para o desenvolvimento, alguns conceitos do Javascript acabam sendo um pouco obscuros, principalmente por desenvolvedores que vem de outras linguagens de programação. Por conta disso, decidi trazer alguns conceitos básicos da linguagem e também conceitos comumente usados no desenvolvimento que podem (talvez) ser mais facilmente explicados com músicas de Raul Seixas.
+Apesar de ser fácil de aprender e dar muita liberadade para o desenvolvimento, alguns conceitos do Javascript acabam sendo um pouco obscuros, principalmente para desenvolvedores que vem de outras linguagens de programação. Por conta disso, decidi trazer alguns conceitos básicos da linguagem e também conceitos comumente usados no desenvolvimento que podem (talvez) ser mais facilmente explicados com músicas de Raul Seixas.
+
+![Raul](/images/raul/raul.png)
 
 ## Tipagem dinâmica
 
@@ -79,7 +81,7 @@ console.log("Pessoa:", pessoa);
 
 ```
 
-As referências porém não funcionam para outros tipos como de `texto`, `números` ou `booleanos`. Vejamos no código abaixo como podemos verificar as referências em ação.
+As referências porém não funcionam para outros tipos como de `texto`, `números` ou `booleanos`. Vejamos no código abaixo como podemos verificar em ação o que acontece quando passamos um parâmetro de texto ao invés de objeto.
 
 ```js
 function limparTexto(texto) {
@@ -98,7 +100,7 @@ console.log("Nome:", nome);
 
 Para evitar efeitos colaterais vindos de alteração de objetos por referência, métodos imutáveis tem sido muito recomendados nos últimos tempos. Métodos imutáveis são métodos que retornam uma nova instância do objeto/lista que foi passada como argumento de uma função. 
 
-Isso garante que o original não tenha sido alterado, enquanto a informação alterada pode ser verificada no retorno do método. Como o Raul menciona na música __O Trem das Sete__, sua função retornará um objeto que já não é mais o mesmo passado por argumento.
+Estes métodos devem garantir que o objeto original não seja alterado, enquanto a informação alterada pode ser verificada em seu retorno. Como o Raul menciona na música __O Trem das Sete__, sua função retornará um objeto que já não é mais o mesmo passado por argumento.
 
 Vejamos no exemplo abaixo:
 
@@ -113,6 +115,8 @@ console.log("Pessoa:", pessoa);
 console.log("Nova pessoa:", novaPessoa);
 // Pessoa: Object { nome: "Raul" }
 // Nova pessoa: Object { nome: "" }
+console.log("É a mesma pessoa?", pessoa === novaPessoa)
+// É a mesma pessoa? false
 ```
 
 Funções imutáveis são bastante utilizadas para listas do Javascript. O próprio `Array` nativo possui métodos imutáveis, como o `map`, `find`, `filter` e `reduce`.
@@ -122,3 +126,12 @@ Funções imutáveis são bastante utilizadas para listas do Javascript. O próp
 Apesar de simples de aprender, o Javascript está em constante mudança, como uma __Metamorfose ambulante__, com novas versões do ECMAScript (especificação de linguagem em que o Javascript se baseia) sendo liberadas quase anualmente.
 
 Com isso, a linguagem acaba ganhando um pouco mais de complexidade e demandando um pouco mais de estudo. Mas não tenha medo disso achando que as novas funcionalidades como `spreading` ou `async/await` vão te tornar um __Maluco Beleza__. Quando algum conceito ainda estiver um pouco obscuro, __Tente Outra Vez__, com certeza você conseguirá compreender.
+
+{%raw%}
+<style>
+img {
+    animation: spin 4s linear infinite;
+}
+@keyframes spin { 50% { transform: scale(0.7) rotate(180deg); } 100% { transform: scale(1) rotate(360deg); } }
+</style>
+{%endraw%}
