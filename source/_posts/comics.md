@@ -3,7 +3,7 @@ title: Quadrinhos
 date: "2020-09-01T22:00:00.169Z"
 ---
 
-Esta página é apenas um teste de estilo para uma página. Você pode ver como esse estilo afeta alguém abaixo.
+Isto não é um artigo. É apenas um teste de estilo para uma página. Você pode verificar abaixo como alguém reage a esta página.
 
 {%raw%}
 <style>
@@ -40,6 +40,9 @@ article .content {
 }
 .py4 {
   padding-bottom: 8rem;
+}
+#footer {
+  justify-content: center !important;
 }
 .footer-right {
   border: 4px solid black;
