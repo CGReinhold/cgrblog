@@ -3,7 +3,7 @@ title: Cursors
 date: "2020-09-22T22:00:00.169Z"
 ---
 
-Existem vários modelos de cursores diferentes em que é possível utilizar através do atributo `cursors` do CSS. Os mais comuns de vermos são os {%raw%}<code style="cursor:default">default</code><span>, </span><code style="cursor:pointer">pointer</code><span>, </span><code style="cursor:crosshair">crosshair</code><span>, </span><code style="cursor:no-drop">no-drop</code><span> e </span><code style="cursor:none">none</code>{%endraw%}. ALém disso, esse atributo permite também, adicionar {%raw%}<span class="image-cursor">imagens no lugar do cursor</span>{%endraw%}.
+Existem vários modelos de cursores diferentes em que é possível utilizar através do atributo `cursors` do CSS. Os mais comuns de vermos são os {%raw%}<code style="cursor:default">default</code><span>, </span><code style="cursor:pointer">pointer</code><span>, </span><code style="cursor:crosshair">crosshair</code><span>, </span><code style="cursor:no-drop">no-drop</code><span> e </span><code style="cursor:none">none</code>{%endraw%}. ALém disso, esse atributo permite também, adicionar {%raw%}<code class="image-cursor">imagens no lugar do cursor</code>{%endraw%}.
 
 Apesar disso, não é possível adicionar _GIFs_ ou vídeos no lugar do cursor, limitando apenas a imagens estáticas.
 

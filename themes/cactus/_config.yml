@@ -15,6 +15,38 @@ nav:
   projects: /projects/
   reading: /reading/
 
+projects:
+  - cgrcode:
+    name: CGRCode
+    description: Uma alternativa ao famoso QRCode
+    image: /images/cgrcode/cgrcode.gif
+    url: https://cgreinhold.dev/2020/05/07/cgrcode/
+  - palavras:
+    name: Palavras
+    description: Faça pontos encontrando palavras nesse pequeno jogo
+    image: /images/palavras.PNG
+    url: https://cgreinhold.dev/2020/05/25/word-games/
+  - bolao:
+    name: Bolão da copa
+    description: Aplicativo de apostas da Copa do Mundo 2018
+    image: /images/bolaoDaCopa.PNG
+    url: https://github.com/CGReinhold/BolaoDaCopa/
+  - brick:
+    name: Brick game
+    description: Relembre o antigo brick game em sua versão web
+    image: /images/brick/brickgame2.png
+    url: https://cgreinhold.dev/2020/07/28/brick/
+  - clippy:
+    name: Clippy
+    description: Reviva a assistente clippy em seu computador
+    image: /images/clippy.gif
+    url: https://cgreinhold.dev/2019/08/25/clippy-revival/
+  - wsdion:
+    name: WSDion
+    description: Aplicação utilizada nos tempos de faculdade para verificar notas
+    image: /images/wsdion.gif
+    url: https://github.com/CGReinhold/WSDion
+
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);

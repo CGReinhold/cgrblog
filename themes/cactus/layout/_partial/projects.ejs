@@ -1,0 +1,11 @@
+<div class="project-grid">
+  <% for (var i = 0; i < theme.projects.length; i++) { %> 
+    <div class="project-item">
+      <a href="<%= theme.projects[i].url %>">
+        <img alt="<%= theme.projects[i].name %>" src="<%= theme.projects[i].image %>" />
+        <span class="project-title"><%= theme.projects[i].name %></span>
+        <span class="project-description"><%= theme.projects[i].description %></span>
+      </a>
+    </div>
+  <% } %>
+</div>

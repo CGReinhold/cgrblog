@@ -3,6 +3,8 @@
   <div class="content" itemprop="articleBody">
       <% if (page.type === "search") { %>
         <%- partial('_partial/search') %>
+      <% } else if (page.type === "projects") { %>
+        <%- partial('_partial/projects') %>  
       <% } else { %>
         <%- page.content %>
       <% } %>
