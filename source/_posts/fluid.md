@@ -3,7 +3,7 @@ title: Algoritmos que eu não sabia que queria conhecer
 date: "2020-09-15T22:00:00.169Z"
 ---
 
-Desde que comecei a assistir os vídeos do [Coding Train](https://thecodingtrain.com/) tenho conhecido diversos algoritmos que nunca havia ouvido anteriormente, mas que achei bastante legais. Em seus vídeos, Daniel Shiffman aplica a maioria destes algoritmos a um canvas, gerando imagens um tnato quanto interessantes.
+Desde que comecei a assistir os vídeos do [Coding Train](https://thecodingtrain.com/) tenho conhecido diversos algoritmos que nunca havia ouvido anteriormente, mas que me chamaram bastante a atenção por serem divertidos de implementar. Em seus vídeos, Daniel Shiffman aplica a maioria destes algoritmos a um canvas, gerando imagens um tanto quanto interessantes.
 
 Selecionei alguns dos algoritmos de seus vídeos para descrever rapidamente aqui.
 
@@ -13,11 +13,11 @@ Perlin Noise é um algoritmo utilizado para geração de ruídos. Ele se diferen
 
 Alguns dos vídeos que apresentam exemplos desse algoritmo são o [Flow Field](https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html) e o [Polar Loops](https://thecodingtrain.com/CodingChallenges/136.1-polar-perlin-noise-loops.html)
 
-No background deste artigo utilizo um exemplo do Perlin Noise com a implementação do **Flow Field**
+No background deste artigo faço uma implementação do **Flow Field**, que utiliza bastante o conceito do Perlin Noise para criar os caminhos das linhas.
 
 ## Marching Squares
 
-Um outro algoritmo divertido para aplicação em geraçãode campos procedurais é o [Marching Squares](https://thecodingtrain.com/challenges/coding-in-the-cabana/005-marching-squares.html). Este algoritmo é utilizado para criação de contornos em campos 2D, que podem ser bastante utilizados em criação de terrenos em jogos.
+Um outro algoritmo divertido para aplicação em geração de campos procedurais é o [Marching Squares](https://thecodingtrain.com/challenges/coding-in-the-cabana/005-marching-squares.html). Este algoritmo é utilizado para criação de contornos em campos 2D, que podem ser bastante utilizados em criação de terrenos em jogos.
 
 No vídeo do Daniel Shiffman, ele faz uma implementação do Marching Squares utilizando em conjunto com o perlin noise gerando imagens que você pode ver no gif abaixo.
 
@@ -29,15 +29,22 @@ Este já é um algoritmo um pouco mais conhecido e bastante utilizado na indúst
 
 ![Ray Casting](/images/fluid/rayCasting.gif)
 
-Este algoritmo é melhor explicado [neste tutorial](https://thecodingtrain.com/CodingChallenges/145-2d-ray-casting.html) do Daniel Shiffman.
+Este algoritmo é explicado mais profundamente [neste tutorial](https://thecodingtrain.com/CodingChallenges/145-2d-ray-casting.html) do Daniel Shiffman.
 
 ## Conclusão
 
-A diversão dos algoritmos apresentados é que todos podem ser utilizados para geração de imagens, ou até mesmo no desenvolvimento de jogos. Algumas recomendações legais caso você deseje continuar a estudar outros algoritmos são os tutoriais de [simulação de fluidos](https://thecodingtrain.com/CodingChallenges/132-fluid-simulation.html) e [simulação de fogo](https://thecodingtrain.com/CodingChallenges/103-fire-effect.html).
+A diversão dos algoritmos que descrevi brevemente aqui é que todos podem ser utilizados para geração de imagens, podendo ser utilizado para criação de arte generativa, ou até mesmo no desenvolvimento de jogos.
 
+Algumas recomendações legais caso você deseje continuar a estudar outros algoritmos são os tutoriais de [simulação de fluidos](https://thecodingtrain.com/CodingChallenges/132-fluid-simulation.html) e [simulação de fogo](https://thecodingtrain.com/CodingChallenges/103-fire-effect.html).
 
 {% raw %}
 <style>
+a {
+  font-weight: bold;
+}
+code, h2, a {
+  color: #c9cacc !important;
+}
 #parent {
   position: fixed;
   top: 0;

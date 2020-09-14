@@ -5,6 +5,8 @@ date: 2020-06-24 08:32:21
 
 ## 2020
 
+- 14/09 - Exploring CQRS and Event Sourcing: Fernando Simonazzi, Dominic Betts, Grigori Melnik, Mani Subramanian, Julián Domínguez
+- 09/09 - Dom Casmurro, Machado de Assis
 - 30/08 - Test Driven Development: By Example, Kent Beck
 - 29/08 - The Catcher in the Rye, J. D. Salinger
 - 10/08 - O Cortiço, Aluísio de Azevedo

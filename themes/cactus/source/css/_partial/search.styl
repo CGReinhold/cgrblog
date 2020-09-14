@@ -6,20 +6,12 @@
   border-radius: 5px
   background-color: $color-background
   color: $color-text
-  @media (prefers-color-scheme: dark) {
-    border: solid 1px #cccccc
-    background-color: #1d1f21
-    color: #c9cacc
-  }
   font-size: 1.2rem
   -webkit-border-radius: 5px
   -moz-border-radius: 5px
 
   &:focus
     border: solid 1px $color-accent-1
-    @media (prefers-color-scheme: dark) {
-      border: solid 1px #2bbc8a
-    }
 
 #search-result
   ul.search-result-list
@@ -32,9 +24,6 @@
   a.search-result-title
     background-image: none
     color: $color-text
-    @media (prefers-color-scheme: dark) {
-      color: #c9cacc
-    }
     text-transform: capitalize
     font-weight: bold
     line-height: 1.2
@@ -49,16 +38,9 @@
   em.search-keyword
     border-bottom: 1px dashed $color-link
     color: $color-link
-    @media (prefers-color-scheme: dark) {
-      border-bottom: 1px dashed rgba(212, 128, 170, 1)
-      color: rgba(212, 128, 170, 1)
-    }
     font-weight: bold
 
 .search-no-result
   display: none
   padding-bottom: .5em
   color: $color-text
-  @media (prefers-color-scheme: dark) {
-    color: #c9cacc
-  }

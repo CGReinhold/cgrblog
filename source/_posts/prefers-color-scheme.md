@@ -5,7 +5,7 @@ date: "2020-06-02T22:00:00.169Z"
 
 Você já usou o [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), a _feature_ do CSS que permite você identificar qual o tema da máquina do usuário que acessa o seu site?
 
-Como é uma _feature_ recente, ainda pode não ser suportada em alguns navegadores, mas é algo muito legal para configurar seu site com temas escuros ou claros dependendo nas preferências do usuário. Se você utiliza tema escuro na sua máquina já deve ter percebido que este blog mudou, já que passei a utilizar esse novo estilo. E isso tudo apenas com CSS, de forma simple e fácil.
+Como é uma _feature_ recente, ainda pode não ser suportada em alguns navegadores, mas é algo muito legal para configurar seu site com temas escuros ou claros dependendo nas preferências do usuário. Se você utiliza tema escuro na sua máquina já deve ter percebido que este post está um pouco diferente, já que passei a utilizar esse novo estilo. E isso tudo apenas com CSS, de forma simple e fácil.
 
 ## Mas, como funciona?
 
@@ -47,3 +47,17 @@ E com isso você pode deixar sua criatividade te levar. Você pode não só muda
 ```
 
 Agora é só por em prática e deixar o seu site de acordo com as preferências de quem usa.
+
+{%raw%}
+<style>
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1d1f21;
+    color: #c9cacc;
+  }
+  code, h2 {
+    color: #c9cacc !important;
+  }
+}
+</style>
+{%endraw%}
