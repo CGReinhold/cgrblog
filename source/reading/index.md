@@ -5,6 +5,7 @@ date: 2020-06-24 08:32:21
 
 ## 2020
 
+- __15/09 - Volta ao mundo em 80 dias, Jules Verne__
 - 14/09 - Exploring CQRS and Event Sourcing: Fernando Simonazzi, Dominic Betts, Grigori Melnik, Mani Subramanian, Julián Domínguez
 - 09/09 - Dom Casmurro, Machado de Assis
 - 30/08 - Test Driven Development: By Example, Kent Beck
