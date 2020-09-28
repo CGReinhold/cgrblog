@@ -3,7 +3,7 @@ title: Super Octagon
 date: "2020-09-29T22:00:00.169Z"
 ---
 
-Um clone fajuto do jogo [**SUPER HEXAGON**](https://superhexagon.com/)
+Um clone fajuto do jogo [**SUPER HEXAGON**](https://superhexagon.com/). Infelizmente não suportado em dispositivos touch.
 
 {% raw %}
 <div id="parent"></div>
@@ -141,7 +141,6 @@ class Background {
     this.a = a;
   }
   setColor(c) {
-    console.log(c.levels)
     this.c = color(c.levels[0], c.levels[1], c.levels[2], 90);
   }
   show() {
