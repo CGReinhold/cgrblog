@@ -1,6 +1,6 @@
 ---
 title: Morse
-date: "2020-10-13T22:00:00.169Z"
+date: "2020-10-20T22:00:00.169Z"
 ---
 
 A implementação abaixo é uma proposta de aplicativo para comunicação utilizando código morse. A mensagem que é enviada por um usuário é apresentada ao outro como código morse.
