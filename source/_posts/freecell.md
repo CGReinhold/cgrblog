@@ -9,7 +9,7 @@ Com a flexibilidade do **Node.js** conseguimos criar quase qualquer coisa, inclu
 
 Usando caracteres unicode, a biblioteca permite a criação de caixas, e textos coloridos utilizando estilos bastante familiares ao CSS
 
-Inspirado [neste Solitaire](https://github.com/zephraph/solitaire), que permite você jogar o famoso jogo **Paciência** direto no seu prompt de comando, desenvolvi o [Freecell](https://github.com/CGReinhold/freecell), um jogo de cartas que o Windows costuma disponibilizar em seu sistema operacional.
+Inspirado [neste Solitaire](https://github.com/zephraph/solitaire), que permite você jogar o famoso jogo **Paciência** direto no seu prompt de comando, desenvolvi o Freecell ([você pode encontrar o código fonte aqui](https://github.com/CGReinhold/freecell)), um jogo de cartas que o Windows costuma disponibilizar em seu sistema operacional.
 
 Para jogar basta ter o **Node.js** instalado e executar no prompt de comando o seguinte:
 
