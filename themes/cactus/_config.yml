@@ -33,6 +33,11 @@ projects:
     description: Aplicativo de apostas da Copa do Mundo 2018
     image: /images/bolaoDaCopa.PNG
     url: https://github.com/CGReinhold/BolaoDaCopa/
+  - bolao:
+    name: Freecell
+    description: Freecell para CLI construído com React
+    image: /images/cards/freecell.gif
+    url: https://cgreinhold.dev/2020/10/12/freecell/
   - brick:
     name: Brick game
     description: Relembre o antigo brick game em sua versão web
