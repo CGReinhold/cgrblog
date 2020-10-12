@@ -11,7 +11,7 @@ Usando caracteres unicode, a biblioteca permite a criação de caixas, e textos 
 
 Inspirado [neste Solitaire](https://github.com/zephraph/solitaire), que permite você jogar o famoso jogo **Paciência** direto no seu prompt de comando, desenvolvi o [Freecell](https://github.com/CGReinhold/freecell), um jogo de cartas que o Windows costuma disponibilizar em seu sistema operacional.
 
-Para jogar basta executar o seguinte comando caso você tenha o **Node.js** instalado:
+Para jogar basta ter o **Node.js** instalado e executar no prompt de comando o seguinte:
 
 ```
 npx freecell
