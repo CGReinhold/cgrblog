@@ -404,6 +404,10 @@ function morseVibrate(morseMessage) {
 }
 function runMorse(morseMessage, morseType) {
   const morseChars = morseMessage.split('');
+  if (morseInterval) {
+    clearInterval(morseInterval);
+    morseInterval = null;
+  }
   if (!morseInterval) {
     morseInterval = setInterval(() => {
       if (morseChars.length) {
