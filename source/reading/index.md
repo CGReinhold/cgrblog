@@ -5,6 +5,7 @@ date: 2020-06-24 08:32:21
 
 ## 2020
 
+- __22/10 - Frankenstein, Mary Shelley__
 - 11/10 - Pride and Prejudice, Jane Austen
 - __15/09 - Volta ao mundo em 80 dias, Jules Verne__
 - 14/09 - Exploring CQRS and Event Sourcing: Fernando Simonazzi, Dominic Betts, Grigori Melnik, Mani Subramanian, Julián Domínguez

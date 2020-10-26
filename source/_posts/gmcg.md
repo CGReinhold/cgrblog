@@ -1,10 +1,22 @@
 ---
 title: Gol, Motoca, Caminhão Game
-date: "2020-10-27T22:00:00.169Z"
+date: "2020-10-26T22:00:00.169Z"
 ---
 
+Este "jogo" é uma implementação fajuta e desinteressante de uma ideia do [João Carvalho](https://twitter.com/assimdisseojoao) no podcast Lektronik. Apenas emojis foram utilizados para a arte deste "jogo", o que acabou deixando-o ainda menos elegante.
+
+O "jogo" consistem em três partes:
+
+- __Gol__: Nesta parte o seu objetivo é fazer o gol da partida de futebol. Basta clicar na `barra de espaço` para fazer o gol, não tem segredo.
+- __Motoca__: Nesta parte do "jogo" você pode relaxar após a partida de futebol pilotando a sua motoca. Você pode utilizar as setas para cima e para baixo para pilotá-la. Não tem problema se acabar atropelando algo.
+- __Caminhão__: Na última etapa, você deve voltar ao trabalho e pegar todas as caixas para o caminhão. Colete todas as caixas com as setas do teclado para conseguir finalizar o "jogo".
+
+Neste "jogo" a única coisa que você perde é o seu tempo.
+
+Para manter a simplicidade do "jogo" (por preguiça mesmo), não é possível jogá-lo com dispositivos touch caso você não tenha um teclado. 
+
 {%raw%}
-<div id="gmcg"></div>
+<div id="gmcg" style="position: relative"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
 <script>
@@ -20,7 +32,7 @@ function setup() {
   canvas.parent('gmcg');
   button = createButton('Iniciar jogo');
   button.parent('gmcg');
-  button.position(width / 2 - 500, height / 2 - 500);
+  button.position(width / 2 - 50000, height / 2 - 50000);
   ballInitialX = width / 2;
   ballInitialY = height / 2 + 150;
 }
@@ -61,8 +73,12 @@ function splashAnimation() {
     }, 1000)
   }, 1000)
 }
-function keyPressed() {
+function keyPressed(e) {
+  if (keyCode === UP_ARROW || keyCode === DOWN_ARROW || keyCode === RIGHT_ARROW || keyCode === LEFT_ARROW) {
+    e.preventDefault();
+  }
   if (key === ' ') {
+    e.preventDefault();
     if (showGol) {
       let xToHit = golArrowX;
       let yToHit = height / 2;
@@ -113,7 +129,7 @@ function renderMenu() {
 }
 function onIniciar() {
   showMenu = false;
-  button.position(width / 2 - 500, height / 2 - 500);
+  button.position(width / 2 - 50000, height / 2 - 50000);
   showGol = true;
 }
 /////////
