@@ -1,6 +1,6 @@
 ---
 title: Caça palavras
-date: "2020-11-20T22:00:00.169Z"
+date: "2020-11-10T22:00:00.169Z"
 ---
 
 Existem algumas palavras que para qualquer um que está aprendendo inglês, ou até mesmo para quem já tem níveis avançados, é um grande desafio conseguir escrever corretamente. Podemos ver isso nitidamente com as palavars `tough`, `though`, `thought`, `through`, `thorough` e `throughout`.
