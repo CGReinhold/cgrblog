@@ -41,6 +41,7 @@ Palavras encontradas:
   font-weight: bold;
   cursor: pointer;
   user-select: none;
+  display: inline-block;
 }
 .letter::selection {
   background-color: transparent;
@@ -87,6 +88,15 @@ const generateMaze = () => {
 
 const renderMaze = () => {
   const div = document.getElementById('words');
+  div.addEventListener('touchmove', (e) => {
+    const element = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY);
+    const values = element.getAttribute('position').split('-');
+    e.preventDefault();
+    if (startSelection) {
+      currentSelection = { x: Number(values[0]), y: Number(values[1]) };
+      updateMaze();
+    }
+  });
   div.innerHTML = '';
   for (let i = 0; i < mazeSize; i++) {
     const row = document.createElement('div');
@@ -94,14 +104,19 @@ const renderMaze = () => {
     div.appendChild(row);
     for (let j = 0; j < mazeSize; j++) {
       const mazeItem = wordMaze[i][j];
-      const span = document.createElement('span');
+      const span = document.createElement('div');
       span.id = mazeItem.word;
+      span.setAttribute('position', i + '-' + j)
       span.className = 'letter';
       if (mazeItem.isWord) {
         span.className += ' isWord';
       }
       span.innerText = mazeItem.letter;
       span.addEventListener('mousedown', () => startSelection = { x: i, y: j });
+      span.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        startSelection = { x: i, y: j }
+      });
       span.addEventListener('mousemove', () => {
         if (startSelection) {
           currentSelection = { x: i, y: j };
@@ -109,6 +124,12 @@ const renderMaze = () => {
         }
       });
       span.addEventListener('mouseup', () => { 
+        startSelection = null;
+        currentSelection = null;
+        updateMaze();
+      });
+      span.addEventListener('touchend', (e) => { 
+        e.preventDefault();
         startSelection = null;
         currentSelection = null;
         updateMaze();
@@ -240,7 +261,6 @@ const getWordPosition = (word, direction) => {
     y = !direction ? getRandomInt(24 - word.length) : getRandomInt(24);
     returnX = x;
     returnY = y;
-    console.log(word, returnX, returnY)
     for (let j = 0; j < word.length; j++) {
       if (wordMaze[x][y].isWord && wordMaze[x][y].letter !== word[j]) {
         isValid = false;
