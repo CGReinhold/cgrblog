@@ -262,7 +262,7 @@ const getWordPosition = (word, direction) => {
     returnX = x;
     returnY = y;
     for (let j = 0; j < word.length; j++) {
-      if (wordMaze[x][y].isWord && wordMaze[x][y].letter !== word[j]) {
+      if (wordMaze[x][y].isWord) {
         isValid = false;
         break;
       }
