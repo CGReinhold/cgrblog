@@ -1,9 +1,9 @@
 ---
 title: Sound Wave
-date: "2020-12-08T22:00:00.169Z"
+date: "2020-11-17T22:00:00.169Z"
 ---
 
-O código abaixo executa uma onda sonora apresentando um círculo apresentado a amplitude corrente. Este código foi criado utilizando a biblioteca `p5.js` Você pode copiar este texto e testar no [editor online](https://editor.p5js.org/) do `p5.js`.
+O código abaixo executa uma onda sonora apresentando um círculo apresentado a amplitude corrente. Este código foi criado utilizando a biblioteca `p5.js` Você pode copiá-lo e testar no [editor online](https://editor.p5js.org/) do `p5.js`.
 
 ```js
                                      let o;function                                                                          setup(){createCanvas

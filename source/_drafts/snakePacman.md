@@ -1,6 +1,6 @@
 ---
 title: Pac-snake
-date: "2020-12-01T22:00:00.169Z"
+date: "2020-11-24T22:00:00.169Z"
 ---
 
 Uma mistura dos jogos `Pacman` e `Snake`

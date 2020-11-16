@@ -5,6 +5,8 @@ date: 2020-06-24 08:32:21
 
 ## 2020
 
+- 16/11 - Patterns of Enterprise Application Architecture, Martin Fowler
+- __14/11 - Ioga para quem não está nem aí, Geoff Dyer__
 - __22/10 - Frankenstein, Mary Shelley__
 - 11/10 - Pride and Prejudice, Jane Austen
 - __15/09 - Volta ao mundo em 80 dias, Jules Verne__
