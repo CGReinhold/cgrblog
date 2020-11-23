@@ -20,7 +20,7 @@ Palavras encontradas:
 <li><strong>throughout</strong><span id="throughout" class="not-found">×</span</li>
 </ul>
 <p>
-  <input id="show-answer" onclick="showAnswer()" type="checkbox"/><span>Mostrar resposta</span>
+  <input id="show-answer" onclick="showAnswer()" type="checkbox"/><label for="show-answer">Mostrar resposta</span>
 </p>
 
 <div id="words" style="white-space:nowrap;"></div>

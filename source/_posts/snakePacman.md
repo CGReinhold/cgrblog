@@ -6,7 +6,35 @@ date: "2020-11-24T22:00:00.169Z"
 Uma mistura dos jogos `Pacman` e `Snake`
 
 {%raw%}
+<style>
+#game {
+  margin: auto;
+}
+.commands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.commands button {
+  margin: 5px;
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
+  background-color: black;
+  color: rgb(92, 91, 254);
+  border: 1px double rgb(92, 91, 254);
+}
+</style>
 <div id="game"></div>
+<div class="commands">
+  <div><button onclick="moveSnake(38)">🠕</button></div>
+  <div>
+    <button onclick="moveSnake(37)">🠔</button>
+    <button onclick="moveSnake(40)">🠗</button>
+    <button onclick="moveSnake(39)">➞</button>
+  </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.dom.min.js"></script>
 
@@ -75,16 +103,20 @@ function draw() {
 }
 
 function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
+  moveSnake(keyCode);
+}
+
+function moveSnake(direction) {
+  if (direction === LEFT_ARROW) {
     if (dir === 'RIGHT') return;
     dir = 'LEFT';
-  } else if (keyCode === RIGHT_ARROW) {
+  } else if (direction === RIGHT_ARROW) {
     if (dir === 'LEFT') return;
     dir = 'RIGHT';
-  } else if (keyCode === UP_ARROW) {
+  } else if (direction === UP_ARROW) {
     if (dir === 'DOWN') return;
     dir = 'UP';
-  } else if (keyCode === DOWN_ARROW) {
+  } else if (direction === DOWN_ARROW) {
     if (dir === 'UP') return;
     dir = 'DOWN';
   }
