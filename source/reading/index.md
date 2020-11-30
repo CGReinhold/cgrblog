@@ -5,6 +5,7 @@ date: 2020-06-24 08:32:21
 
 ## 2020
 
+- __26/11 - The Cafe on the Edge of the World, John Strelecky__
 - 21/11 - Mitos Gregos, Nathaniel Hawthorne
 - 16/11 - Patterns of Enterprise Application Architecture, Martin Fowler
 - __14/11 - Ioga para quem não está nem aí, Geoff Dyer__
