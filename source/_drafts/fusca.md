@@ -9,7 +9,7 @@ O problema é que esse Fusca não acende a luz e não se mexe. Como sabemos que 
 
 ## O Fusca
 
-
+Abaixo você pode ver como está o Fusca. Não tem muita emoção, pois ele está desligado e parado, mas isso é o que vamos mudar.
 
 {%raw%}
 
@@ -124,6 +124,425 @@ O problema é que esse Fusca não acende a luz e não se mexe. Como sabemos que 
   </div>
 </div>
 
+{% endraw %}
+
+## Acendendo as luzes
+
+O primeiro passo para ligarmos o Fusca é acender as luzes. O que é uma tarefa simples para a maioria dos carros, pode não ser tão trivial para um Fusca.
+
+Para isso, vamos utilizar uma mistura das propriedades CSS `box-shadow` e `background`. Primeiro encontramos quais seletores CSS descrevem os faróis do carro, que são `.base .whole .bug .bug__headlight` e `.base .whole .bug .bug__taillight`.
+
+Podemos adicionar então uma nova classe a eles, com a nossa iluminação:
+
+```css
+.base .whole .bug .bug__headlight.lights-on,
+.base .whole .bug .bug__taillight.lights-on {
+  box-shadow: 0px 0px 75px 18px rgb(255,255,0);
+}
+
+.base .whole .bug .bug__headlight.lights-on {
+  background: rgb(200,200,0);
+}
+```
+
+Desta forma, temos um Fusca já iluminado:
+
+{%raw%}
+
+<div class="base">
+  <div class="whole">
+    <div class="bug">
+      <div class="bug__whole__shadow"></div>
+      <div class="bug__tire__shadow__ground"></div>
+      <div class="bug__tire__shadow__ground"></div>
+      <div class="bug__tire__shadow"></div>
+      <div class="bug__tire__shadow"></div>
+      <div class="bug__ex"></div>
+      <div class="bug__handle__back"></div>
+      <div class="bug__body__w"></div>
+      <div class="bug__body__f">
+        <div class="bug__body__hood"></div>
+        <div class="bug__body__hood2"></div>
+      </div>
+      <div class="bug__body__b__back">
+        <div class="engineroom">
+          <div class="engine__lines">
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+          </div>
+        </div>
+        <div class="window__back__w">
+          <div class="window__back__w__inner"></div>
+        </div>
+      </div>
+      <div class="bug__body__b__top">
+        <div class="window__f">
+          <div class="window__f__inner"></div>
+          <div class="window__f__h__inner"></div>
+          <div class="window__f__stick"></div>
+          <div class="window__f__stick"></div>
+          <div class="window__f__headrest"></div>
+          <div class="window__f__headrest__stick"></div>
+          <div class="window__f__headrest__btm"></div>
+          <div class="window__f__handle"></div>
+        </div>
+        <div class="window__f__h"></div>
+        <div class="window__b">
+          <div class="window__b__inner"></div>
+          <div class="window__b__seat"></div>
+        </div>
+      </div>
+      <div class="bug__longline"></div>
+      <div class="bug__door__line__back"></div>
+      <div class="bug__door">
+        <div class="bug__door__line__right"></div>
+        <div class="bug__door__line__left__btm"></div>
+        <div class="bug__door__line__left__top"></div>
+        <div class="bug__door__box"></div>
+        <div class="bug__door__box"></div>
+      </div>
+      <div class="bug__step__shadow"></div>
+      <div class="bug__headlight lights-on"></div>
+      <div class="bug__fender__f">
+        <div class="bug__fender__shadow"></div>
+      </div>
+      <div class="bug__fender__b">
+        <div class="bug__fender__shadow"></div>
+        <div class="bug__fender__shadow__box">
+          <div class="bug__fender__shadow__cir"></div>
+        </div>
+      </div>
+      <div class="bug__taillight lights-on"></div>
+      <div class="bug__fender__bb">
+        <div class="bug__fender__shadow"></div>
+        <div class="bug__fender__shadow__box">
+          <div class="bug__fender__shadow__cir"></div>
+        </div>
+      </div>
+      <div class="bug__fender__fb">
+        <div class="bug__fender__shadow"></div>
+        <div class="bug__fender__shadow__box">
+          <div class="bug__fender__shadow__cir"></div>
+        </div>
+      </div>
+      <div class="bug__handle">
+        <div class="bug__handle__shadow"></div>
+        <div class="bug__handle__handle"></div>
+      </div>
+      <div class="bug__tire">
+        <div class="bug__tire__white">
+          <div class="bug__tire__blue">
+            <div class="bug__tire__blue__dots"></div>
+            <div class="bug__tire__wheel">
+              <div class="bug__tire__wheel__logo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bug__tire">
+        <div class="bug__tire__white">
+          <div class="bug__tire__blue">
+            <div class="bug__tire__blue__dots"></div>
+            <div class="bug__tire__wheel">
+              <div class="bug__tire__wheel__logo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bug__step"> </div>
+      <div class="bug__bumper__back"></div>
+      <div class="bug__bumper__front"></div>
+    </div>
+  </div>
+</div>
+
+{%endraw%}
+
+## Girando as rodas
+
+Ok, agora que já temos as luzer acesas, precisamos nos preocupar em fazer o carro andar. Vamos primeiro ativar as rodas dele, que podem ser encontrados com o seletor `bug__tire`.
+
+Para fazermos as rodas girar, vamos utilizar o `animation`, com um `transform`. Veja abaixo como podemos fazer isso:
+
+```css
+.base .whole .bug .bug__tire.turn-wheels {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform: rotate(-360deg); } }
+```
+
+Pronto! Desta forma já temos as rodas girando.
+
+{%raw%}
+
+<div class="base">
+  <div class="whole">
+    <div class="bug">
+      <div class="bug__whole__shadow"></div>
+      <div class="bug__tire__shadow__ground"></div>
+      <div class="bug__tire__shadow__ground"></div>
+      <div class="bug__tire__shadow"></div>
+      <div class="bug__tire__shadow"></div>
+      <div class="bug__ex"></div>
+      <div class="bug__handle__back"></div>
+      <div class="bug__body__w"></div>
+      <div class="bug__body__f">
+        <div class="bug__body__hood"></div>
+        <div class="bug__body__hood2"></div>
+      </div>
+      <div class="bug__body__b__back">
+        <div class="engineroom">
+          <div class="engine__lines">
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+          </div>
+        </div>
+        <div class="window__back__w">
+          <div class="window__back__w__inner"></div>
+        </div>
+      </div>
+      <div class="bug__body__b__top">
+        <div class="window__f">
+          <div class="window__f__inner"></div>
+          <div class="window__f__h__inner"></div>
+          <div class="window__f__stick"></div>
+          <div class="window__f__stick"></div>
+          <div class="window__f__headrest"></div>
+          <div class="window__f__headrest__stick"></div>
+          <div class="window__f__headrest__btm"></div>
+          <div class="window__f__handle"></div>
+        </div>
+        <div class="window__f__h"></div>
+        <div class="window__b">
+          <div class="window__b__inner"></div>
+          <div class="window__b__seat"></div>
+        </div>
+      </div>
+      <div class="bug__longline"></div>
+      <div class="bug__door__line__back"></div>
+      <div class="bug__door">
+        <div class="bug__door__line__right"></div>
+        <div class="bug__door__line__left__btm"></div>
+        <div class="bug__door__line__left__top"></div>
+        <div class="bug__door__box"></div>
+        <div class="bug__door__box"></div>
+      </div>
+      <div class="bug__step__shadow"></div>
+      <div class="bug__headlight  lights-on"></div>
+      <div class="bug__fender__f">
+        <div class="bug__fender__shadow"></div>
+      </div>
+      <div class="bug__fender__b">
+        <div class="bug__fender__shadow"></div>
+        <div class="bug__fender__shadow__box">
+          <div class="bug__fender__shadow__cir"></div>
+        </div>
+      </div>
+      <div class="bug__taillight  lights-on"></div>
+      <div class="bug__fender__bb">
+        <div class="bug__fender__shadow"></div>
+        <div class="bug__fender__shadow__box">
+          <div class="bug__fender__shadow__cir"></div>
+        </div>
+      </div>
+      <div class="bug__fender__fb">
+        <div class="bug__fender__shadow"></div>
+        <div class="bug__fender__shadow__box">
+          <div class="bug__fender__shadow__cir"></div>
+        </div>
+      </div>
+      <div class="bug__handle">
+        <div class="bug__handle__shadow"></div>
+        <div class="bug__handle__handle"></div>
+      </div>
+      <div class="bug__tire turn-wheels">
+        <div class="bug__tire__white">
+          <div class="bug__tire__blue">
+            <div class="bug__tire__blue__dots"></div>
+            <div class="bug__tire__wheel">
+              <div class="bug__tire__wheel__logo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bug__tire turn-wheels">
+        <div class="bug__tire__white">
+          <div class="bug__tire__blue">
+            <div class="bug__tire__blue__dots"></div>
+            <div class="bug__tire__wheel">
+              <div class="bug__tire__wheel__logo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bug__step"> </div>
+      <div class="bug__bumper__back"></div>
+      <div class="bug__bumper__front"></div>
+    </div>
+  </div>
+</div>
+
+{%endraw%}
+
+## Movendo o carro
+
+Agora só precisamos fazer o carro de fato mover.
+
+Começamos essa etapa criando variáveis CSS para calcular os cantos direto e esquero da tela. O Fusca já tem uma variável para sua largura, o que facilita nosso trabalho:
+
+```css
+:root {
+  --size: 60;
+  --unit: calc((var(--size) / 800) * 1vmin);
+  --left: calc(100vw / 2 * -1 - calc(800 * var(--unit)) / 2);
+  --right: calc(100vw - calc(800 * var(--unit)) / 2 + 120px);
+}
+```
+
+Sim, o CSS permite você criar variáveis e fazer cálculos (por incrível que pareça). Com as variáveis `--left` e `--right` criadas, podemos utilizá-las na animação de nosso Fusca, iniciando-o na direita e movendo para a esquerda.
+
+```css
+.base .whole .bug.move {
+  margin-top: 50px;
+  transform: translateX(var(--right));
+  animation: drive 10s linear infinite;
+}
+
+@keyframes drive { 100% { transform: translateX(var(--left)); }}
+```
+
+{%raw%}
+
+<div class="base">
+  <div class="whole">
+    <div class="bug move">
+      <div class="bug__whole__shadow"></div>
+      <div class="bug__tire__shadow__ground"></div>
+      <div class="bug__tire__shadow__ground"></div>
+      <div class="bug__tire__shadow"></div>
+      <div class="bug__tire__shadow"></div>
+      <div class="bug__ex"></div>
+      <div class="bug__handle__back"></div>
+      <div class="bug__body__w"></div>
+      <div class="bug__body__f">
+        <div class="bug__body__hood"></div>
+        <div class="bug__body__hood2"></div>
+      </div>
+      <div class="bug__body__b__back">
+        <div class="engineroom">
+          <div class="engine__lines">
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+            <div class="engine__line"></div>
+          </div>
+        </div>
+        <div class="window__back__w">
+          <div class="window__back__w__inner"></div>
+        </div>
+      </div>
+      <div class="bug__body__b__top">
+        <div class="window__f">
+          <div class="window__f__inner"></div>
+          <div class="window__f__h__inner"></div>
+          <div class="window__f__stick"></div>
+          <div class="window__f__stick"></div>
+          <div class="window__f__headrest"></div>
+          <div class="window__f__headrest__stick"></div>
+          <div class="window__f__headrest__btm"></div>
+          <div class="window__f__handle"></div>
+        </div>
+        <div class="window__f__h"></div>
+        <div class="window__b">
+          <div class="window__b__inner"></div>
+          <div class="window__b__seat"></div>
+        </div>
+      </div>
+      <div class="bug__longline"></div>
+      <div class="bug__door__line__back"></div>
+      <div class="bug__door">
+        <div class="bug__door__line__right"></div>
+        <div class="bug__door__line__left__btm"></div>
+        <div class="bug__door__line__left__top"></div>
+        <div class="bug__door__box"></div>
+        <div class="bug__door__box"></div>
+      </div>
+      <div class="bug__step__shadow"></div>
+      <div class="bug__headlight  lights-on"></div>
+      <div class="bug__fender__f">
+        <div class="bug__fender__shadow"></div>
+      </div>
+      <div class="bug__fender__b">
+        <div class="bug__fender__shadow"></div>
+        <div class="bug__fender__shadow__box">
+          <div class="bug__fender__shadow__cir"></div>
+        </div>
+      </div>
+      <div class="bug__taillight  lights-on"></div>
+      <div class="bug__fender__bb">
+        <div class="bug__fender__shadow"></div>
+        <div class="bug__fender__shadow__box">
+          <div class="bug__fender__shadow__cir"></div>
+        </div>
+      </div>
+      <div class="bug__fender__fb">
+        <div class="bug__fender__shadow"></div>
+        <div class="bug__fender__shadow__box">
+          <div class="bug__fender__shadow__cir"></div>
+        </div>
+      </div>
+      <div class="bug__handle">
+        <div class="bug__handle__shadow"></div>
+        <div class="bug__handle__handle"></div>
+      </div>
+      <div class="bug__tire turn-wheels">
+        <div class="bug__tire__white">
+          <div class="bug__tire__blue">
+            <div class="bug__tire__blue__dots"></div>
+            <div class="bug__tire__wheel">
+              <div class="bug__tire__wheel__logo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bug__tire turn-wheels">
+        <div class="bug__tire__white">
+          <div class="bug__tire__blue">
+            <div class="bug__tire__blue__dots"></div>
+            <div class="bug__tire__wheel">
+              <div class="bug__tire__wheel__logo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bug__step"> </div>
+      <div class="bug__bumper__back"></div>
+      <div class="bug__bumper__front"></div>
+    </div>
+  </div>
+</div>
+
+{%endraw%}
+
+## Conclusão
+
+E pronto, temos um Fusca em pleno funcionamento. Essa é só uma brincadeira utilizando um **Codepen** encontrado pela internet, mas é uma ótima forma de práticar o entendimento do código de outras pessoas, além de praticar o seu conhecimento na tecnologia.
+
+Se você acha que o CSS ainda é um ponto fraco seu, experimente também alterar projetos e outras pessoas e adicionar novas funcionalidades. Você verá que irá aprender muito com isso.
+
+{%raw%}
+
 <style>
 :root {
   --size: 60;
@@ -136,6 +555,7 @@ O problema é que esse Fusca não acende a luz e não se mexe. Como sabemos que 
   width: calc(800 * var(--unit));
   height: calc(350 * var(--unit));
   position: relative;
+  margin: 45px auto;
 }
 .base .whole .bug__tire__shadow__ground {
   position: absolute;
@@ -828,21 +1248,21 @@ O problema é que esse Fusca não acende a luz e não se mexe. Como sabemos que 
   border-radius: 20%;
   box-shadow: 1px -3px 2px 1px #6d929a inset;
 }
-.base .whole .bug .bug__tire {
+.base .whole .bug .bug__tire.turn-wheels {
   animation: spin 4s linear infinite;
 }
 @keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
 
-.base .whole .bug .bug__headlight,
-.base .whole .bug .bug__taillight {
+.base .whole .bug .bug__headlight.lights-on,
+.base .whole .bug .bug__taillight.lights-on {
   box-shadow: 0px 0px 75px 18px rgb(255,255,0);
 }
 
-.base .whole .bug .bug__headlight {
+.base .whole .bug .bug__headlight.lights-on {
   background: rgb(200,200,0);
 }
 
-.base .whole .bug {
+.base .whole .bug.move {
   margin-top: 50px;
   transform: translateX(var(--right));
   animation: drive 10s linear infinite;
