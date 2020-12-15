@@ -264,7 +264,7 @@ Desta forma, temos um Fusca já iluminado:
 
 ## Girando as rodas
 
-Ok, agora que já temos as luzer acesas, precisamos nos preocupar em fazer o carro andar. Vamos primeiro ativar as rodas dele, que podem ser encontrados com o seletor `bug__tire`.
+Ok, agora que já temos as luzes acesas, precisamos nos preocupar em fazer o carro andar. Vamos primeiro ativar as rodas dele, que podem ser encontrados com o seletor `bug__tire`.
 
 Para fazermos as rodas girar, vamos utilizar o `animation`, com um `transform`. Veja abaixo como podemos fazer isso:
 

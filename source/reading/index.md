@@ -5,6 +5,7 @@ date: 2020-06-24 08:32:21
 
 ## 2020
 
+- __10/12 - The Art of Computer Designing: a black and white approach, Osamu Sato__
 - __06/12 - The Kangaroo Chronicles, Marc-Uwe Kling__
 - __26/11 - The Cafe on the Edge of the World, John Strelecky__
 - 21/11 - Mitos Gregos, Nathaniel Hawthorne
