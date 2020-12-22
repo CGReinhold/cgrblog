@@ -294,6 +294,10 @@ O [Neal Agarwal](https://neal.fun/) também é um _creative coder_ com vários p
 
 [Nicky Case](https://ncase.me/) também possui diversos projetos interativos que você pode jogar direto no navegador. Seus projetos geralmente possuem temas mais profundos ou que possuem um cenário científico explicando os temas de forma simple e as vezes até engraçada. Minha recomendação é o [Evolution of trust](https://ncase.me/trust/) que é um guia interativo sobre a __teoria dos jogos__ e como confiamos um nos outros.
 
+## Bartosz Ciechanowski
+
+O [Bartosz Ciechanowski](https://ciechanow.ski/) possui um arquivo incrível de artigos interativos. Os artigos vão desde explicando como funcionam câmeras e lentes até a lógica de refração de luzes e como as cores são compostas. Vale muito a pena gastar um tempo lendo cada um de seus artigos.
+
 ## Uses this
 
 O [Uses this](https://usesthis.com/) é um blog com uma pegada mais diferente. A ideia deste site é entrevistar desenvolvedores e artistas para conhecer um pouco sobre o _hardware_ e _software_ utilizado por eles. O projeto é muito interessante e aqui conseguimos ver como trabalham os criadores de muitos softwares que utilizamos hoje em dia.
