@@ -3,6 +3,10 @@ title: Leitura
 date: 2020-06-24 08:32:21
 ---
 
+## 2021
+
+- 09/01 - Life of Pi, Yann Martel
+
 ## 2020
 
 - __10/12 - The Art of Computer Designing: a black and white approach, Osamu Sato__
