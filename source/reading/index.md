@@ -5,6 +5,7 @@ date: 2020-06-24 08:32:21
 
 ## 2021
 
+- 13/01 - Vidas Secas, Graciliano Ramos
 - 09/01 - Life of Pi, Yann Martel
 
 ## 2020
