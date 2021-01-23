@@ -55,7 +55,7 @@ let label;
 let input;
 
 function preload() {
-  font = loadFont('http://localhost:4000/font/AvenirNextLTPro-Demi.otf');
+  font = loadFont('https://cgreinhold.dev/font/AvenirNextLTPro-Demi.otf');
 }
 
 function setup() {
