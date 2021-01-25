@@ -62,6 +62,7 @@ p:after {
   padding-right: 20px;
   padding-left: 20px;
   margin-top: 10px;
+  z-index: 200;
 }
 #footer {
   padding-right: 40px;

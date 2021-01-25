@@ -91,6 +91,19 @@ body
   h6
     a:hover
       underline(6px, $color-link)
+  
+  .navigation
+    margin-top: 20px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%
+
+    a
+      text-decoration: underline;
+      font-size: 14px;
+      color: #666;
 
 @media (min-width: 540px)
   .image-wrap
@@ -132,7 +145,6 @@ body
 @import "_partial/comments"
 @import "_partial/footer"
 @import "_partial/pagination"
-@import "_partial/search"
 @import "_partial/tags"
 @import "_partial/tooltip"
 @import "_partial/categories"

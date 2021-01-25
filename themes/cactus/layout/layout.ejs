@@ -2,17 +2,24 @@
 <html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
 <%- partial('_partial/head') %>
 <body class="max-width mx-auto px3">
-    <% if (is_post()) { %>
-      <%- partial('_partial/post/actions_desktop') %>
-    <% } %>
     <div class="content index py4">
         <% if (!is_post()) { %>
           <%- partial('_partial/header') %>
         <% } %>
         <%- body %>
+        <% if (is_post()) { %>
+          <div class="navigation">
+            <% if (page.prev) { %>
+              <a class="icon" href="<%- url_for(page.prev.path) %>"><%= __('post.desktop.previous') %></a>
+              <% } %>
+              <div></div>
+            <% if (page.next) { %>
+              <a class="icon" href="<%- url_for(page.next.path) %>"><%= __('post.desktop.next') %></a>
+            <% } %>
+          </div>
+        <% } %>
         <%- partial('_partial/footer') %>
     </div>
     <%- partial('_partial/styles') %>
-    <%- partial('_partial/scripts') %>
 </body>
 </html>
