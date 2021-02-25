@@ -51,7 +51,7 @@ const languages = [
   ['{nome}, você aqui?', 'Achei que você já tinha encontrado seu caminho.', 'Com essa idade você com certeza já foi escolhido para uma linguagem.', 'COBOL.'],
   ['{nome}! É sua primeira vez aqui?', 'Sua linguagem parece uma alternativa fácil.', 'Vejo aqui que você vai se gostar desta escolha.', 'Ruby.'],
   ['{nome}? É você mesmo?', 'Você parece muito decidido para precisar de mim.', 'A sua linguagem pode ser apenas uma.', 'C.'],
-  ['Então, você é {name}.', 'Muitos farão cara feia para você, mas não desista.', 'Você com certeza pertence a uma linguagem.', 'PHP.'],
+  ['Então, você é {nome}.', 'Muitos farão cara feia para você, mas não desista.', 'Você com certeza pertence a uma linguagem.', 'PHP.'],
   ['{nome}! Finalmente você aqui.', 'Percebo que você pode ter alguma dúvida.', 'Mas uma pessoa rebelde assim pertence apenas a uma linguagem.', 'Javascript.'],
 ];
 
