@@ -47,6 +47,8 @@ author: Cleyson, Isabela e Luma
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 #resultado > span {
