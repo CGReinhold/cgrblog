@@ -1,0 +1,10 @@
+- Assistir uma partida de Roller Derby
+- Aprender a andar de monocículo
+- Conseguir plantar bananeira
+- Aprender a patinar no gelo
+- Descer uma montanha de snowboard
+- Escalar um vulcão
+- Fazer um curso de aquarela
+- Cozinhar sua própria cerveja
+- Andar de Kayak
+- Montar um time de quadribol

@@ -1,0 +1,8 @@
+[[redirects]]
+  from = "todo.*"
+  to = "https://happy-swanson-106098.netlify.app/2021/03/03/todo/"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "some-api-key-string"
