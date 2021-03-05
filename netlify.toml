@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "todo.*"
+  from = "https://todo.cgreinhold.dev/"
   to = "https://happy-swanson-106098.netlify.app/2021/03/03/todo/"
   status = 200
   force = true
