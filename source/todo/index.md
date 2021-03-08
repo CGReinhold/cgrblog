@@ -72,6 +72,7 @@ h1 {
 
 .languages a {
   margin: 0 10px;
+  color: #383838;
 }
 
 @media (max-width: 600px)
