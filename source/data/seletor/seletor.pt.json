@@ -1,4 +1,9 @@
 {
+  "title": "Chapéu Seletor da Programação",
+  "introduction": "O mundo da programação ainda é algo mágico para você? Não faz ideia de como seguir nessa jornada? O chapéu seletor da programação irá te dizer a qual linguagem de programação você pertence.",
+  "question": "Qual o seu nome?",
+  "placeholder": "Seu nome",
+  "button": "Me diga!",
   "languages": [
     ["Hmmm, {nome}.", "Consigo ver porque você está aqui.", "Você só pode fazer parte de uma linguagem.", "Python."],
     ["Ora, ora, se não é o {nome}.", "Finalmente chegou a hora de definir seu caminho.", "Sua linguagem é muito óbvia.", "C#."],

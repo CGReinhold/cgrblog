@@ -1,14 +1,19 @@
 {
+  "title": "The Programming Sorting Hat",
+  "introduction": "The coding world still looks like magic to you? You have no idea on how to follow your path? The Programming Sorting Hat will tell you which programming language you belong to.",
+  "question": "What is your name?",
+  "placeholder": "Your name",
+  "button": "Tell me!",
   "languages": [
-    ["Hmmm, {nome}.", "Consigo ver porque você está aqui.", "Você só pode fazer parte de uma linguagem.", "Python."],
-    ["Ora, ora, se não é o {nome}.", "Finalmente chegou a hora de definir seu caminho.", "Sua linguagem é muito óbvia.", "C#."],
-    ["Bem vindo {nome}.", "Vejo que você se sente pressionado para encontrar sua linguagem.", "Mas a resposta é clara.", "Java."],
-    ["Chegou a sua vez, {nome}.", "Está preparado para encontrar sua linguagem?", "A escolha não foi fácil, mas já sei qual a sua", "Go."],
-    ["Olá {nome}.", "Difícil encontrar uma linguagem que encaixe para você.", "Mas com esse seu ar misterioso, consigo encontrar seu caminho.", "Lua."],
-    ["{nome}, você aqui?", "Achei que você já tinha encontrado seu caminho.", "Com essa idade você com certeza já foi escolhido para uma linguagem.", "COBOL."],
-    ["{nome}! É sua primeira vez aqui?", "Sua linguagem parece uma alternativa fácil.", "Vejo aqui que você vai se gostar desta escolha.", "Ruby."],
-    ["{nome}? É você mesmo?", "Você parece muito decidido para precisar de mim.", "A sua linguagem pode ser apenas uma.", "C."],
-    ["Então, você é {nome}.", "Muitos farão cara feia para você, mas não desista.", "Você com certeza pertence a uma linguagem.", "PHP."],
-    ["{nome}! Finalmente você aqui.", "Percebo que você pode ter alguma dúvida.", "Mas uma pessoa rebelde assim pertence apenas a uma linguagem.", "Javascript."]
+    ["Hmmm, {nome}.", "I can see why you are here.", "You can only belong to one language.", "Python."],
+    ["Well, well, well, isn't it {nome}?", "It's finally time to decide your path.", "Your language is very obvious.", "C#."],
+    ["Welcome {nome}.", "I see you are being pressured to know your language.", "But the answer is very clear.", "Java."],
+    ["It's your turn, {nome}.", "Are you ready to find your language?", "The choice wasn't easy, but I already know yours.", "Go."],
+    ["Hello {nome}.", "It was hard to find a language for you.", "But with your misterious path, I already know your path.", "Lua."],
+    ["{nome}, you here?", "I thought you had already found your path.", "With taht age you were already chosen for a language.", "COBOL."],
+    ["{nome}! Is it your first time here?", "Your language seems like and easy alternative.", "I see here you'll like this choice.", "Ruby."],
+    ["{nome}? Is that you?", "You already look decided.", "Your language can only be one.", "C."],
+    ["So, you are the {nome}.", "Lots of people will look down to you, but don't give up.", "You certanly belong to a language.", "PHP."],
+    ["{nome}! Finally you here.", "I can see you are still undecided.", "But a rebel person like you can only belong to one language.", "Javascript."]
   ]
 }
