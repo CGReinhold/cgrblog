@@ -63,6 +63,7 @@ canvas {
   font-size: 10px;
   line-height: 7px;
   margin: auto;
+  word-wrap: break-word;
 }
 .char {
   display: inline;
