@@ -1,6 +1,6 @@
 [[redirects]]
   from = "https://todo.cgreinhold.dev/"
-  to = "https://happy-swanson-106098.netlify.app/2021/03/03/todo/"
+  to = "https://happy-swanson-106098.netlify.app/todo/"
   status = 200
   force = true
   [redirects.headers]
