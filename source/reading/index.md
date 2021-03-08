@@ -6,7 +6,7 @@ date: 2020-06-24 08:32:21
 ## 2021
 
 - 01/03 - A Gentleman in Moscow, Amor Towles
-- 22/02 - My Year With Eleanor, Noelle Hancock
+- __22/02 - My Year With Eleanor, Noelle Hancock__
 - 14/02 - The Phoenix Project: A Novel About IT, DevOps and Helping Your Business Win, Gene Kim, Kevin Behr and George Spafford
 - 13/01 - Vidas Secas, Graciliano Ramos
 - 09/01 - Life of Pi, Yann Martel

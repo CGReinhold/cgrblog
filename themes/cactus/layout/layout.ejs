@@ -3,22 +3,29 @@
 <%- partial('_partial/head') %>
 <body class="max-width mx-auto px3">
     <div class="content index py4">
-        <% if (!is_post()) { %>
+        <% if (!is_post() && !page.special) { %>
           <%- partial('_partial/header') %>
         <% } %>
-        <%- body %>
-        <% if (is_post()) { %>
-          <div class="navigation">
-            <% if (page.prev) { %>
-              <a class="icon" href="<%- url_for(page.prev.path) %>"><%= __('post.desktop.previous') %></a>
-              <% } %>
-              <div></div>
-            <% if (page.next) { %>
-              <a class="icon" href="<%- url_for(page.next.path) %>"><%= __('post.desktop.next') %></a>
-            <% } %>
-          </div>
+        <% if (page.special) { %>
+          <header>
+            <%- partial('_partial/post/title', { post: page, index: false, class_name: 'posttitle' }) %>
+          </header>
         <% } %>
-        <%- partial('_partial/footer') %>
+        <%- body %>
+        <% if (!page.special) { %>
+          <% if (is_post()) { %>
+            <div class="navigation">
+              <% if (page.prev) { %>
+                <a class="icon" href="<%- url_for(page.prev.path) %>"><%= __('post.desktop.previous') %></a>
+                <% } %>
+                <div></div>
+              <% if (page.next) { %>
+                <a class="icon" href="<%- url_for(page.next.path) %>"><%= __('post.desktop.next') %></a>
+              <% } %>
+            </div>
+          <% } %>
+          <%- partial('_partial/footer') %>
+        <% } %>
     </div>
     <%- partial('_partial/styles') %>
 </body>
