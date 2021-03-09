@@ -21,7 +21,7 @@ projects:
   - ideas:
     name: '101 Coisas'
     description: '101 coisas não convencionais para fazer esse ano'
-    image: /images/seletor/seletor.png
+    image: /images/list.png
     url: https://todo.cgreinhold.dev/
   - sortinghat:
     name: 'Chapéu Seletor'
@@ -31,7 +31,7 @@ projects:
   - cgrcode:
     name: CGRCode
     description: Uma alternativa ao famoso QRCode
-    image: /images/cgrcode/cgrcode.gif
+    image: /images/cgrcode.png
     url: https://cgreinhold.dev/2020/05/07/cgrcode/
   - palavras:
     name: Palavras
