@@ -122,6 +122,7 @@ function render() {
   .then(data => {
     atividades.push(...data.items);
     resultText = data.result;
+    document.title = data.title;
     document.querySelector('.posttitle').innerText = data.title;
     loadSelectedItems();
     renderAtividades();

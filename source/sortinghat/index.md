@@ -131,6 +131,7 @@ function inicializar() {
   .then(file => file.json())
   .then(data => {
     languages.push(...data.languages);
+    document.title = data.title;
     document.querySelector('.posttitle').innerText = data.title;
     document.querySelector('#question').innerText = data.question;
     document.querySelector('#introduction').innerText = data.introduction;
