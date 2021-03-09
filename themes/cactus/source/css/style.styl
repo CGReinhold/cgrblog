@@ -227,70 +227,76 @@ code
     height: 22px
 
 .project-grid
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 25px;
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  margin-top: 25px
+  margin-bottom: 25px
 
   .project-item
-    margin: 25px 0;
-    cursor: pointer;
-    width: 100%;
+    margin: 25px 10px
+    cursor: pointer
+    width: 200px
 
     a
-      display: flex;
-      align-items: center;
-      width: 100%;
-      position: relative;
+      display: flex
+      align-items: center
+      width: 100%
+      position: relative
 
     a, span
-      text-decoration: none;
-      background-image: none;
+      text-decoration: none
+      background-image: none
     
     a:hover
-      text-decoration: underline;
+      text-decoration: underline
 
     .project-info
-      display: flex;
-      flex-direction: column;
-      padding: 10px 15px;
-      background-color: #282828;
-      border-radius: 5px;
-      position: absolute;
-      right: 0px;
-      bottom: -40px;
-      width: 300px;
-      color: white;
+      display: flex
+      flex-direction: column
+      padding: 10px 15px
+      background-color: #282828
+      border-radius: 5px
+      position: absolute
+      right: 0px
+      bottom: -40px
+      width: 100%
+      color: white
 
     .project-title
-      font-weight: bold;
-      font-size: 24px;
-      margin-top: 2px;
+      font-weight: bold
+      font-size: 20px
+      margin-top: 2px
 
     .project-description
-      font-size: 18px;
+      font-size: 16px
+      display: none
 
     .project-image
-      opacity: 0.8;
-      width: 60%;
-      min-width: 300px;
-      height: 300px;
-      margin-bottom: 4px;
-      box-shadow: 0 8px 6px -6px #282828;
-      border: 7px solid black;
-      padding: 5px;
-      margin: auto;
-      display: flex;
+      opacity: 0.8
+      width: 200px
+      height: 200px
+      box-shadow: 0 8px 6px -6px #282828
+      border: 7px solid black
+      padding: 5px
+      margin: auto
+      display: flex
 
       img
-        max-height: 100%;
-        max-width: 100%;
+        max-height: 100%
+        max-width: 100%
   
   .project-item:nth-of-type(even)
     .project-info
-      left: 0px;
+      left: 0px
 
   .project-item:hover
     .project-image
-      opacity: 1;
-      box-shadow: 0 12px 12px -6px black;
+      opacity: 1
+      box-shadow: 0 12px 12px -6px black
+    .project-description
+      display: block
+
+@media only screen and (hover: none) and (pointer: coarse)
+  .project-description
+    display: block !important
