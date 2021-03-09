@@ -2,6 +2,7 @@
 title: Chapéu Seletor da Programação
 date: "2021-02-25T22:00:00.169Z"
 special: true
+translated: true
 ---
 
 <p id="introduction"></p>
@@ -39,18 +40,6 @@ button {
 img {
   height: 50vh !important;
 }
-.languages {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-}
-
-.languages a {
-  margin: 0 10px;
-  color: #383838;
-}
-
 </style>
 
 <form onsubmit="return false;" class="form">
@@ -151,6 +140,5 @@ function inicializar() {
 }
 
 inicializar();
-document.querySelector('body').innerHTML += '<div class="languages"><a href="?lang=en">English</a><a href="?lang=pt">Português</a></div>';
 </script>
 {%endraw%}

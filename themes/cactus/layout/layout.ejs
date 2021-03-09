@@ -28,5 +28,11 @@
         <% } %>
     </div>
     <%- partial('_partial/styles') %>
+    <% if (page.translated) { %>
+      <div class="languages">
+        <a href="?lang=en">English</a>
+        <a href="?lang=pt">Português</a>
+      </div>
+    <% } %>
 </body>
 </html>

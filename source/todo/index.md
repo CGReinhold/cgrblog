@@ -3,6 +3,7 @@ title: 101 coisas não convencionais para fazer este ano
 date: "2021-03-03T22:00:00.169Z"
 author: Cleyson, Isabela e Luma
 special: true
+translated: true
 ---
 
 {%raw%}
@@ -61,18 +62,6 @@ h1 {
 #resultado > span {
   font-size: 22px;
   font-weight: bold;
-}
-
-.languages {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-}
-
-.languages a {
-  margin: 0 10px;
-  color: #383838;
 }
 
 @media (max-width: 600px)
@@ -140,7 +129,6 @@ function render() {
 }
 
 render();
-document.querySelector('body').innerHTML += '<div class="languages"><a href="?lang=en">English</a><a href="?lang=pt">Português</a></div>';
 </script>
 
 {%endraw%}

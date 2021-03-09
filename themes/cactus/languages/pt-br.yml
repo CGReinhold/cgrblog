@@ -1,7 +1,7 @@
 nav:
   home: Início
   about: Sobre
-  articles: Artigos
+  articles: Blog
   projects: Projetos
   search: Buscar
   reading: "Leitura"
@@ -13,7 +13,7 @@ index:
   find_me_on: Me encontre em 
   enum_comma: ','
   enum_and: e
-  articles: Artigos
+  articles: Blog
   projects: Projetos
   reading: "Leitura"
 

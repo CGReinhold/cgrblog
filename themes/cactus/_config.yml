@@ -18,6 +18,16 @@ nav:
   reading: /reading/
 
 projects:
+  - ideas:
+    name: '101 Coisas'
+    description: '101 coisas não convencionais para fazer esse ano'
+    image: /images/seletor/seletor.png
+    url: https://todo.cgreinhold.dev/
+  - sortinghat:
+    name: 'Chapéu Seletor'
+    description: 'O Chapéu Seletor irá indicar qual seu caminho na programação'
+    image: /images/seletor/seletor.png
+    url: https://sortinghat.cgreinhold.dev/
   - cgrcode:
     name: CGRCode
     description: Uma alternativa ao famoso QRCode
@@ -53,11 +63,6 @@ projects:
     description: Reviva a assistente clippy em seu computador
     image: /images/clippy.gif
     url: https://cgreinhold.dev/2019/08/25/clippy-revival/
-  - wsdion:
-    name: WSDion
-    description: Aplicação utilizada nos tempos de faculdade para verificar notas
-    image: /images/wsdion.gif
-    url: https://github.com/CGReinhold/WSDion
 
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
