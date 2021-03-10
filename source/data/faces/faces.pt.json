@@ -1,0 +1,21 @@
+{
+  "title": "Gerador de Rostos",
+  "random": "Aleatório!",
+  "save": "Salvar!",
+  "face": "Rosto",
+  "faceWidth": "Largura do Rosto",
+  "faceHeight": "Altura do Rosto",
+  "facePointiness": "Finura do Rosto",
+  "resolution": "Resolução",
+  "hairColor": "Cor do Cabelo",
+  "hairLength": "Comprimento do Cabelo",
+  "hairType": "Tipo do Cabelo",
+  "up": "Para cima!",
+  "down": "Para baixo!",
+  "mouthWidth": "Largura da Boca",
+  "eyeColor": "Cor dos Olhos",
+  "eyeHorizontalMargin": "Margem Horizontal dos Olhos",
+  "eyeVerticalMargin": "Margem Vertical dos olhos",
+  "noseWidth": "Largura do Nariz",
+  "noseHeight": "Altura do Nariz"
+}

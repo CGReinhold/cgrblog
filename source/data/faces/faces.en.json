@@ -1,0 +1,21 @@
+{
+  "title": "Pixel Face Generator",
+  "random": "Random!",
+  "save": "Save!",
+  "face": "Face",
+  "faceWidth": "Face Width",
+  "faceHeight": "Face Height",
+  "facePointiness": "Face Pointiness",
+  "resolution": "Resolution",
+  "hairColor": "Hair Color",
+  "hairLength": "Hair Length",
+  "hairType": "Hair Type",
+  "up": "Up!",
+  "down": "Down!",
+  "mouthWidth": "Mouth Width",
+  "eyeColor": "Eye Color",
+  "eyeHorizontalMargin": "Eye Horizontal Margin",
+  "eyeVerticalMargin": "Eye Vertical Margin",
+  "noseWidth": "Nose Width",
+  "noseHeight": "Nose Height"
+}
