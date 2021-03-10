@@ -14,3 +14,11 @@
   [redirects.headers]
     X-From = "Netlify"
     X-Api-Key = "some-api-key-string"
+[[redirects]]
+  from = "https://faces.cgreinhold.dev/"
+  to = "https://happy-swanson-106098.netlify.app/faces/"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "some-api-key-string"
