@@ -32,6 +32,11 @@ projects:
     description: Uma alternativa ao famoso QRCode
     image: /images/cgrcode.png
     url: https://cgreinhold.dev/2020/05/07/cgrcode/
+  - faces:
+    name: Gerador de Rostos
+    description: Gerador de rostos pixelados
+    image: /images/faces.png
+    url: https://faces.cgreinhold.dev/
   - palavras:
     name: Palavras
     description: Faça pontos encontrando palavras nesse pequeno jogo
@@ -42,7 +47,7 @@ projects:
     description: Aplicativo de apostas da Copa do Mundo 2018
     image: /images/bolaoDaCopa.PNG
     url: https://github.com/CGReinhold/BolaoDaCopa/
-  - bolao:
+  - freecell:
     name: Freecell
     description: Freecell para CLI construído com React
     image: /images/cards/freecell.gif
