@@ -242,9 +242,11 @@
     { image: 'face8.svg', title: '101 coisas não convencionais', link: 'https://todo.cgreinhold.dev/' },
     { image: 'face9.svg', title: 'Palavras', link: 'https://cgreinhold.dev/2020/05/25/word-games/' },
   ]
+  const shuffledItems = items.sort(() => .5 - Math.random());
+  const takenItems = items.slice(0, 5);
   const body = document.querySelector('body');
 
-  for (const item of items) {
+  for (const item of takenItems) {
     body.innerHTML += `<img class="floating-face" src="/images/svg/${item.image}" alt="${item.title}" onclick="window.location.href = '${item.link}'" />`;
   }
 </script>
