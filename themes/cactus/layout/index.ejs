@@ -74,6 +74,9 @@
   position:absolute;
   top: 10px;
   left: 50%;
+}
+
+.floating-face:nth-of-type(odd) {
   animation: move 5s infinite linear alternate;
 }
 
@@ -82,10 +85,11 @@
   transform: translateY(calc(200vh - 3rem));
   top: 10px;
   left: 30%;
+  animation: move2 5s infinite linear alternate;
 }
 
 .floating-face:nth-of-type(n+4) {
-  animation-duration: 22s;
+  animation-duration: 16s;
   top: 20px;
   left: 65%;
 }
@@ -97,7 +101,7 @@
 }
 
 .floating-face:nth-of-type(n+6) {
-  animation-duration: 32s;
+  animation-duration: 23s;
   animation-direction: alternate-reverse;
 }
 
@@ -112,9 +116,8 @@
 }
 
 .floating-face:nth-of-type(n+9) {
-  animation-duration: 18s;
+  animation-duration: 12s;
   animation-delay: 0.5s;
-  
   right: 10%;
 }
 
@@ -129,6 +132,30 @@
 
 .floating-face:nth-of-type(-n + 3) {
   animation-duration: 14s;
+}
+
+.floating-face:nth-of-type(3) {
+  animation: move3 20s infinite linear alternate;
+  top: 50px;
+  right: 50px;
+}
+.floating-face:nth-of-type(4) {
+  animation: move2 21s infinite linear alternate;
+  animation-direction: alternate-reverse;
+  top: 100px;
+  right: 100px;
+}
+.floating-face:nth-of-type(5) {
+  top: 150px;
+  right: 150px;
+}
+.floating-face:nth-of-type(6) {
+  top: 20px;
+  right: 150px;
+}
+.floating-face:nth-of-type() {
+  top: 160px;
+  right: 20px;
 }
 
 @keyframes move {
@@ -151,6 +178,50 @@
     transform: translateY(calc(100vh - 3rem));
   }
 }
+
+@keyframes move2 {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(calc(10vh)) translateX(10vw);
+  }
+  40% {
+    transform: translateY(calc(50vh - 3rem)) translateX(20vw);
+  }
+  60% {
+    transform: translateY(calc(85vh - 3rem)) translateX(-10vw);
+  }
+  80% {
+    transform: translateY(calc(32vh - 3rem)) translateX(-10vw);
+  }
+  100% {
+    transform: translateY(calc(90vh - 3rem));
+  }
+}
+
+
+@keyframes move3 {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(calc(20vh)) translateX(8vw);
+  }
+  40% {
+    transform: translateY(calc(25vh - 3rem)) translateX(22vw);
+  }
+  60% {
+    transform: translateY(calc(62vh - 3rem)) translateX(10vw);
+  }
+  80% {
+    transform: translateY(calc(43vh - 3rem)) translateX(-10vw);
+  }
+  100% {
+    transform: translateY(calc(10vh - 3rem));
+  }
+}
+
 
 </style>
 <script>
