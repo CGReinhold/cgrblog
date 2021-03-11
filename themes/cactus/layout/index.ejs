@@ -35,6 +35,10 @@
   <% } %>
 </section>
 
+<p>
+  Sou Cleyson, desenvolvedor de Software e formado em Ciência da Computação na <a href="https://furb.br/">FURB</a>. Tenho 24 anos (ou teria caso não tivesse feito um <i>update</i> sem <i>where</i>). Entusiasta de tudo relacionado a programação, estou o tempo inteiro aprendendo e buscando explorar novas tecnologias. Nas horas vagas também um viajante, que tenta conhecer novas culturas sempre que a oportunidade aparece. Compartilhe esse blog com 20 pessoas para evitar que o <i>update</i> sem <i>where</i> também atinja você.
+</p>
+
 <section id="writing">
   <span class="h1"><a href="<%- url_for("archives") %>"><%= __('index.articles') %></a></span>
   <% if (theme.tags_overview && site.tags.length) { %>
@@ -62,3 +66,109 @@
     <%- partial('_partial/pagination') %>
   <% } %>
 </section>
+<style>
+.floating-face {
+  height:150px;
+  width:150px;
+  cursor:pointer;
+  position:absolute;
+  top: 10px;
+  left: 50%;
+  animation: move 5s infinite linear alternate;
+}
+
+.floating-face:nth-of-type(even) {
+  animation-duration: 7s;
+  transform: translateY(calc(200vh - 3rem));
+  top: 10px;
+  left: 30%;
+}
+
+.floating-face:nth-of-type(n+4) {
+  animation-duration: 22s;
+  top: 20px;
+  left: 65%;
+}
+
+.floating-face:nth-of-type(n+5) {
+  animation-duration: 32s;
+  top: 25px;
+  left: 50%;
+}
+
+.floating-face:nth-of-type(n+6) {
+  animation-duration: 32s;
+  animation-direction: alternate-reverse;
+}
+
+.floating-face:nth-of-type(n+7) {
+  animation-duration: 22s;
+  animation-direction: alternate-reverse;
+}
+
+.floating-face:nth-of-type(n+8) {
+  animation-duration: 35s;
+  animation-delay: 1.5s;
+}
+
+.floating-face:nth-of-type(n+9) {
+  animation-duration: 18s;
+  animation-delay: 0.5s;
+  
+  right: 10%;
+}
+
+.floating-face:nth-of-type(n+10) {
+  animation-duration: 14s;
+  animation-delay: 0.3s;
+}
+
+.floating-face:nth-of-type(n + 3) {
+  animation-delay: 1s;
+}
+
+.floating-face:nth-of-type(-n + 3) {
+  animation-duration: 14s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(calc(30vh)) translateX(5vw);
+  }
+  40% {
+    transform: translateY(calc(80vh - 3rem)) translateX(-20vw);
+  }
+  60% {
+    transform: translateY(calc(50vh - 3rem)) translateX(-10vw);
+  }
+  80% {
+    transform: translateY(calc(85vh - 3rem)) translateX(10vw);
+  }
+  100% {
+    transform: translateY(calc(100vh - 3rem));
+  }
+}
+
+</style>
+<script>
+  const items = [
+    { image: 'face0.svg', title: 'Gerador de Rostos', link: 'https://faces.cgreinhold.dev/' },
+    { image: 'face1.svg', title: 'Chapéu Seletor', link: 'https://sortinghat.cgreinhold.dev/' },
+    { image: 'face2.svg', title: 'CGRCode', link: 'https://cgreinhold.dev/2020/05/07/cgrcode/' },
+    { image: 'face3.svg', title: 'Freecell', link: 'https://cgreinhold.dev/2020/10/12/freecell/' },
+    { image: 'face4.svg', title: 'Clippy', link: 'https://cgreinhold.dev/2019/08/25/clippy-revival/' },
+    { image: 'face5.svg', title: 'Super Octagon', link: 'https://cgreinhold.dev/2020/09/29/super-octagon/' },
+    { image: 'face6.svg', title: 'Bolão da Copa', link: 'https://github.com/CGReinhold/BolaoDaCopa/' },
+    { image: 'face7.svg', title: 'Brick Game', link: 'https://cgreinhold.dev/2020/07/28/brick/' },
+    { image: 'face8.svg', title: '101 coisas não convencionais', link: 'https://todo.cgreinhold.dev/' },
+    { image: 'face9.svg', title: 'Palavras', link: 'https://cgreinhold.dev/2020/05/25/word-games/' },
+  ]
+  const body = document.querySelector('body');
+
+  for (const item of items) {
+    body.innerHTML += `<img class="floating-face" src="/images/svg/${item.image}" alt="${item.title}" onclick="window.location.href = '${item.link}'" />`;
+  }
+</script>

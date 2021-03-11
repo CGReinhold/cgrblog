@@ -12,7 +12,6 @@ language: pt
 
 nav:
   home: /
-  about: /about/
   articles: /archives/
   projects: /projects/
   reading: /reading/
