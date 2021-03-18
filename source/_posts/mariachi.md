@@ -24,9 +24,19 @@ date: "2021-03-18T22:00:00.169Z"
   filter: grayscale(100%);
   cursor: pointer;
 }
-.band img:hover,
-.band img[selected="true"] {
+
+.band img:hover {
   filter: none;
+}
+
+.band img[selected="true"] {
+  filter: none !important;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .band img:hover {
+    filter: grayscale(100%) !important;
+  }
 }
 
 </style>
@@ -46,7 +56,7 @@ let guitarAudio = null, trumpetAudio = null, violinAudio = null, guitaronAudio =
 
 function onGuitarClick() {
   guitarSelected = !guitarSelected;
-  document.getElementById('guitar').setAttribute('selected', guitarSelected.toString());
+  document.getElementById('guitar').setAttribute('selected', guitarSelected);
   if (guitarSelected) {
     playGuitar();
   } else {
@@ -56,7 +66,7 @@ function onGuitarClick() {
 
 function onTrumpetClick() {
   trumpetSelected = !trumpetSelected;
-  document.getElementById('trumpet').setAttribute('selected', trumpetSelected.toString());
+  document.getElementById('trumpet').setAttribute('selected', trumpetSelected);
   if (trumpetSelected) {
     playTrumpet();
   } else {
@@ -66,7 +76,7 @@ function onTrumpetClick() {
 
 function onViolinClick() {
   violinSelected = !violinSelected;
-  document.getElementById('violin').setAttribute('selected', violinSelected.toString());
+  document.getElementById('violin').setAttribute('selected', violinSelected);
   if (violinSelected) {
     playViolin();
   } else {
@@ -76,7 +86,7 @@ function onViolinClick() {
 
 function onGuitaronClick() {
   guitaronSelected = !guitaronSelected;
-  document.getElementById('guitaron').setAttribute('selected', guitaronSelected.toString());
+  document.getElementById('guitaron').setAttribute('selected', guitaronSelected);
   if (guitaronSelected) {
     playGuitaron();
   } else {
@@ -86,39 +96,55 @@ function onGuitaronClick() {
 
 
 function onGuitarHoverIn() {
-  guitarHover = true;
-  playGuitar();
+  if (!isMobile()) {
+    guitarHover = true;
+    playGuitar();
+  }
 };
 function onGuitarHoverOut() {
-  guitarHover = false;
-  stopGuitar();
+  if (!isMobile()) {
+    guitarHover = false;
+    stopGuitar();
+  }
 };
 
 function onTrumpetHoverIn() {
-  trumpetHover = true;
-  playTrumpet();
+  if (!isMobile()) {
+    trumpetHover = true;
+    playTrumpet();
+  }
 };
 function onTrumpetHoverOut() {
-  trumpetHover = false;
-  stopTrumpet();
+  if (!isMobile()) {
+    trumpetHover = false;
+    stopTrumpet();
+  }
 };
 
 function onViolinHoverIn() {
-  violinHover = true;
-  playViolin();
+  if (!isMobile()) {
+    violinHover = true;
+    playViolin();
+  }
 };
 function onViolinHoverOut() {
-  violinHover = false;
-  stopViolin();
+  if (!isMobile()) {
+    violinHover = false;
+    stopViolin();
+  }
 };
 
 function onGuitaronHoverIn() {
-  guitaronHover = true;
-  playGuitaron();
+  if (!isMobile()) {
+    guitaronHover = true;
+    playGuitaron();
+  }
 };
 function onGuitaronHoverOut() {
-  guitaronHover = false;
-  stopGuitaron();
+  if (!isMobile()) {
+    guitaronHover = false;
+    stopGuitaron();
+  }
 };
 
 
@@ -216,6 +242,10 @@ function randomVocalPlay() {
       vocalAudio = null;
     });
   }
+}
+
+function isMobile() {
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 }
 </script>
 

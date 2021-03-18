@@ -28,6 +28,7 @@ h1 {
   filter: grayscale(100%);
   cursor: pointer;
 }
+
 .band img:hover,
 .band img[selected="true"] {
   filter: none;
@@ -90,39 +91,55 @@ function onGuitaronClick() {
 
 
 function onGuitarHoverIn() {
-  guitarHover = true;
-  playGuitar();
+  if (!isMobile()) {
+    guitarHover = true;
+    playGuitar();
+  }
 };
 function onGuitarHoverOut() {
-  guitarHover = false;
-  stopGuitar();
+  if (!isMobile()) {
+    guitarHover = false;
+    stopGuitar();
+  }
 };
 
 function onTrumpetHoverIn() {
-  trumpetHover = true;
-  playTrumpet();
+  if (!isMobile()) {
+    trumpetHover = true;
+    playTrumpet();
+  }
 };
 function onTrumpetHoverOut() {
-  trumpetHover = false;
-  stopTrumpet();
+  if (!isMobile()) {
+    trumpetHover = false;
+    stopTrumpet();
+  }
 };
 
 function onViolinHoverIn() {
-  violinHover = true;
-  playViolin();
+  if (!isMobile()) {
+    violinHover = true;
+    playViolin();
+  }
 };
 function onViolinHoverOut() {
-  violinHover = false;
-  stopViolin();
+  if (!isMobile()) {
+    violinHover = false;
+    stopViolin();
+  }
 };
 
 function onGuitaronHoverIn() {
-  guitaronHover = true;
-  playGuitaron();
+  if (!isMobile()) {
+    guitaronHover = true;
+    playGuitaron();
+  }
 };
 function onGuitaronHoverOut() {
-  guitaronHover = false;
-  stopGuitaron();
+  if (!isMobile()) {
+    guitaronHover = false;
+    stopGuitaron();
+  }
 };
 
 
@@ -220,6 +237,10 @@ function randomVocalPlay() {
       vocalAudio = null;
     });
   }
+}
+
+function isMobile() {
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 }
 </script>
 
