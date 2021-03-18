@@ -46,7 +46,7 @@ let guitarAudio = null, trumpetAudio = null, violinAudio = null, guitaronAudio =
 
 function onGuitarClick() {
   guitarSelected = !guitarSelected;
-  document.getElementById('guitar').setAttribute('selected', guitarSelected);
+  document.getElementById('guitar').setAttribute('selected', guitarSelected.toString());
   if (guitarSelected) {
     playGuitar();
   } else {
@@ -56,7 +56,7 @@ function onGuitarClick() {
 
 function onTrumpetClick() {
   trumpetSelected = !trumpetSelected;
-  document.getElementById('trumpet').setAttribute('selected', trumpetSelected);
+  document.getElementById('trumpet').setAttribute('selected', trumpetSelected.toString());
   if (trumpetSelected) {
     playTrumpet();
   } else {
@@ -66,7 +66,7 @@ function onTrumpetClick() {
 
 function onViolinClick() {
   violinSelected = !violinSelected;
-  document.getElementById('violin').setAttribute('selected', violinSelected);
+  document.getElementById('violin').setAttribute('selected', violinSelected.toString());
   if (violinSelected) {
     playViolin();
   } else {
@@ -76,7 +76,7 @@ function onViolinClick() {
 
 function onGuitaronClick() {
   guitaronSelected = !guitaronSelected;
-  document.getElementById('guitaron').setAttribute('selected', guitaronSelected);
+  document.getElementById('guitaron').setAttribute('selected', guitaronSelected.toString());
   if (guitaronSelected) {
     playGuitaron();
   } else {
