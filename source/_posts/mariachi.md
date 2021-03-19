@@ -5,6 +5,15 @@ date: "2021-03-18T22:00:00.169Z"
 
 {%raw%}
 <style>
+footer {
+  max-width: 48rem;
+}
+.navigation {
+  max-width: 48rem;
+}
+.max-width {
+  max-width: 100% !important;
+}
 .content {
   align-items: center;
   justify-content: center;
@@ -13,9 +22,6 @@ date: "2021-03-18T22:00:00.169Z"
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 60vw;
-  position: absolute;
-  top: 35%;
 }
 .band img {
   flex: 1;
