@@ -30,3 +30,11 @@
   [redirects.headers]
     X-From = "Netlify"
     X-Api-Key = "some-api-key-string"
+[[redirects]]
+  from = "https://walk.cgreinhold.dev/"
+  to = "https://happy-swanson-106098.netlify.app/walk/"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "some-api-key-string"

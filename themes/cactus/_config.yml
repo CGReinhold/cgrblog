@@ -17,6 +17,11 @@ nav:
   reading: /reading/
 
 projects:
+  - matchr:
+    name: 'Movie Matchr'
+    description: 'Aplicativo para sincronizar e combinar filmes'
+    image: /images/matchr.png
+    url: https://github.com/CGReinhold/MovieMatchr
   - ideas:
     name: '101 Coisas'
     description: '101 coisas não convencionais para fazer esse ano'
