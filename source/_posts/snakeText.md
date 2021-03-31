@@ -27,11 +27,11 @@ date: "2021-01-21T22:00:00.169Z"
 <div id="game"></div>
 <div id="input"></div>
 <div class="commands">
-  <div><button onclick="moveSnake(38)">🠕</button></div>
+  <div><button onclick="moveSnake(38)">↑</button></div>
   <div>
-    <button onclick="moveSnake(37)">🠔</button>
-    <button onclick="moveSnake(40)">🠗</button>
-    <button onclick="moveSnake(39)">➞</button>
+    <button onclick="moveSnake(37)">←</button>
+    <button onclick="moveSnake(40)">↓</button>
+    <button onclick="moveSnake(39)">→</button>
   </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>

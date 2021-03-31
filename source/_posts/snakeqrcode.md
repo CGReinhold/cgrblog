@@ -20,19 +20,29 @@ date: "2021-04-01T22:00:00.169Z"
   height: 50px;
   width: 50px;
   font-size: 2rem;
-  background-color: black;
-  color: rgb(92, 91, 254);
-  border: 1px double rgb(92, 91, 254);
+  border: 2px double black;
+  border-radius: 5px;
+  background-color: white;
+}
+.play {
+  font-size: 22px;
+  width: 100px;
+  height: 50px;
+  align-self: center;
+  border: 2px double black;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: white;
 }
 </style>
 <div id="game"></div>
-<button onclick="start()">Play</button>
+<button class="play" onclick="start()">Play</button>
 <div class="commands">
-  <div><button onclick="moveSnake(38)">🠕</button></div>
+  <div><button onclick="moveSnake(38)">↑</button></div>
   <div>
-    <button onclick="moveSnake(37)">🠔</button>
-    <button onclick="moveSnake(40)">🠗</button>
-    <button onclick="moveSnake(39)">➞</button>
+    <button onclick="moveSnake(37)">←</button>
+    <button onclick="moveSnake(40)">↓</button>
+    <button onclick="moveSnake(39)">→</button>
   </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>

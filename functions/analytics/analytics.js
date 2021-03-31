@@ -11,9 +11,9 @@ const handler = async (event) => {
     
 	await sheet.addRow({
     referer: event.headers.referer,
-    // country: event?.multiValueHeaders?['X-Country'] || '' : '',
+    country: event.multiValueHeaders['X-Country'].toString().replace(/"/g, ''),
     agent: event.headers['user-agent'],
-    date: new Date().toDateString().replace('.', ':'),
+    date: new Date().toISOString().replace('.', ':'),
   })
 		
     return {

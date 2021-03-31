@@ -28,11 +28,11 @@ Uma mistura dos jogos `Pacman` e `Snake`
 </style>
 <div id="game"></div>
 <div class="commands">
-  <div><button onclick="moveSnake(38)">🠕</button></div>
+  <div><button onclick="moveSnake(38)">↑</button></div>
   <div>
-    <button onclick="moveSnake(37)">🠔</button>
-    <button onclick="moveSnake(40)">🠗</button>
-    <button onclick="moveSnake(39)">➞</button>
+    <button onclick="moveSnake(37)">←</button>
+    <button onclick="moveSnake(40)">↓</button>
+    <button onclick="moveSnake(39)">→</button>
   </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
