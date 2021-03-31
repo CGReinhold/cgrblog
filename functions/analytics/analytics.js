@@ -10,7 +10,7 @@ const handler = async (event) => {
     
     
 	const data = JSON.stringify(event)
-	const addedRow = await sheet.addRow(data)
+	const addedRow = await sheet.addRow({ data: data })
 		
     return {
       statusCode: 200,
