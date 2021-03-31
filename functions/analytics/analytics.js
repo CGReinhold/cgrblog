@@ -9,10 +9,8 @@ const handler = async (event) => {
 	const sheet = doc.sheetsByIndex[0]
     
     
-	const data = JSON.parse(event.body)
-	const data2 = JSON.stringify(event)
+	const data = JSON.stringify(event)
 	const addedRow = await sheet.addRow(data)
-	const addedRow2 = await sheet.addRow(data2)
 		
     return {
       statusCode: 200,
