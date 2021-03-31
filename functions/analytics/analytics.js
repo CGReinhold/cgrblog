@@ -10,10 +10,10 @@ const handler = async (event) => {
     
     
 	await sheet.addRow({
-    referer: event?.headers?.referer || '',
-    country: event?.multiValueHeaders?['X-Country'] || '' : '',
-    agent: event?.headers?['user-agent'] || '' : '',
-    date: new Date().toISOString(),
+    referer: event.headers.referer,
+    // country: event?.multiValueHeaders?['X-Country'] || '' : '',
+    agent: event.headers['user-agent'],
+    date: new Date().toDateString().replace('.', ':'),
   })
 		
     return {
