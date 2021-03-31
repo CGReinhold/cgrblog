@@ -9,8 +9,11 @@ const handler = async (event) => {
 	const sheet = doc.sheetsByIndex[0]
     
     
-	const data = JSON.stringify(event)
-	const addedRow = await sheet.addRow({ data: data })
+	await sheet.addRow({
+    referer: event.headers.referer,
+    country: event.multiValueHeaders['X-Country'],
+    agent: event.headers['user-agent'],
+  })
 		
     return {
       statusCode: 200,
