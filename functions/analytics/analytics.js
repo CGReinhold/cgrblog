@@ -4,7 +4,7 @@ const { google_json, sheet_id } = process.env
 const handler = async (event) => {
   try {
 	const doc = new GoogleSpreadsheet(sheet_id)
-	await doc.useServiceAccountAuth(google_json)
+	await doc.useServiceAccountAuth(JSON.parse(google_json))
 	await doc.loadInfo()
 	const sheet = doc.sheetsByIndex[0]
     
