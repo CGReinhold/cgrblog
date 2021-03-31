@@ -19,4 +19,10 @@
 19. Esculpir uma pedra
 20. Gravar uma música e divulgá-la
 21. Aprender a utilizar um telescópio e encontrar outros planetas
-22. 
+22. Organizar sua árvore genealógica
+23. Praticar rafting
+24. Mergulhar abaixo de 20 metros
+25. Saltar de para-quedas
+26. Ver a aurora boreal
+27. Mergulhar com tubarões
+28. Chegar ao topo da maior montanha de algum continente
