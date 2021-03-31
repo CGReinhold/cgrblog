@@ -1,16 +1,25 @@
-// Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+const { google_json, sheet_id } = process.env;
+	
 const handler = async (event) => {
   try {
-    const subject = event.queryStringParameters.name || 'World'
+	const doc = new GoogleSpreadsheet(sheet_id);
+	await doc.useServiceAccountAuth(google_json);
+	await doc.loadInfo();
+	const sheet = doc.sheetsByIndex[0];
+    
+    
+	const data = JSON.parse(event.body);
+	const data2 = JSON.stringify(event);
+	const addedRow = await sheet.addRow(data);
+	const addedRow2 = await sheet.addRow(data2);
+		
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: `Hello ${subject}` }),
-      // // more keys you can return:
-      // headers: { "headerName": "headerValue", ... },
-      // isBase64Encoded: true,
-    }
+      body: JSON.stringify({ message: `Success!` });
+    };
   } catch (error) {
-    return { statusCode: 500, body: error.toString() }
+    return { statusCode: 500, body: error.toString() };
   }
 }
 
