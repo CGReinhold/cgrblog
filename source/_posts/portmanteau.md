@@ -70,7 +70,7 @@ Esse é um gerador de `Portmanteau's` em português para você brincar.
 .hidden {
   display: none;
 }
-p {
+.portmanteau p {
   text-align: center;
 }
 </style>
