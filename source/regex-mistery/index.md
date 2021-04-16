@@ -5,6 +5,10 @@ special: true
 ---
 
 {%raw%}
+<meta property="og:title" content="Regex Mistery" />
+<meta property="og:description" content="Regex Mistery - Learn regex by playing">
+<meta property="og:image" content="/images/regex-mistery.PNG"/>
+
 <style>
 body {
   padding: 0 !important;
