@@ -41,3 +41,11 @@ functions = "./functions"
   [redirects.headers]
     X-From = "Netlify"
     X-Api-Key = "some-api-key-string"
+[[redirects]]
+  from = "https://regex-mistery.cgreinhold.dev/"
+  to = "https://happy-swanson-106098.netlify.app/regex-mistery/"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "some-api-key-string"

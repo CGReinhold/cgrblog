@@ -17,6 +17,16 @@ nav:
   reading: /reading/
 
 projects:
+  - regex:
+    name: 'Regex Mistery'
+    description: 'Aprenda conceitos de Regex de uma forma divertida'
+    image: /images/regex-mistery.PNG
+    url: https://regex-mistery.cgreinhold.dev/
+  - walk:
+    name: 'Walk Around the World'
+    description: 'Caminhe através de diversas cidades do mundo, sem sair de casa'
+    image: /images/walk.gif
+    url: https://walk.cgreinhold.dev/
   - matchr:
     name: 'Movie Matchr'
     description: 'Aplicativo para sincronizar e combinar filmes'
