@@ -5,6 +5,7 @@ date: 2020-06-24 08:32:21
 
 ## 2021
 
+- 18/04 - Antkind, Charlie Kaufman
 - 01/03 - A Gentleman in Moscow, Amor Towles
 - __22/02 - My Year With Eleanor, Noelle Hancock__
 - 14/02 - The Phoenix Project: A Novel About IT, DevOps and Helping Your Business Win, Gene Kim, Kevin Behr and George Spafford
