@@ -5,6 +5,8 @@ date: 2020-06-24 08:32:21
 
 ## 2021
 
+- 13/05 - A Proper Drink, Robert Simonson
+- 02/05 - World Travel: An Irreverent Guide, Anthony Bourdain and Laurie Woolever
 - 18/04 - Antkind, Charlie Kaufman
 - 01/03 - A Gentleman in Moscow, Amor Towles
 - __22/02 - My Year With Eleanor, Noelle Hancock__
