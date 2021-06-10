@@ -49,3 +49,11 @@ functions = "./functions"
   [redirects.headers]
     X-From = "Netlify"
     X-Api-Key = "some-api-key-string"
+[[redirects]]
+  from = "https://font-challenge.cgreinhold.dev/"
+  to = "https://happy-swanson-106098.netlify.app/font-challenge/"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "some-api-key-string"

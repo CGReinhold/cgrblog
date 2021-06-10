@@ -5,6 +5,8 @@ date: 2020-06-24 08:32:21
 
 ## 2021
 
+- __06/06 - The Beardless Adventurer and her inconvenience: A first-time cycle trip across Europe, Donna Marie Ashton__
+- __27/05 - Llama Drama: A two-woman, 5,500-mile cycling adventure through South America, Anna McNuff__
 - 13/05 - A Proper Drink, Robert Simonson
 - 02/05 - World Travel: An Irreverent Guide, Anthony Bourdain and Laurie Woolever
 - 18/04 - Antkind, Charlie Kaufman
