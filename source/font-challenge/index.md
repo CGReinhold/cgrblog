@@ -7,7 +7,7 @@ special: true
 {%raw%}
 <meta property="og:title" content="Font Challenge" />
 <meta property="og:description" content="Font Challenge - Can you guess all the font properties?">
-<meta property="og:image" content="/images/regex-mistery.PNG"/>
+<meta property="og:image" content="/images/font-challenge.PNG"/>
 
 <style>
 *, ::before, ::after {
