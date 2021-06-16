@@ -27,6 +27,11 @@ projects:
     description: 'Caminhe através de diversas cidades do mundo, sem sair de casa'
     image: /images/walk.gif
     url: https://walk.cgreinhold.dev/
+  - font-challenge:
+    name: 'Font Challenge'
+    description: 'Este é um jogo sobre atributos de fontes no CSS'
+    image: /images/font-challenge-s.png
+    url: https://font-challenge.cgreinhold.dev/
   - matchr:
     name: 'Movie Matchr'
     description: 'Aplicativo para sincronizar e combinar filmes'

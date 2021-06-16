@@ -35,7 +35,7 @@ Esse truque pode ser expandido, adicionando outras divs com tamanhos maiores de 
 ```css
 .stars {
   position: absolute;
-  top: 0;
+  top: 100px;
   left: -700px;
   width: 1px;
   height: 1px;
