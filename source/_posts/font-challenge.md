@@ -7,7 +7,7 @@ CSS é uma linguagem que está sempre em evolução, e a cada vez que pesquiso e
 
 Alguns dos que fiquei mais surpreso foi em relação a fontes, que podem auxiliar bastante e evitar a utilização de JavaScript de forma desnecessária.
 
-Conhecendo essas novas propriedades, criei então o Font Challenge, um pequeno jogo para me desafiar a relembrar cada uma dessas propriedades.
+Conhecendo essas novas propriedades, criei então o [Font Challenge](https://font-challenge.cgreinhold.dev/), um pequeno jogo para me desafiar a relembrar cada uma dessas propriedades.
 
 ![Font challenge](/images/challenge.PNG)
 
