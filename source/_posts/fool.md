@@ -1,9 +1,9 @@
 ---
 title: Ideias bobas funcionam
-date: "2021-05-28T22:00:00.169Z"
+date: "2021-06-28T22:00:00.169Z"
 ---
 
-Por bastante tempo eu evitei fazer atividades no meu tempo livre por achar que não serviriam de nada, ou não trariam nenhum ganho. A gurande maioria dessas atividades era relacionada a programação. 
+Por bastante tempo eu evitei fazer atividades no meu tempo livre por achar que não serviriam de nada, ou não trariam nenhum ganho. A grande maioria dessas atividades era relacionada a programação. 
 
 Programar no tempo livre sempre foi um dilema para mim. Por mais que eu goste de programar, já faço isso por mais de oito horas todos os dias, e fazer isso no tempo livre só me deixava com mais desgosto pela atividade.
 
