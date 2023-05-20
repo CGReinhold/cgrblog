@@ -57,3 +57,12 @@ functions = "./functions"
   [redirects.headers]
     X-From = "Netlify"
     X-Api-Key = "some-api-key-string"
+
+[[redirects]]
+  from = "https://qrcode.cgreinhold.dev/"
+  to = "https://happy-swanson-106098.netlify.app/qrcode/"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "some-api-key-string"
