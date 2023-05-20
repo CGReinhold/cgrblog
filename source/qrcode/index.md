@@ -12,20 +12,21 @@ special: true
   <head>
     <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.js"></script>
     <style>
-    header {
+      header {
         display: none !important;
-    }
-    .max-width {
+      }
+      .max-width {
         max-width: 100%;
-    }
-    .content {
+      }
+      .content {
         padding: 0 !important;
         margin: 0 !important;
-    }
-    article .content img {
+        height: 100vh;
+        flex-direction: row;
+      }
+      article .content img {
         height: inherit !important;
-    }
-
+      }
       body {
         padding: 0 !important;
         margin: 0 !important;
