@@ -92,13 +92,11 @@ special: true
       .footer {
         width: 100vw;
         background-color: #eee;
-        margin-top: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
       }
       .mode-options {
-        margin-top: 10px;
         display: flex;
         align-items: center;
         display: block;
