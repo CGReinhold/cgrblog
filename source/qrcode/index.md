@@ -950,9 +950,9 @@ special: true
       })
 
       function getQrCodeSvgWidth() {
-        const greaterDimension = innerWidth// innerHeight > innerWidth ? innerHeight : innerWidth
-        const percent = greaterDimension / 100 * 80
-        if (percent <= 200) return 200
+        const lowerDimension = (innerHeight-230) > innerWidth ?  innerWidth : (innerHeight - 230)
+        const percent = lowerDimension / 100 * 60
+        if (percent <= 100) return 100
         if (percent >= 645) return 450
         return Math.ceil(percent)
       }
