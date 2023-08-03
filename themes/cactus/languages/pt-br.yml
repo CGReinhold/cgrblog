@@ -4,7 +4,6 @@ nav:
   articles: Blog
   projects: Projetos
   search: Buscar
-  reading: "Leitura"
 
 footer:
   copyright: Copyright
@@ -15,7 +14,6 @@ index:
   enum_and: e
   articles: Blog
   projects: Projetos
-  reading: "Leitura"
 
 post:
   desktop:

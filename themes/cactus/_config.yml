@@ -14,7 +14,6 @@ nav:
   home: /
   articles: /archives/
   projects: /projects/
-  reading: /reading/
 
 projects:
   - regex:

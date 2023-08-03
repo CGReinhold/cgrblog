@@ -25,6 +25,6 @@ Acredito que esse costume de apenas fazer coisas que me divertiam foi o principa
 
 ![Hobbies](/images/retro/hobbies.jpg)
 
-Por fim, o fator de ficar quase todo meu tempo em casa também foi um impulsionador para eu fortalecer alguns hobbies. Neste ano passei muito tempo lendo [novos livros](https://cgreinhold.dev/reading/), e fazendo alguns desenhos. Para me desconectar de casa um pouco passei a manter uma rotina de práticas de yoga e voltas de bicicleta, que ajudaram bastante a repor o ar e relaxar das obrigações da rotina diária.
+Por fim, o fator de ficar quase todo meu tempo em casa também foi um impulsionador para eu fortalecer alguns hobbies. Neste ano passei muito tempo lendo novos livros, e fazendo alguns desenhos. Para me desconectar de casa um pouco passei a manter uma rotina de práticas de yoga e voltas de bicicleta, que ajudaram bastante a repor o ar e relaxar das obrigações da rotina diária.
 
 Para o próximo ano pretendo manter esse hábito de brincar com tecnologia das diversas formas possíveis, mas não perder a vontade de praticar outras atividades, e sempre que possível experimentar coisas novas, e espero que consiga ao final do ano trazer novamente ótimos aprendizados. 
