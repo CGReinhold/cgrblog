@@ -1,6 +1,6 @@
 ---
 title: Experimentos em Programação Criativa - 2
-date: "2023-08-20T22:00:00.169Z"
+date: "2023-08-17T22:00:00.169Z"
 ---
 
 Essa é mais uma tentativa de reproduzir uma imagem utilizando computação criativa, puramente para aprender coisas novas e passar o tempo.
@@ -207,3 +207,129 @@ Algumas outras ideias para evoluir essa brincadeira seriam:
 
 - Adicionar fendas ou laços como na imagem original, onde aleatóriamente poderiams quebrar a linha
 - Usar uma biblioteca, como o [dat.gui](https://github.com/dataarts/dat.gui) para configurar as variáveis em tempo real, sem precisar executar o algoritmo múltiplas vezes para novos resultados
+
+
+<details>
+  <summary>
+    Código completo
+  </summary>
+  <p>
+    ```js
+let strokeColor = 10
+let backgroundColor = 245
+let frameMargin // distância entre o quadro e a borda do canvas
+let padding // distância entre o quadro e os pontos
+let dotRadius // tamanho dos pontos
+let dotPadding // distância entre os ponto
+let shouldFill // os pontos devem ser vazados?
+let lineRadius // largura da linha
+
+function setup() {
+  createCanvas(windowWidth, windowHeight)
+  frameMargin = round(random(50, 150))
+  padding = round(random(-100, 100))
+  dotRadius = random(0.1, 10)
+  dotPadding = round(random(15, 30))
+  shouldFill = random() > 0.5
+  lineRadius = random(1, 20)
+}
+
+function draw() {
+  background(backgroundColor)
+  const frameBorders = drawFrame()
+  const dots = getDots(frameBorders)
+  drawDots(dots)
+  drawWalker(dots)
+  noLoop()
+}
+
+function drawFrame() {
+  noFill()
+  strokeWeight(4)
+  stroke(strokeColor)
+  const startAt = [frameMargin, frameMargin]
+  const size = [windowWidth - frameMargin * 2, windowHeight - frameMargin * 2]
+
+  rect(...startAt, ...size)
+  
+  return [startAt, size]
+}
+
+function getDots(frameBorders) {
+  const startAt = [
+    frameBorders[0][0] + padding,
+    frameBorders[0][1] + padding
+  ]
+  const endAt = [
+    frameBorders[0][0] + frameBorders[1][0] - padding,
+    frameBorders[0][1] + frameBorders[1][1] - padding
+  ]
+  
+  let curLine = startAt[0]
+  let col = startAt[1]
+  const dots = []
+  
+  while (curLine < endAt[0]) {
+    const columns = []
+    while (col < endAt[1]) {
+      const x = curLine + dotRadius / 2
+      const y = col + dotRadius / 2
+      columns.push(createVector(x, y))
+      col += dotPadding
+    }
+    curLine += dotPadding
+    col = startAt[1]
+    dots.push(columns)
+  }
+  
+  return dots
+}
+
+function drawDots(dots) {
+  if (shouldFill) fill(strokeColor)
+  
+  for (let i = 0; i < dots.length; i++) {
+    for (let j = 0; j < dots[i].length; j++) {
+      circle(dots[i][j].x, dots[i][j].y, dotRadius)
+    }
+  }
+}
+
+function drawWalker(dots, startAtLine) {
+  stroke(strokeColor)
+  noFill()
+  strokeWeight(lineRadius)
+  strokeCap(ROUND) // para evitar que a linha fique com as pontas quadradas
+  strokeJoin(ROUND) // para evitar que a linha fique com as juntas quadradas
+  
+  const middle = Math.round(dots[0].length / 2)
+  let selectedLine = middle
+  let selectedCol = 0
+  let previousLine = middle
+    
+  beginShape()
+  while (selectedCol < dots.length) {
+    if (!dots[selectedCol] || !dots[selectedCol][selectedLine]) break
+    const dot = dots[selectedCol][selectedLine]
+    
+    if (previousLine !== selectedLine) {
+      const prevDot = dots[selectedCol][previousLine]
+      vertex(prevDot.x, prevDot.y)
+    }
+    
+    vertex(dot.x, dot.y)
+
+    previousLine = selectedLine
+    const next = Math.round(random(-3, 3))
+    selectedLine += next
+    
+    if (selectedLine < 0) selectedLine = 0
+    if (selectedLine === dots[0].length) selectedLine = dots[0].length -1
+
+    selectedCol++
+  }
+  endShape()
+}
+```
+  </p>
+</details>

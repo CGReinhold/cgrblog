@@ -276,7 +276,6 @@ function segmentizeLine(lineSegmentStart, lineSegmentEnd, segmentCount = 10) {
 E utilizando essa função junto com o `curveVertex`, conseguimos ter os tentáculos curvos:
 
 ```js
-
 function draw() {
   ...
   
@@ -312,3 +311,159 @@ Para chegar mais próximo do original, algumas possível mudanças seriam:
 - Alterar a aleatóriedade dos pontos para que não sejam gerados pontos tão próximos do polígono
 
 Por mais que ainda possa ser melhorado, fiquei satisfeito com esse resultado e empolgado para começar um próximo. 
+
+
+<details>
+  <summary>
+    Código completo
+  </summary>
+  <p>
+    ```js
+function setup() {
+  createCanvas(400, 400)
+}
+
+function draw() {
+  noLoop()
+  background(255)
+  strokeWeight(5)
+  noFill() // Para que o polígono não seja preenchido
+  
+  const vertexes = getPoligonVertexes()
+  
+  beginShape()
+  for (let i = 0; i < vertexes.length; i++) {
+    vertex(vertexes[i].x, vertexes[i].y)
+  }
+  endShape(CLOSE)
+  
+  const dots = getDots()
+
+  for (let i = 0; i < dots.length; i++) {
+    stroke('black')
+    strokeWeight(10)
+    point(dots[i].x, dots[i].y)
+
+    // Desenhando a linha
+    strokeWeight(2) // Alterando a largura entre o ponto e a linha
+    const closestPolygonVertex = getClosestPolygonVertex(dots[i], vertexes)
+    const segments = segmentizeLine(dots[i], closestPolygonVertex, 6)
+    beginShape()
+    for (let j = 0; j < segments.length; j++) {
+      curveVertex(segments[j].x, segments[j].y)
+    }
+    endShape() 
+  }
+}
+
+function getPoligonVertexes(radius = 100, sides = 8) {
+  const vertexes = []
+  let angle = 0
+  
+  for (let i = 0; i < sides; i++) {
+    const pointX = radius * sin(angle)
+    const pointY = radius * cos(angle)
+    
+    const vector = createVector(pointX + width/2, pointY + height/2)
+    vertexes.push(vector)
+    
+    angle = angle + TWO_PI / sides
+  }
+
+  return vertexes
+}
+
+function getDots(count = 100) {
+  const minRadius = width / 6
+  const maxRadius = width / 2.5
+  const dots = []
+  for (let i = 0; i < count; i++) {
+    const angle = Math.random() * TWO_PI
+    const x = Math.cos(angle) * random(minRadius, maxRadius) + width / 2
+    const y = Math.sin(angle) * random(minRadius, maxRadius) + height / 2
+
+    const vector = createVector(x, y)
+    dots.push(vector)
+  }
+  return dots
+}
+
+function getClosestPolygonVertex(vertex, polygonVertexes = []) {
+  let closest
+  let closestDistance = Infinity
+
+  for (let i = 0; i < polygonVertexes.length; i++) {
+    // Loop entre os vertices do polígonos, pegando o atual e o seguinte, que formam a linha
+    const isLast = (i+1) === polygonVertexes.length
+    const v1 = polygonVertexes[i]
+    const v2 = polygonVertexes[isLast ? 0 : i+1]
+    
+    const closestPoint = getClosestPointFromVertexToLine(vertex, v1, v2)
+    const distance = distanceFromVertexes(vertex, closestPoint)
+    
+    if (distance < closestDistance) {
+      closestDistance = distance
+      closest = closestPoint
+    }
+  }
+  
+  return closest
+}
+
+function getClosestPointFromVertexToLine(vertex, lineStart, lineEnd) {
+  // Calculate the vector representing the line segment
+  const lineSegmentVector = createVector(lineEnd.x - lineStart.x, lineEnd.y - lineStart.y)
+  
+  // Calculate the vector from the line segment start to the vertex
+  const vertexVector = createVector(vertex.x - lineStart.x, vertex.y - lineStart.y)
+
+  // Calculate the dot product of the line segment vector and the vertex vector
+  const dotProduct = lineSegmentVector.x * vertexVector.x + lineSegmentVector.y * vertexVector.y;
+
+  // Calculate the squared length of the line segment vector
+  const squaredLength = lineSegmentVector.x * lineSegmentVector.x + lineSegmentVector.y * lineSegmentVector.y;
+
+  // Calculate the parameter value of the closest point on the line segment to the vertex
+  const t = Math.max(0, Math.min(1, dotProduct / squaredLength));
+
+  // Calculate the coordinates of the closest point on the line segment
+  const closestPoint = createVector(lineStart.x + t * lineSegmentVector.x, lineStart.y + t * lineSegmentVector.y)
+
+  return closestPoint
+}
+
+function distanceFromVertexes(vertex1, vertex2) {
+  return Math.sqrt(
+    (vertex1.x - vertex2.x) * (vertex1.x - vertex2.x) +
+    (vertex1.y - vertex2.y) * (vertex1.y - vertex2.y)
+  )
+}
+
+function segmentizeLine(lineSegmentStart, lineSegmentEnd, segmentCount = 10) {
+  const points = [];
+  const dx = (lineSegmentEnd.x - lineSegmentStart.x) / (segmentCount - 1);
+  const dy = (lineSegmentEnd.y - lineSegmentStart.y) / (segmentCount - 1);
+
+  for (let i = 0; i < segmentCount; i++) {
+    let x = lineSegmentStart.x + dx * i;
+    let y = lineSegmentStart.y + dy * i;
+
+    // Não queremos mover a posição do primeiro vértice e do vértice que encosta no polígono
+    if (i > 0 && i < segmentCount-1) {
+      x += random(0, 15)
+      y += random(0, 15)
+    }
+    
+    // Para utilizar a função `curveVertex` precisamos do primeiro e último vértices duplicados
+    if (i === 0 || i === segmentCount-1) {
+      points.push(createVector(x, y));  
+    }
+    
+    points.push(createVector(x, y));
+  }
+
+  return points;
+}
+```
+  </p>
+</details>
