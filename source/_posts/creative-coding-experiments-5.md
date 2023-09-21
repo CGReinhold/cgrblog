@@ -340,7 +340,7 @@ class Circle {
 
 ## Próximos passos
 
-Como podem ver na imagem base e na final, nossos círculos coloridos não são perfeitos. Isso acontece porque só berificamos se as espirais encostam em uma das áreas coloridas, mas não paramos de crescê-las quando elas ultrapassam.
+Como podem ver na imagem base e na final, nossos círculos coloridos não são perfeitos. Isso acontece porque só verificamos se as espirais encostam em uma das áreas coloridas, mas não paramos de crescê-las quando elas ultrapassam.
 
 Uma ideia para brincar mais um pouco com esse código seria adicionar essa validação para que não sejam desenhadas espirais entre as áreas coloridas e preto e brancas.
 
