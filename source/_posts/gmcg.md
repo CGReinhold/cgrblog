@@ -3,7 +3,7 @@ title: Gol, Motoca, Caminhão Game
 date: "2020-10-26T22:00:00.169Z"
 ---
 
-Este "jogo" é uma implementação fajuta e desinteressante de uma ideia do [João Carvalho](https://twitter.com/assimdisseojoao) no podcast Lektronik. Apenas emojis foram utilizados para a arte deste "jogo", o que acabou deixando-o ainda menos elegante.
+Este "jogo" é uma implementação fajuta e desinteressante de uma ideia do [João Carvalho](https://www.youtube.com/@assimdisseojoao) no podcast Lektronik. Apenas emojis foram utilizados para a arte deste "jogo", o que acabou deixando-o ainda menos elegante.
 
 O "jogo" consistem em três partes:
 
