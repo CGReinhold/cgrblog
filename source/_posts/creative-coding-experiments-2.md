@@ -3,7 +3,7 @@ title: Experimentos em Programação Criativa - 2
 date: "2023-08-17T22:00:00.169Z"
 ---
 
-Essa é mais uma tentativa de reproduzir uma imagem utilizando computação criativa, puramente para aprender coisas novas e passar o tempo.
+Essa é mais uma tentativa de reproduzir uma imagem utilizando computação criativa, puramente para aprender coisas novas e passar o tempo. Esses artigos são principalmente criados como uma forma de catalogar o processo de implementação para referencia futura quando eu estiver desenvolvendo novas coisas.
 
 ## Inspiração
 

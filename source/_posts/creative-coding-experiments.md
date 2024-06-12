@@ -5,7 +5,7 @@ date: "2023-08-01T22:00:00.169Z"
 
 Há alguns anos passei a ter um interesse por programação criativa, e apesar de consumir bastante conteúdo sobre o tema, foram poucas as vezes que de fato implementei algo.
 
-Com várias imagens e gifs de inspiração salvas nesse tempo, quero começar a tentar implementar cada uma dessas ideias
+Com várias imagens e gifs de inspiração salvas nesse tempo, quero começar a tentar implementar cada uma dessas ideias. Esses artigos são principalmente criados como uma forma de catalogar o processo de implementação para referencia futura quando eu estiver desenvolvendo novas coisas.
 
 ## Inspiração
 
