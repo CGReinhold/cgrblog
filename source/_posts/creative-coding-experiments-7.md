@@ -1,5 +1,5 @@
 ---
-title: Experimentos em Programação Criativa - 7
+title: Skate - Experimentos em Programação Criativa - 7
 date: "2023-11-03T22:00:00.169Z"
 ---
 

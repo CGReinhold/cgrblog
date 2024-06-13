@@ -1,5 +1,5 @@
 ---
-title: Experimentos em Programação Criativa - 4
+title: Rotação - Experimentos em Programação Criativa - 4
 date: "2023-08-30T22:00:00.169Z"
 ---
 

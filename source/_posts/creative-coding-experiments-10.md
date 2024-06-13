@@ -1,5 +1,5 @@
 ---
-title: Experimentos em Programação Criativa - 10
+title: Xadrez - Experimentos em Programação Criativa - 10
 date: "2024-06-12T22:00:00.169Z"
 ---
 

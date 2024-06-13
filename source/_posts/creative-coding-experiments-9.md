@@ -1,5 +1,5 @@
 ---
-title: Experimentos em Programação Criativa - 9
+title: Wings - Experimentos em Programação Criativa - 9
 date: "2024-06-06T22:00:00.169Z"
 ---
 

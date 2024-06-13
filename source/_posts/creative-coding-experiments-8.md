@@ -1,5 +1,5 @@
 ---
-title: Experimentos em Programação Criativa - 8
+title: Dithering - Experimentos em Programação Criativa - 8
 date: "2023-11-29T22:00:00.169Z"
 ---
 
