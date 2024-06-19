@@ -19,7 +19,7 @@ O resultado foi o seguinte:
 
 ## Implementação
 
-Usarei novamento o [editor do p5](https://editor.p5js.org) para essa implementação, dessa vez com a modalidade WEBGL.
+Usarei novamento o [editor do p5](https://editor.p5js.org) para essa implementação.
 
 ## Passo 1
 
