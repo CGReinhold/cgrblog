@@ -11,7 +11,7 @@ Desta vez, uma das imagens que eu tinha salvo como inspiração é a seguinte:
 
 ![Múltiplos hexagonos parecendo salas](/images/creative-coding/part-11/cc-1.png)
 
-No caso dessa imagem, lemberi que tinha encontrado através do canal [Birb's Nest no discord](https://discord.gg/hBrWUCKu), então fui atrás da origem. Não encontrei a exata imagem, mas encontrei [esse ótimo artigo](https://www.gorillasun.de/blog/a-guide-to-hexagonal-grids-in-p5js/) do Gorilla Sun, e [esse projeto](https://openprocessing.org/sketch/1361971?hidden=true) de Roni Kaufman no Open Processing, que por sinal é o mesmo autor da imagem de inspiração.
+No caso dessa imagem, lembrei que tinha encontrado através do canal [Birb's Nest no discord](https://discord.gg/hBrWUCKu), então fui atrás da origem. Não encontrei a exata imagem, mas encontrei [esse ótimo artigo](https://www.gorillasun.de/blog/a-guide-to-hexagonal-grids-in-p5js/) do Gorilla Sun, e [esse projeto](https://openprocessing.org/sketch/1361971?hidden=true) de Roni Kaufman no Open Processing, que por sinal é o mesmo autor da imagem de inspiração.
 
 ## Implementação
 
@@ -528,5 +528,3 @@ function prop(a, b, k) {
 ```
   </p>
 </details>
-
-
