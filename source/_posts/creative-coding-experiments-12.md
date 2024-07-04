@@ -1,6 +1,6 @@
 ---
 title: Corrente - Experimentos em Programação Criativa - 12
-date: "2024-07-05T22:00:00.169Z"
+date: "2024-07-04T22:00:00.169Z"
 ---
 
 Essa é mais uma tentativa de reproduzir uma imagem utilizando computação criativa. Como nas últimas vezes, o objetivo dessa tentativa é de utilizar uma inspiração para aprender técnicas e conceitos novos. Esses artigos são principalmente criados como uma forma de catalogar o processo de implementação para referencia futura quando eu estiver desenvolvendo novas coisas.
